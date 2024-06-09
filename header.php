@@ -92,7 +92,7 @@ do_action( 'elementify/body_top' );
      * @hooked elementify_header - 10
      */
     do_action( 'elementify/header' );
-    // $enable = get_theme_mod( 'elementify_framework_footer_menu_colors');
+    // $enable = get_theme_mod( 'elementify_framework_fonts_base_typo');
     // echo '<pre>';
     // print_r($enable);
     // echo '</pre>';
