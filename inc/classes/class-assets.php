@@ -59,6 +59,7 @@ class Assets {
 			filemtime( ELEMENTIFY_DIR_PATH . '/build/public/index.css' ),
 			'all'
 		);
+		wp_style_add_data( 'elementify-main', 'rtl', 'replace' );
 
 		// Enqueue Scripts.
 		wp_enqueue_script(
