@@ -12,9 +12,7 @@ module.exports = function (grunt) {
         src: [
           "**",
           "!style - Copy.css",
-          "!build/**",
           "!node_modules/**",
-          "!assets/**",
           "!css/sourcemap/**",
           "!.git/**",
           "!bin/**",
