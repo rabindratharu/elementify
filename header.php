@@ -92,10 +92,31 @@ do_action( 'elementify/body_top' );
      * @hooked elementify_header - 10
      */
     do_action( 'elementify/header' );
+    // use Elementify_Framework\Inc\Fonts;
+    // $google_font_subsets = Fonts::add_google_fonts();
+    // echo $google_font_subset = Fonts::get_google_font_url();
     // $enable = get_theme_mod( 'elementify_framework_fonts_base_typo');
     // echo '<pre>';
-    // print_r($enable);
+    // print_r($google_font_subsets);
     // echo '</pre>';
+    
+    // $base = get_theme_mod('elementify_framework_fonts_base_typo',[
+    //     'font-family'   => 'default',
+    //     'font-weight'   => '400',
+    //     'subsets'       => ['latin'],
+    //     'font-size'     => [
+    //         'desktop'   => '30px',
+    //     ],
+    //     'line-height'   => [
+    //         'desktop'   => '13px',
+    //     ],
+    //     'letter-spacing'=> [
+    //         'desktop'   => '1.3px',
+    //     ],
+    //     'font-style'    => 'normal',
+    //     'text-transform'    => 'none',
+    //     'text-decoration'   => 'none',
+    // ]);
     ?>
     
     <?php
