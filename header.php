@@ -95,7 +95,7 @@ do_action( 'elementify/body_top' );
     // echo $google_font_subset = Fonts::get_google_font_url();
     // $enable = get_theme_mod( 'elementify_framework_fonts_base_typo');
     // echo '<pre>';
-    // print_r($google_font_subsets);
+    // print_r($enable);
     // echo '</pre>';
     
     // $base = get_theme_mod('elementify_framework_fonts_base_typo',[

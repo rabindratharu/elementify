@@ -19,7 +19,7 @@ License: GNU General Public License v2 or later
   --ele-font-size: 16px;
   --ele-text-transform: none;
   --ele-text-decoration: none;
-  --ele-line-height: 23px;
+  --ele-line-height: 1.65;
   --ele-letter-spacing: 0px;
   --ele-frame-size: 4px;
   --ele-container-width-base: calc(90vw - var(--ele-frame-size, 0px) * 2);
@@ -673,32 +673,44 @@ h6 a {
 }
 
 h1 {
+  --ele-font-weight: 600;
   --ele-font-size: 40px;
+  --ele-line-height: 1.5;
   color: var(--ele-accent-color);
 }
 
 h2 {
-  --ele-font-size: 32px;
+  --ele-font-weight: 600;
+  --ele-font-size: 35px;
+  --ele-line-height: 1.5;
   color: var(--ele-accent-color);
 }
 
 h3 {
-  --ele-font-size: 28px;
+  --ele-font-weight: 600;
+  --ele-font-size: 30px;
+  --ele-line-height: 1.5;
   color: var(--ele-accent-color);
 }
 
 h4 {
-  --ele-font-size: 24px;
+  --ele-font-weight: 600;
+  --ele-font-size: 25px;
+  --ele-line-height: 1.5;
   color: var(--ele-accent-color);
 }
 
 h5 {
+  --ele-font-weight: 600;
   --ele-font-size: 20px;
+  --ele-line-height: 1.5;
   color: var(--ele-accent-color);
 }
 
 h6 {
+  --ele-font-weight: 600;
   --ele-font-size: 16px;
+  --ele-line-height: 1.5;
   color: var(--ele-accent-color);
 }
 
@@ -835,7 +847,7 @@ figcaption,
   font-family: var(--ele-font-family);
   font-size: var(--ele-font-size);
   font-weight: var(--ele-font-weight);
-  font-style: var(--ele-theme-font-style, inherit);
+  font-style: var(--ele-font-style, inherit);
   line-height: var(--ele-line-height);
   letter-spacing: var(--ele-letter-spacing);
   text-transform: var(--ele-text-transform);
@@ -6220,10 +6232,6 @@ Layout 3
 /*
  Post Title
 ----------------------------------------*/
-.ele-posts-wrap .entry-title,
-.ele-related-posts-items .entry-title {
-  --ele-font-weight: 500;
-}
 .ele-posts-wrap .entry-title a:hover,
 .ele-posts-wrap .ele-post-meta a:hover,
 .ele-related-posts-items .entry-title a:hover,
