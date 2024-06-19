@@ -53,8 +53,7 @@ do_action( 'elementify/before_html' );
 
 </head>
 
-<body 
-    <?php 
+<body <?php 
     body_class();
     /**
      * Functions hooked into elementify/body_attributes action
@@ -62,10 +61,9 @@ do_action( 'elementify/before_html' );
 	 * @hooked elementify_body_attributes - 10
      */
     do_action( 'elementify/body_attributes' );
-    ?>
->
+    ?>>
 
-<?php
+    <?php
 /**
  * Functions hooked into elementify/body_top action
  *
@@ -74,25 +72,25 @@ do_action( 'elementify/before_html' );
 do_action( 'elementify/body_top' );
 ?>
 
-<div id="page" class="site ele-position-relative ele-position-absolute-after">
+    <div id="page" class="site ele-position-relative ele-position-absolute-after">
 
-    <?php
-    /**
-     * Functions hooked into elementify/before_header action
-     *
-	 * @hooked elementify_skip_link - 10
-     */
-    do_action( 'elementify/before_header' );
-    ?>
+        <?php
+        /**
+         * Functions hooked into elementify/before_header action
+         *
+         * @hooked elementify_skip_link - 10
+         */
+        do_action( 'elementify/before_header' );
+        ?>
 
-    <?php
+        <?php
     /**
      * Functions hooked into elementify/header action
      *
      * @hooked elementify_header - 10
      */
     do_action( 'elementify/header' );
-    // use Elementify_Framework\Inc\Fonts;
+    //use Elementify_Framework\Inc\Generated_Styles;
     // $google_font_subsets = Fonts::add_google_fonts();
     // echo $google_font_subset = Fonts::get_google_font_url();
     // $enable = get_theme_mod( 'elementify_framework_fonts_base_typo');
@@ -117,9 +115,32 @@ do_action( 'elementify/body_top' );
     //     'text-transform'    => 'none',
     //     'text-decoration'   => 'none',
     // ]);
+    // echo '<pre>';
+    // print_r(Generated_Styles::typography(
+    //     [':root'],
+	// 		'elementify_framework_fonts_base_typo',
+	// 		[
+	// 			'font-family'   => 'default',
+	// 			'font-weight'   => '400',
+	// 			'subsets'       => ['latin'],
+	// 			'font-size'     => [
+	// 				'desktop'   => '30px',
+	// 			],
+	// 			'line-height'   => [
+	// 				'desktop'   => '13px',
+	// 			],
+	// 			'letter-spacing'=> [
+	// 				'desktop'   => '1.3px',
+	// 			],
+	// 			'font-style'    => 'normal',
+	// 			'text-transform'    => 'none',
+	// 			'text-decoration'   => 'none',
+	// 		]
+    // ));
+    // echo '</pre>';
     ?>
-    
-    <?php
+
+        <?php
     /**
      * Functions hooked into elementify/after_header action
      *
