@@ -1,6 +1,6 @@
 // Styles
-import './index.css';
-import './responsive.css';
+import "./index.css";
+import "./responsive.css";
 
 // Scripts
-import './navigation';
+import "./navigation";

@@ -15,8 +15,7 @@ class Elementify {
 		Utils::get_instance();
 		Customizer::get_instance();
 		Menus::get_instance();
-
-		new Sidebars();
+		Sidebars::get_instance();
 		
 		$this->setup_hooks();
 	}
