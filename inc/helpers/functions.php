@@ -50,8 +50,7 @@ if ( ! function_exists( 'elementify_site_title' ) ) {
         $defaults   = array(
             'title'       => '<a href="%1$s">%2$s</a>',
             'title_class' => 'ele-site-title',
-            'home_wrap'   => '<h1 class="%1$s">%2$s</h1>',
-            'single_wrap' => '<h2 class="%1$s">%2$s</h2>',
+            'wrapper'     => '<div class="%1$s" itemprop="name">%2$s</div>',
             'condition'   => ( is_front_page() || is_home() ) && ! is_page(),
         );
         $args       = wp_parse_args( $args, $defaults );
@@ -65,8 +64,8 @@ if ( ! function_exists( 'elementify_site_title' ) ) {
         $args       = apply_filters( 'elementify_site_title_args', $args, $defaults );
         $contents   = sprintf( $args['title'], esc_url( get_home_url( null, '/' ) ), esc_html( get_bloginfo( 'name' ) ) );
         $classname  = $args['title_class'];
-        $wrap       = $args['condition'] ? 'home_wrap' : 'single_wrap';
-        $html       = sprintf( $args[ $wrap ], $classname, $contents );
+        $wrap       = $args['wrapper'];
+        $html       = sprintf( $wrap, $classname, $contents );
 
         /**
          * Filters the arguments for `elementify_site_title()`.
@@ -100,7 +99,7 @@ if ( ! function_exists( 'elementify_site_description' ) ) {
      */
     function elementify_site_description( $echo = true ) {
         $description    = get_bloginfo( 'description' );
-        $wrapper        = '<div class="ele-site-description">%s</div><!-- .ele-site-description -->';
+        $wrapper        = '<p class="ele-site-description" itemprop="description">%s</p><!-- .ele-site-description -->';
         $html           = sprintf( $wrapper, esc_html( $description ) );
 
         /**
@@ -170,13 +169,13 @@ if ( ! function_exists( 'elementify_site_identify' ) ) {
      */
     function elementify_site_identify() {
         ?>
-        <div class="ele-site-identity">
-            <?php
+<div class="ele-site-identity">
+    <?php
             elementify_site_title(); // Site title.
             elementify_site_description(); // Site description.
             ?>
-        </div>
-        <?php
+</div>
+<?php
     }
 }
 
@@ -215,9 +214,10 @@ if ( ! function_exists( 'elementify_primary_navigation' ) ) {
         // }
         ?>
 
-        <nav id="site-navigation" class="<?php echo esc_attr( implode( ' ', $main_navigation ) ); ?>" aria-label="<?php esc_attr_e( 'Horizontal', 'elementify' ); ?>" role="navigation">
+<nav id="site-navigation" class="<?php echo esc_attr( implode( ' ', $main_navigation ) ); ?>"
+    aria-label="<?php esc_attr_e( 'Horizontal', 'elementify' ); ?>" role="navigation">
 
-            <?php
+    <?php
             wp_nav_menu(
                 array(
 					'theme_location'	=> 'menu-1',
@@ -229,11 +229,13 @@ if ( ! function_exists( 'elementify_primary_navigation' ) ) {
                 )
             );
             ?>
-        </nav>
+</nav>
 
-        <div class="ele-trigger-menu ele-d-block ele-z-30 ele-d-sm-none"><div class="ele-hamburger-menu"><span></span><span></span><span></span><span></span></div></div>
+<div class="ele-trigger-menu ele-d-block ele-z-30 ele-d-sm-none">
+    <div class="ele-hamburger-menu"><span></span><span></span><span></span><span></span></div>
+</div>
 
-        <?php
+<?php
     }
 }
 

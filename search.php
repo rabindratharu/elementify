@@ -7,6 +7,12 @@
  * @package Elementify
  */
 
+namespace Elementify;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header();
 ?>
 
@@ -20,7 +26,7 @@ do_action( 'elementify/before_content' );
 
 <main id="main" class="site-main">
 
-	<?php
+    <?php
 	/**
 	 * Functions hooked into elementify/before_content action
 	 *
@@ -28,9 +34,9 @@ do_action( 'elementify/before_content' );
 	do_action( 'elementify/content_top' );
 	?>
 
-	<?php if ( have_posts() ) : ?>
+    <?php if ( have_posts() ) : ?>
 
-		<?php
+    <?php
 		/**
 		 * Functions hooked into elementify/content/before_loop action
 		 * 
@@ -64,7 +70,7 @@ do_action( 'elementify/before_content' );
 	endif;
 	?>
 
-	<?php
+    <?php
 	/**
 	 * Functions hooked into elementify/content_bottom action
 	 *
@@ -84,4 +90,3 @@ do_action( 'elementify/after_content' );
 ?>
 
 <?php get_footer(); ?>
-

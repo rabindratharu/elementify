@@ -7,6 +7,12 @@
  * @package Elementify
  */
 
+namespace Elementify;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header();
 ?>
 
@@ -20,7 +26,7 @@ do_action( 'elementify/before_content' );
 
 <main id="main" class="site-main ele-d-flex ele-flex-col ele-flex-column">
 
-	<?php
+    <?php
 	/**
 	 * Functions hooked into elementify/post/content/before_loop action
 	 *

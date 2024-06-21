@@ -7,6 +7,12 @@
  * @package Elementify
  */
 
+namespace Elementify;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header();
 ?>
 
@@ -30,7 +36,7 @@ do_action( 'elementify/content_top' );
 
 <?php if ( have_posts() ) : ?>
 
-	<?php
+<?php
 	/**
 	 * Functions hooked into elementify/content/before_loop action
 	 * 

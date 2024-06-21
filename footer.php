@@ -9,9 +9,14 @@
  * @package Elementify
  */
 
+namespace Elementify;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 ?>
 
-    <?php
+<?php
     /**
      * Functions hooked into elementify/before_footer action
      *
@@ -19,7 +24,7 @@
     do_action( 'elementify/before_footer' );
     ?>
 
-    <?php
+<?php
     /**
      * Functions hooked into elementify/footer action
      *
@@ -28,7 +33,7 @@
     do_action( 'elementify/footer' );
     ?>
 
-    <?php
+<?php
     /**
      * Functions hooked into elementify/after_footer action
      *
@@ -51,5 +56,5 @@ do_action( 'elementify/body_bottom' );
 <?php wp_footer(); ?>
 
 </body>
-</html>
 
+</html>

@@ -7,7 +7,11 @@
 
 namespace Elementify\Inc;
 
+use Elementify\Inc\Traits\Singleton;
+
 class Utils {
+
+	use Singleton;
 
 	/**
 	 * A utility for constructing className strings conditionally.
@@ -89,8 +93,6 @@ class Utils {
 
 		return strtr( rawurlencode( $str ), $revert );
 	}
-
-	
 
 	/**
 	 * Flatten a multi-dimensional array into a single level.
@@ -285,4 +287,103 @@ class Utils {
 	public static function the_customizer_url( $location ) {
 		echo esc_url( self::customizer_url( $location ) );
 	}
+
+	/**
+	 * Get any necessary schema definition.
+	 *
+	 * @param string $context The element to target.
+	 * @return string Our final attribute to add to the element.
+	 */
+	public static function schema_org_definitions( $context ) {
+		$data = false;
+
+		if ( 'html' === $context ) {
+			$type = 'WebPage';
+
+			if ( class_exists( 'woocommerce' ) && is_product() ) {
+				$type = 'IndividualProduct';
+			} elseif ( is_home() || is_archive() || is_attachment() || is_tax() || is_single() ) {
+				$type = 'Blog';
+			} elseif ( is_author() ) {
+				$type = 'ProfilePage';
+			}
+
+			if ( is_search() ) {
+				$type = 'SearchResultsPage';
+			}
+
+			$type = apply_filters( 'elementify_html_itemtype', $type );
+
+			$data = sprintf(
+				'itemtype="https://schema.org/%s" itemscope',
+				esc_html( $type )
+			);
+		}
+
+		if ( 'header' === $context ) {
+			$data = 'itemtype="https://schema.org/WPHeader" itemscope';
+		}
+
+		if ( 'navigation' === $context ) {
+			$data = 'itemtype="https://schema.org/SiteNavigationElement" itemscope';
+		}
+		
+		if ( 'logo' === $context ) {
+			$data = 'itemtype="https://schema.org/Organization" itemscope';
+		}
+
+		if ( 'article' === $context ) {
+			$type = apply_filters( 'elementify_article_itemtype', 'CreativeWork' );
+
+			$data = sprintf(
+				'itemtype="https://schema.org/%s" itemscope',
+				esc_html( $type )
+			);
+		}
+
+		if ( 'post-author' === $context ) {
+			$data = 'itemprop="author" itemtype="https://schema.org/Person" itemscope';
+		}
+
+		if ( 'comment-body' === $context ) {
+			$data = 'itemtype="https://schema.org/Comment" itemscope';
+		}
+
+		if ( 'comment-author' === $context ) {
+			$data = 'itemprop="author" itemtype="https://schema.org/Person" itemscope';
+		}
+
+		if ( 'sidebar' === $context ) {
+			$data = 'itemtype="https://schema.org/WPSideBar" itemscope';
+		}
+
+		if ( 'footer' === $context ) {
+			$data = 'itemtype="https://schema.org/WPFooter" itemscope';
+		}
+		if ( 'video' === $context ) {
+			$data = 'itemprop="video" itemtype="http://schema.org/VideoObject" itemscope';
+		}
+
+		if ( $data ) {
+			return apply_filters( "elementify_{$context}_schema", $data );
+		}
+	}
+	/**
+	 * Print attribute string
+	 *
+	 * @param $attributes
+	 */
+	public static function the_microdata( $attributes ) {
+		echo self::schema_org_definitions( $attributes );
+	}
+
+	/**
+	 * Return attribute string
+	 *
+	 * @param $attributes
+	 */
+	public static function microdata( $attributes ) {
+		return self::schema_org_definitions( $attributes );
+	}
+
 }

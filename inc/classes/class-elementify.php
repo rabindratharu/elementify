@@ -11,10 +11,12 @@ class Elementify {
 
 	public function __construct() {
 
+		Assets::get_instance();
+		Utils::get_instance();
+
 		new Menus();
 		new Sidebars();
 		new Customizer();
-		new Assets();
 		
 		$this->setup_hooks();
 	}

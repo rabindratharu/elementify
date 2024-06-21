@@ -10,6 +10,12 @@
  * @package Elementify
  */
 
+namespace Elementify;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /*
  * If the current post is protected by a password and
  * the visitor has not yet entered the password we will
@@ -30,7 +36,7 @@ do_action( 'elementify/before_comments' );
 
 <div id="comments" class="comments-area">
 
-	<?php
+    <?php
     /**
      * Functions hooked into elementify/comments_top action
      *
@@ -38,7 +44,7 @@ do_action( 'elementify/before_comments' );
     do_action( 'elementify/comments_top' );
     ?>
 
-	<?php
+    <?php
     /**
      * Functions hooked into elementify/comments action
 	 * 

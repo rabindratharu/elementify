@@ -3143,7 +3143,7 @@ Header: Logo
 }
 .ele-site-identity .ele-site-title {
   --ele-font-weight: 700;
-  --ele-font-size: 25px;
+  --ele-font-size: 30px;
   --ele-line-height: 1.5;
   color: var(--ele-accent-color);
   text-decoration: none;

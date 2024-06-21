@@ -7,14 +7,26 @@
 
 namespace Elementify\Inc;
 
+use Elementify\Inc\Traits\Singleton;
+
+/**
+ * Class Assets.
+ */
 class Assets {
 
+	use Singleton;
+
+	/**
+	 * Constructor.
+	 */
 	public function __construct() {
 
-		// load class.
 		$this->setup_hooks();
 	}
 
+	/**
+	 * Initialize hooks.
+	 */
 	private function setup_hooks() {
 
 		/**

@@ -9,6 +9,12 @@
  * @package Elementify
  */
 
+namespace Elementify;
+use Elementify\Inc\Utils;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 ?>
 
 <!doctype html>
@@ -21,7 +27,7 @@
 do_action( 'elementify/before_html' );
 ?>
 
-<html <?php language_attributes(); ?> <?php elementify_html_attributes(); ?>>
+<html <?php language_attributes(); ?> <?php elementify_html_attributes(); ?> <?php Utils::the_microdata( 'html' ); ?>>
 
 <head>
 
