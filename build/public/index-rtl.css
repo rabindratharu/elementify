@@ -19,7 +19,7 @@ License: GNU General Public License v2 or later
   --ele-font-size: 16px;
   --ele-text-transform: none;
   --ele-text-decoration: none;
-  --ele-line-height: 1.65;
+  --ele-line-height: 1.35;
   --ele-letter-spacing: 0px;
   --ele-frame-size: 4px;
   --ele-container-width-base: calc(90vw - var(--ele-frame-size, 0px) * 2);
@@ -673,36 +673,36 @@ h6 a {
 }
 
 h1 {
-  --ele-font-weight: 600;
-  --ele-font-size: 40px;
+  --ele-font-weight: 700;
+  --ele-font-size: 34px;
   --ele-line-height: 1.5;
   color: var(--ele-accent-color);
 }
 
 h2 {
-  --ele-font-weight: 600;
-  --ele-font-size: 35px;
+  --ele-font-weight: 700;
+  --ele-font-size: 30px;
   --ele-line-height: 1.5;
   color: var(--ele-accent-color);
 }
 
 h3 {
   --ele-font-weight: 600;
-  --ele-font-size: 30px;
+  --ele-font-size: 24px;
   --ele-line-height: 1.5;
   color: var(--ele-accent-color);
 }
 
 h4 {
   --ele-font-weight: 600;
-  --ele-font-size: 25px;
+  --ele-font-size: 20px;
   --ele-line-height: 1.5;
   color: var(--ele-accent-color);
 }
 
 h5 {
   --ele-font-weight: 600;
-  --ele-font-size: 20px;
+  --ele-font-size: 18px;
   --ele-line-height: 1.5;
   color: var(--ele-accent-color);
 }
@@ -710,7 +710,7 @@ h5 {
 h6 {
   --ele-font-weight: 600;
   --ele-font-size: 16px;
-  --ele-line-height: 1.5;
+  --ele-line-height: 1.35;
   color: var(--ele-accent-color);
 }
 
