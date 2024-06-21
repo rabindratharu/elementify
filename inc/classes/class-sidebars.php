@@ -7,22 +7,24 @@
 
 namespace Elementify\Inc;
 
+use Elementify\Inc\Traits\Singleton;
+
 /**
- * Class Assets
+ * Class Sidebars
  */
 class Sidebars {
 
+	use Singleton;
+
 	/**
-	 * Construct method.
+	 * Constructor.
 	 */
 	public function __construct() {
 		$this->setup_hooks();
 	}
 
 	/**
-	 * To register action/filter.
-	 *
-	 * @return void
+	 * Initialize hooks.
 	 */
 	private function setup_hooks() {
 

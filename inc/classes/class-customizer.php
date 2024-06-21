@@ -7,13 +7,17 @@
 
 namespace Elementify\Inc;
 
+use Elementify\Inc\Traits\Singleton;
+
 /**
  * Class Customizer
  */
 class Customizer {
 
+	use Singleton;
+
 	/**
-	 * Construct method.
+	 * Constructor.
 	 */
 	public function __construct() {
 		
@@ -21,7 +25,7 @@ class Customizer {
 	}
 
 	/**
-	 * To register action/filter.
+	 * Initialize hooks.
 	 *
 	 * @return void
 	 */

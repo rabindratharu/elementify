@@ -10,6 +10,7 @@
  */
 
 namespace Elementify;
+
 use Elementify\Inc\Utils;
 
 if ( ! defined( 'ABSPATH' ) ) {

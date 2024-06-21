@@ -13,10 +13,10 @@ class Elementify {
 
 		Assets::get_instance();
 		Utils::get_instance();
+		Customizer::get_instance();
+		Menus::get_instance();
 
-		new Menus();
 		new Sidebars();
-		new Customizer();
 		
 		$this->setup_hooks();
 	}
