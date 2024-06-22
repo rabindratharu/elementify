@@ -293,7 +293,7 @@
 	# Display
 	--------------------------------------------------------------*/
   .ele-d-sm-none {
-    display: none !important;
+    display: none;
   }
 
   .ele-d-sm-inline-block {
@@ -850,7 +850,7 @@
 	# Display
 	--------------------------------------------------------------*/
   .ele-d-md-none {
-    display: none !important;
+    display: none;
   }
 
   .ele-d-md-inline-block {
@@ -1477,7 +1477,7 @@
 	# Display
 	--------------------------------------------------------------*/
   .ele-d-lg-none {
-    display: none !important;
+    display: none;
   }
 
   .ele-d-lg-inline-block {

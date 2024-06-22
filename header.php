@@ -78,9 +78,6 @@ do_action( 'elementify/before_html' );
  */
 do_action( 'elementify/body_top' );
 ?>
-    <div class="ele-preloader-wrap ele-preloader-preset1" style="display: none;">
-        <div class="ele-preloader-1"></div>
-    </div>
     <div id="page" class="site ele-position-relative ele-position-absolute-after">
 
         <?php

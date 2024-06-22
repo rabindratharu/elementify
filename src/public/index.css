@@ -2025,7 +2025,7 @@ object {
 # Display
 --------------------------------------------------------------*/
 .ele-d-none {
-  display: none !important;
+  display: none;
 }
 
 .ele-d-inline-block {
