@@ -618,32 +618,6 @@ add_filter(
 // }, 10, 2 );
 
 
-
-
-if( !function_exists( 'bozu_fonts_url' ) ) :
-
-    //Google Fonts URL
-    function bozu_fonts_url(){
-
-        $font_families = array(
-            'Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700',
-            'Gilda+Display',
-            'Herr+Von+Muellerhoff'
-        );
-
-        $fonts_url = add_query_arg( array(
-            'family' => implode( '&family=', $font_families ),
-            'display' => 'swap',
-        ), 'https://fonts.googleapis.com/css2' );
-
-        return esc_url_raw($fonts_url);
-
-    }
-
-endif;
-
-
-
 if ( ! function_exists( 'elementify_blog_id' ) ) {
 	/**
 	 * Get blog id, support multisite
@@ -697,3 +671,33 @@ if ( ! function_exists( 'elementify_footer_widgets_show' ) ) {
     }
 }
 add_filter( 'customize_section_active', 'elementify_footer_widgets_show', 15, 2 );
+
+
+if ( ! function_exists( 'elementify_get_post_id' ) ) {
+	/**
+	 * Store the post ids.
+	 *
+	 * Since blog page takes the first post as its id,
+	 * here we are storing the id of the post and for the blog page,
+	 * storing its value via getting the specific page id through:
+	 * `get_option( 'page_for_posts' )`
+	 *
+	 * @return false|int|mixed|string|void
+	 */
+	function elementify_get_post_id() {
+
+		$post_id        = '';
+		$page_for_posts = get_option( 'page_for_posts' );
+
+		// For single post and pages.
+		if ( is_singular() ) {
+			$post_id = get_the_ID();
+		} elseif ( ! is_front_page() && is_home() && $page_for_posts ) { // For the static blog page.
+
+			$post_id = $page_for_posts;
+		}
+
+		// Return the post ID.
+		return $post_id;
+	}
+}
