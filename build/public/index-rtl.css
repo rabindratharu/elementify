@@ -2120,7 +2120,9 @@ object {
 .ele-visibility.ele-d-block.ele-display {
   opacity: 1;
 }
-
+.ele-hidden-accessible {
+  display: none;
+}
 /*--------------------------------------------------------------
 # Flex
 --------------------------------------------------------------*/
@@ -8065,6 +8067,19 @@ form textarea {
 }
 .ele-header-row[data-header-lg="true"] {
   display: none;
+}
+
+.ele-has-scroll-reveal .post,
+.ele-has-scroll-reveal .ele-sidebar .widget,
+.ele-has-scroll-reveal .ele-pagination-wrap {
+  opacity: 0;
+  visibility: hidden;
+}
+.ele-has-scroll-reveal.ele-reveal-item .post,
+.ele-has-scroll-reveal.ele-reveal-item .ele-sidebar .widget,
+.ele-has-scroll-reveal.ele-reveal-item .ele-pagination-wrap {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*!***************************************************************************************************************************************************************************************************************!*\
