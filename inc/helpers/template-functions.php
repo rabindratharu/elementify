@@ -63,10 +63,10 @@ if ( ! function_exists( 'elementify_head_meta' ) ) {
      */
     function elementify_head_meta() {
         ?>
-        <meta charset="<?php bloginfo( 'charset' ); ?>">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="profile" href="https://gmpg.org/xfn/11">
-        <?php
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<?php
     }
 }
 
@@ -117,8 +117,8 @@ if ( ! function_exists( 'elementify_skip_link' ) ) {
      */
     function elementify_skip_link() {
         ?>
-        <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'elementify' ); ?></a>
-        <?php
+<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'elementify' ); ?></a>
+<?php
     }
 }
 
@@ -130,7 +130,7 @@ if ( ! function_exists( 'elementify_skip_link' ) ) {
 */
 add_action( 'elementify/header', 'elementify_header', 						10 );
 add_action( 'elementify/after_header', 'elementify_header_separator', 		10 );
-add_action( 'elementify/after_header', 'elementify_header_site_overlay', 	15 );
+add_action( 'elementify/body_bottom', 'elementify_header_site_overlay', 	10 );
 
 if ( ! function_exists( 'elementify_header' ) ) {
 
@@ -500,8 +500,8 @@ if ( ! function_exists( 'elementify_comments_element' ) ) {
 						? get_theme_mod( 'elementify_framework_single_post_comments_form_position',elementify_framework_get_theme_options()['values']['default'] )
 						: get_theme_mod( 'elementify_framework_single_page_comments_form_position',elementify_framework_get_theme_options()['values']['default'] );
 			?>
-			<h2 class="comments-title">
-				<?php
+<h2 class="comments-title">
+    <?php
 				$elementify_comment_count = get_comments_number();
 				if ( 1 == $elementify_comment_count ) {
 					echo esc_html__( 'One Comment', 'elementify' );
@@ -510,18 +510,18 @@ if ( ! function_exists( 'elementify_comments_element' ) ) {
 					printf( esc_html__( '%s Comments', 'elementify' ), $elementify_comment_count );
 				}
 				?>
-			</h2><!-- .comments-title -->
+</h2><!-- .comments-title -->
 
-			<?php 
+<?php 
 			if ( $position['desktop'] === 'above' ) {
 				comment_form();
 			}
 			?>
 
-			<?php the_comments_navigation(); ?>
+<?php the_comments_navigation(); ?>
 
-			<ol class="comment-list">
-				<?php
+<ol class="comment-list">
+    <?php
 				wp_list_comments(
 					array(
 						'style'      => 'ol',
@@ -529,16 +529,16 @@ if ( ! function_exists( 'elementify_comments_element' ) ) {
 					)
 				);
 				?>
-			</ol><!-- .comment-list -->
+</ol><!-- .comment-list -->
 
-			<?php
+<?php
 			the_comments_navigation();
 
 			// If comments are closed and there are comments, let's leave a little note, shall we?
 			if ( ! comments_open() ) :
 				?>
-				<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'elementify' ); ?></p>
-				<?php
+<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'elementify' ); ?></p>
+<?php
 			endif;
 
 			if ( $position['desktop'] === 'default' ) {
@@ -567,10 +567,10 @@ if ( ! function_exists( 'elementify_404_page_header' ) ) {
      */
     function elementify_404_page_header() {
 		?>
-		<header class="page-header">
-			<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'elementify' ); ?></h1>
-		</header><!-- .page-header -->
-		<?php
+<header class="page-header">
+    <h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'elementify' ); ?></h1>
+</header><!-- .page-header -->
+<?php
     }
 }
 
@@ -581,19 +581,20 @@ if ( ! function_exists( 'elementify_404_conent' ) ) {
      */
     function elementify_404_conent() {
 		?>
-		<div class="page-content">
-			<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'elementify' ); ?></p>
+<div class="page-content">
+    <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'elementify' ); ?>
+    </p>
 
-				<?php
+    <?php
 				get_search_form();
 
 				the_widget( 'WP_Widget_Recent_Posts' );
 				?>
 
-				<div class="widget widget_categories">
-					<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'elementify' ); ?></h2>
-					<ul>
-						<?php
+    <div class="widget widget_categories">
+        <h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'elementify' ); ?></h2>
+        <ul>
+            <?php
 						wp_list_categories(
 							array(
 								'orderby'    => 'count',
@@ -604,10 +605,10 @@ if ( ! function_exists( 'elementify_404_conent' ) ) {
 							)
 						);
 						?>
-					</ul>
-				</div><!-- .widget -->
+        </ul>
+    </div><!-- .widget -->
 
-				<?php
+    <?php
 				/* translators: %1$s: smiley */
 				$elementify_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'elementify' ), convert_smilies( ':)' ) ) . '</p>';
 				the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$elementify_archive_content" );
@@ -615,8 +616,8 @@ if ( ! function_exists( 'elementify_404_conent' ) ) {
 				the_widget( 'WP_Widget_Tag_Cloud' );
 				?>
 
-		</div><!-- .page-content -->
-		<?php
+</div><!-- .page-content -->
+<?php
     }
 }
 
@@ -637,4 +638,3 @@ if ( ! function_exists( 'elementify_footer' ) ) {
 		get_template_part( 'template-parts/footer/copyright' );
     }
 }
-

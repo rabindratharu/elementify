@@ -7434,9 +7434,19 @@ form textarea {
   margin-right: auto;
 }
 .ele-off-canvas[data-toggle-behaviour="drawer-right"] .ele-modal-inner,
-.ele-off-canvas[data-toggle-behaviour="drawer-left"] .ele-modal-inner {
+.ele-off-canvas[data-toggle-behaviour="drawer-left"] .ele-modal-inner,
+#ele-popup-box .ele-modal-inner {
   width: 500px;
   max-width: 100%;
+}
+#ele-popup-box .ele-modal-inner {
+  max-height: calc(100% - 500px);
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  overflow-y: auto;
 }
 
 .ele-modal .ele-modal-actions {
@@ -8069,7 +8079,7 @@ form textarea {
   display: none;
 }
 
-.ele-has-scroll-reveal .post,
+/* .ele-has-scroll-reveal .post,
 .ele-has-scroll-reveal .ele-sidebar .widget,
 .ele-has-scroll-reveal .ele-pagination-wrap {
   opacity: 0;
@@ -8080,7 +8090,7 @@ form textarea {
 .ele-has-scroll-reveal.ele-reveal-item .ele-pagination-wrap {
   opacity: 1;
   visibility: visible;
-}
+} */
 
 /*!***************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/public/responsive.css ***!
