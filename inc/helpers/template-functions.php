@@ -130,7 +130,7 @@ if ( ! function_exists( 'elementify_skip_link' ) ) {
 */
 add_action( 'elementify/header', 'elementify_header', 						10 );
 add_action( 'elementify/after_header', 'elementify_header_separator', 		10 );
-add_action( 'elementify/body_bottom', 'elementify_header_site_overlay', 	10 );
+//add_action( 'elementify/body_bottom', 'elementify_header_site_overlay', 	10 );
 
 if ( ! function_exists( 'elementify_header' ) ) {
 
