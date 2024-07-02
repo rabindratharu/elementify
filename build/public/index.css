@@ -7434,11 +7434,11 @@ form textarea {
 .ele-off-canvas[data-toggle-behaviour="drawer-right"] .ele-modal-inner,
 .ele-off-canvas[data-toggle-behaviour="drawer-left"] .ele-modal-inner,
 #ele-popup-box .ele-modal-inner {
-  width: 500px;
+  width: 60%;
   max-width: 100%;
 }
 #ele-popup-box .ele-modal-inner {
-  max-height: calc(100% - 500px);
+  max-height: calc(100% - 30%);
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
