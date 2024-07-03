@@ -6900,7 +6900,7 @@ form textarea {
 }
 .ele-off-canvas[data-toggle-behaviour="drawer-right"] .ele-modal-inner,
 .ele-off-canvas[data-toggle-behaviour="drawer-left"] .ele-modal-inner {
-  width: 60%;
+  width: 30%;
   max-width: 100%;
 }
 .ele-popup-box {
