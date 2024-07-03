@@ -6915,14 +6915,41 @@ form textarea {
   transform: translate(-50%, -50%);
   visibility: hidden;
   opacity: 0;
-  width: 34%;
+  width: 65%;
+  min-height: 360px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
 }
-.ele-popup-box .ele-modal-inner {
-  padding: 48px;
-  background-color: #fff;
+.ele-popup-box .ele-modal-inner .post .ele-featured-image {
+  height: 100%;
+}
+.ele-popup-box .ele-modal-inner .post .ele-card-content {
+  padding: 35px 20px 15px 0;
+}
+.ele-popup-box .ele-modal-inner .ele-posts-wrap {
+  height: 100%;
+}
+.ele-popup-box .ele-modal-inner .ele-posts-wrap[data-layout="1"] {
   background-size: cover;
   background-position: center;
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  background-repeat: no-repeat;
+}
+/* .ele-popup-box .ele-modal-inner .post {
+  overflow: inherit;
+} */
+.ele-popup-box .ele-modal-actions {
+  z-index: 9;
+}
+.ele-popup-box[data-preset="2"] .ele-modal-inner::after {
+  z-index: 2;
+  opacity: 0.5;
+}
+.ele-popup-box[data-preset="2"] .ele-modal-inner .post {
+  position: relative;
+  z-index: 9;
+}
+.ele-popup-box[data-preset="2"] .ele-modal-actions {
+  z-index: 10;
 }
 
 .ele-modal .ele-modal-actions {
@@ -6964,6 +6991,7 @@ form textarea {
   overflow: hidden;
   padding-right: var(--scrollbar-width, 17px);
 }
+
 /*--------------------------------------------------------------
 # Header Search
 -------------------------------------------------------------- */
