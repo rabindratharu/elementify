@@ -7529,6 +7529,9 @@ form textarea {
   background-position: center;
   background-repeat: no-repeat;
 }
+.ele-popup-box .post > .ele-column-content {
+  overflow-y: auto;
+}
 /* .ele-popup-box .ele-modal-inner .post {
   overflow: inherit;
 } */
