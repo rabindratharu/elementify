@@ -81,6 +81,9 @@
     .ele-column:nth-of-type(even)::after {
     display: none;
   }
+  .ele-modal-visible {
+    --scrollbar-width: 0;
+  }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
