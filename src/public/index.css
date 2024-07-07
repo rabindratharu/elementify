@@ -6944,17 +6944,16 @@ form textarea {
   top: 50%;
   left: 50%;
   z-index: 999999;
-  min-width: calc(100% - 64px);
   max-height: calc(100% - 64px);
   overflow-y: auto;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   visibility: hidden;
   opacity: 0;
-  width: 65%;
+  width: 50%;
   min-height: 360px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  box-shadow: var(--ele-box-shadow);
 }
 .ele-popup-box .ele-modal-inner .post .ele-featured-image {
   height: 100%;

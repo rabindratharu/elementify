@@ -1315,8 +1315,7 @@
   } */
 
   .ele-popup-box {
-    min-width: calc(100% - 120px) !important;
-    /* max-height: calc(100% - 120px); */
+    max-height: calc(100% - 120px);
   }
 }
 
@@ -2031,9 +2030,5 @@
   .ele-d-grid[data-layout="3"][data-column-divider="on"]
     .ele-column:nth-of-type(5n + 5)::after {
     display: none;
-  }
-
-  .ele-popup-box {
-    min-width: auto !important;
   }
 }
