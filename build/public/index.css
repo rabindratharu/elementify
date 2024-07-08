@@ -7516,6 +7516,7 @@ form textarea {
 }
 .ele-popup-box .ele-modal-inner .post .ele-featured-image {
   height: 100%;
+  border-radius: 0;
 }
 .ele-popup-box .ele-modal-inner .post .ele-card-content {
   padding: 50px;
