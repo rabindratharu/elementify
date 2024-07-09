@@ -7344,32 +7344,35 @@ form textarea {
   }
 }
 
-/*loader-26*/
-.loader-26 {
-  width: 48px;
-  height: 48px;
+/*loader-4*/
+.ele-preloader-wrap[data-preset="4"] {
   display: inline-block;
-  position: relative;
+  height: 100%;
+  width: 100%;
+  position: fixed;
 }
-.loader-26::after,
-.loader-26::before {
+.ele-preloader-wrap[data-preset="4"]::after,
+.ele-preloader-wrap[data-preset="4"]::before {
   content: "";
   width: 48px;
   height: 48px;
   border-radius: 50%;
   background: #fff;
   position: absolute;
-  right: 0;
-  top: 0;
-  -webkit-animation: animloader14 2s linear infinite;
-  animation: animloader14 2s linear infinite;
+  -webkit-animation: preloader4 2s linear infinite;
+          animation: preloader4 2s linear infinite;
+  -webkit-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  top: 50%;
+  right: 50%;
 }
-.loader-26::after {
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
+.ele-preloader-wrap[data-preset="4"]::after {
+  -webkit-animation: preloader4 1s linear infinite;
+          animation: preloader4 1s linear infinite;
 }
 
-@-webkit-keyframes animloader14 {
+@-webkit-keyframes preloader4 {
   0% {
     -webkit-transform: scale(0);
             transform: scale(0);
@@ -7382,7 +7385,7 @@ form textarea {
   }
 }
 
-@keyframes animloader14 {
+@keyframes preloader4 {
   0% {
     -webkit-transform: scale(0);
             transform: scale(0);
