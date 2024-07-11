@@ -1315,7 +1315,7 @@
   } */
 
   .ele-popup-box {
-    max-height: calc(100% - 120px);
+    height: calc(100% - 50%);
   }
 }
 
