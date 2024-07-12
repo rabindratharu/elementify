@@ -184,14 +184,14 @@ class Bizness_Helper {
         global $post;
 
         // Check meta first to override and return (prevents filters from overriding meta)
-        $sidebar = get_post_meta( $post->ID, 'business_aarambha_sidebar_layout', true );
+        $sidebar = get_post_meta( $post->ID, 'elementify_framework_sidebar_layout', true );
         if ( $sidebar && $sidebar != 'default' ) {
             return $sidebar;
         }
         if ( is_single() ) {
             $sidebar = get_theme_mod( 'post_sidebar_layout', 'right' );
         } elseif ( is_page() ) {
-            $sidebar = get_theme_mod( 'business_aarambha_page_sidebar_layout_layout', 'right' );
+            $sidebar = get_theme_mod( 'elementify_framework_page_sidebar_layout_layout', 'right' );
         }
         else {
             $sidebar = get_theme_mod( 'blog_sidebar_layout', 'right' );
