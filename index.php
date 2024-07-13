@@ -37,6 +37,8 @@ do_action( 'elementify/before_content' );
  * @hooked elementify_posts_wrapper_start - 10
  */
 do_action( 'elementify/content_top' );
+// Initialize the duration variable
+$duration = 400; // Starting value in milliseconds
 ?>
 
 <?php if ( have_posts() ) : ?>
@@ -57,7 +59,12 @@ do_action( 'elementify/content_top' );
 		* If you want to override this in a child theme, then include a file
 		* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 		*/
-		get_template_part( 'template-parts/content', get_post_type() );
+		get_template_part( 'template-parts/content', get_post_type(), [
+			'duration' => $duration
+		] );
+
+		// Increment the duration for the next iteration
+        $duration += 200; // Increase by 500 milliseconds
 
 	endwhile;
 
