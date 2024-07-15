@@ -6,11 +6,12 @@
  *
  * @package Elementify
  */
+use Elementify\Inc\Utils;
 
 $the_post_id   = get_the_ID();
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('ele-column'); ?> data-aos="fade-up" data-aos-offset="200"
-    data-aos-delay="100" data-aos-duration="<?php echo esc_attr( $args['duration']); ?>" data-aos-once="true">
+<article id="post-<?php the_ID(); ?>" <?php post_class('ele-column'); ?>
+    <?php Utils::print_attribute_string(elementify_get_scroll_reveal_attributes($args)); ?>>
 
     <?php
 	/**

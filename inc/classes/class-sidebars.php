@@ -7,6 +7,7 @@
 
 namespace Elementify\Inc;
 
+use Elementify\Inc\Utils;
 use Elementify\Inc\Traits\Singleton;
 
 /**
@@ -46,8 +47,7 @@ class Sidebars {
 				'name'          => esc_html__( 'Sidebar', 'elementify' ),
 				'id'            =>'sidebar-1',
 				'description'   => esc_html__( 'Add widgets here.', 'elementify' ),
-				'before_widget' => '<div id="%1$s" class="widget %2$s" data-aos="fade-up" data-aos-offset="200"
-    data-aos-delay="50" data-aos-duration="1000" data-aos-once="true">',
+				'before_widget' => '<div id="%1$s" class="widget %2$s" '.Utils::render_attribute_string(elementify_get_scroll_reveal_attributes()).'>',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
