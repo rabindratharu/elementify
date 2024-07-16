@@ -711,9 +711,12 @@ if ( ! function_exists( 'elementify_get_scroll_reveal_attributes' ) ) {
 	function elementify_get_scroll_reveal_attributes( $user_args = [] ) {
 
         $args = [
-            'data-aos'              => 'fade-in',
-            'data-aos-delay'        => '50',
-            'data-aos-duration'     => '1000'
+            'data-aos'          => 'fade-in',
+            'data-aos-delay'    => '0',
+            'data-aos-duration' => '1000',
+            'data-aos-once'		=> 'false',
+			'data-aos-easing'	=> 'ease-in-out'
+
         ];
         
         $merged_args = wp_parse_args( $user_args, $args );

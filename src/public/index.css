@@ -7559,3 +7559,10 @@ form textarea {
   opacity: 1;
   visibility: visible;
 } */
+
+/*--------------------------------------------------------------
+# Scroll Reveal
+-------------------------------------------------------------- */
+html.sr .ele-has-scroll-reveal .ele-column {
+  visibility: hidden;
+}
