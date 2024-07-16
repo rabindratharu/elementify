@@ -10,8 +10,7 @@ use Elementify\Inc\Utils;
 
 $the_post_id   = get_the_ID();
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('ele-column'); ?>
-    <?php Utils::print_attribute_string(elementify_get_scroll_reveal_attributes()); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('ele-column'); ?>>
 
     <?php
 	/**

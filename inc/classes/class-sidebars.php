@@ -47,7 +47,7 @@ class Sidebars {
 				'name'          => esc_html__( 'Sidebar', 'elementify' ),
 				'id'            =>'sidebar-1',
 				'description'   => esc_html__( 'Add widgets here.', 'elementify' ),
-				'before_widget' => '<div id="%1$s" class="widget %2$s" '.Utils::render_attribute_string(elementify_get_scroll_reveal_attributes()).'>',
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',

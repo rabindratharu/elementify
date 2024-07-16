@@ -37,9 +37,6 @@ do_action( 'elementify/before_content' );
  * @hooked elementify_posts_wrapper_start - 10
  */
 do_action( 'elementify/content_top' );
-// Initialize the duration variable
-$duration 	= 1000;
-$delay 		= 0;
 ?>
 
 <?php if ( have_posts() ) : ?>
@@ -60,14 +57,7 @@ $delay 		= 0;
 		* If you want to override this in a child theme, then include a file
 		* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 		*/
-		get_template_part( 'template-parts/content', get_post_type(), [
-			'data-aos-duration' => $duration,
-			'data-aos-delay' 	=> $delay, // Add a delay to the animations for a more natural flow of the content on the page.
-		] );
-
-		// Increment the duration for the next iteration
-        $duration 	+= 50; // Increase by 500 milliseconds
-		$delay 		+= 50; // Increase by 500 milliseconds
+		get_template_part( 'template-parts/content', get_post_type() );
 
 	endwhile;
 

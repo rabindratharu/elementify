@@ -7563,6 +7563,8 @@ form textarea {
 /*--------------------------------------------------------------
 # Scroll Reveal
 -------------------------------------------------------------- */
-html.sr .ele-has-scroll-reveal .ele-column {
+html.sr .ele-has-scroll-reveal main.ele-posts-wrap .ele-column,
+html.sr .ele-has-scroll-reveal .ele-sidebar .widget,
+html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   visibility: hidden;
 }
