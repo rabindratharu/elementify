@@ -7568,3 +7568,10 @@ html.sr .ele-has-scroll-reveal .ele-sidebar .widget,
 html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   visibility: hidden;
 }
+
+/*--------------------------------------------------------------
+# Modules - Hero Slider
+-------------------------------------------------------------- */
+.ele-hero-slider .ele-hero-section[data-type="2"] {
+  height: calc(100vh - 300px);
+}
