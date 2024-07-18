@@ -8198,8 +8198,57 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
 /*--------------------------------------------------------------
 # Modules - Hero Slider
 -------------------------------------------------------------- */
-.ele-hero-slider .ele-hero-section[data-type="2"] {
+.ele-hero-content-wrap .ele-hero-image {
   height: calc(100vh - 300px);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+.swiper-slide .ele-hero-image {
+  -webkit-transform: scale(1.25);
+      -ms-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-transition: all 0.85s;
+  transition: all 0.85s;
+  opacity: 0;
+}
+.swiper-slide-active .ele-hero-image {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.85s;
+  transition: all 0.85s;
+  opacity: 1;
+}
+.swiper-slide .ele-hero-content {
+  inset: 0;
+  -webkit-transform: scale(1.25);
+      -ms-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
+  padding: 50px;
+}
+.swiper-slide .ele-hero-content > * {
+  margin-bottom: var(--ele-card-items-spacing, 20px);
+  color: var(--ele-accent-active);
+}
+.swiper-slide-active .ele-hero-content {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.ele-hero-content .entry-title {
+  font-family: Cormorant Garamond;
+  font-size: 4vw;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  text-transform: none;
 }
 
 /*!***************************************************************************************************************************************************************************************************************!*\
