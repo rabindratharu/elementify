@@ -8199,7 +8199,7 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
 # Modules - Hero Slider
 -------------------------------------------------------------- */
 .ele-hero-content-wrap .ele-hero-image {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 150px);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
