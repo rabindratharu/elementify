@@ -7155,7 +7155,7 @@ form textarea {
   width: var(--ele-font-size, 15px);
   height: var(--ele-font-size, 15px);
   position: relative;
-  fill: currentColor;
+  /* fill: currentColor; */
 }
 /* --------------------------------------------------------------
 # Article Image
@@ -8249,6 +8249,38 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   letter-spacing: 1px;
   line-height: 1.4;
   text-transform: none;
+}
+.ele-hero-slider-section .swiper-button-prev,
+.ele-hero-slider-section .swiper-button-next {
+  bottom: 15px;
+  top: auto;
+  z-index: 12;
+}
+.ele-hero-slider-section .swiper-button-prev {
+  left: auto;
+  right: 70px;
+}
+.ele-hero-slider-section .swiper-button-next {
+  right: 20px;
+}
+
+.ele-hero-slider-section .swiper-button-prev:after,
+.ele-hero-slider-section .swiper-button-next:after {
+  display: none;
+}
+.ele-hero-slider-section .swiper-pagination-fraction {
+  width: auto;
+  left: auto;
+  right: 40px;
+  bottom: 55px;
+}
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 5px;
+  border-radius: 5px;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 44px;
 }
 
 /*!***************************************************************************************************************************************************************************************************************!*\
