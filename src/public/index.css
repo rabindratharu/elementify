@@ -2120,6 +2120,9 @@ object {
 .ele-align-items-initial {
   align-items: initial;
 }
+.ele-align-items-inherit {
+  align-items: inherit;
+}
 
 .ele-align-items-start {
   align-items: flex-start;
@@ -7588,6 +7591,10 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   transform: scale(1);
   transition: all 0.85s;
   opacity: 1;
+}
+.swiper-slide .ele-hero-image::before,
+.swiper-slide .ele-hero-content {
+  border-radius: 3px;
 }
 .swiper-slide .ele-hero-content {
   inset: 0;
