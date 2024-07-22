@@ -8203,8 +8203,21 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
 /*--------------------------------------------------------------
 # Modules - Hero Slider
 -------------------------------------------------------------- */
-.ele-hero-content-wrap .ele-hero-image {
+.ele-hero-content-wrap .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   height: calc(100vh - 150px);
+}
+.ele-hero-content-wrap .swiper-slide .ele-flex-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.ele-hero-content-wrap .ele-hero-image {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -8250,7 +8263,6 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
           transform: scale(1);
   opacity: 1;
 }
-
 .ele-hero-content .entry-title {
   font-family: Cormorant Garamond;
   font-size: 4vw;
