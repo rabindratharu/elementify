@@ -468,7 +468,7 @@ class SVG_Icons {
 
 		$svg = '';
 		if ( array_key_exists( $icon, $arr ) ) {
-			$repl = sprintf( '<svg class="svg-icon" width="%d" height="%d" aria-hidden="true" role="img" focusable="false" ', $size, $size );
+			$repl = sprintf( '<svg class="ele-svg-icon" width="%d" height="%d" aria-hidden="true" role="img" focusable="false" ', $size, $size );
 
 			$svg = preg_replace( '/^<svg /', $repl, trim( $arr[ $icon ] ) ); // Add extra attributes to SVG code.
 		}

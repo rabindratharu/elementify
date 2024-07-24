@@ -7157,10 +7157,13 @@ form textarea {
 .ele-svg-icon,
 .ele-container svg,
 .ele-header-theme-switch-wrap svg {
-  width: var(--ele-font-size, 15px);
-  height: var(--ele-font-size, 15px);
-  position: relative;
-  /* fill: currentColor; */
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
 }
 /* --------------------------------------------------------------
 # Article Image
@@ -8211,6 +8214,7 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
       -ms-flex-align: stretch;
           align-items: stretch;
   height: calc(100vh - 150px);
+  overflow: hidden;
 }
 .ele-hero-content-wrap .swiper-slide .ele-flex-item {
   -webkit-box-flex: 1;
@@ -8302,6 +8306,62 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
 }
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 44px;
+}
+.ele-hero-slider-section .swiper-button-prev,
+.ele-hero-slider-section .swiper-button-next {
+  bottom: 15px;
+  top: auto;
+  z-index: 12;
+  height: auto;
+  width: auto;
+}
+.ele-hero-slider-section .swiper-button-prev {
+  left: auto;
+  right: 70px;
+}
+.ele-hero-slider-section .swiper-button-next {
+  right: 20px;
+}
+
+.ele-hero-slider-section .swiper-button-prev:after,
+.ele-hero-slider-section .swiper-button-next:after {
+  display: none;
+}
+.ele-hero-slider-section .swiper-pagination-fraction {
+  width: auto;
+  left: auto;
+  right: 75px;
+  bottom: 105px;
+}
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 5px;
+  border-radius: 5px;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 44px;
+}
+.ele-hero-slider-section .ele-swiper-container .ele-hero-content {
+  width: auto;
+}
+
+.ele-hero-slider-section div[data-preset="2"] .swiper-button-prev,
+.ele-hero-slider-section div[data-preset="2"] .swiper-button-next {
+  background: var(--ele-primary-color);
+  padding: 7px;
+  color: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.ele-hero-slider-section div[data-preset="2"] .swiper-button-prev:hover,
+.ele-hero-slider-section div[data-preset="2"] .swiper-button-next:hover {
+  background: var(--ele-primary-active);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.ele-hero-slider-section div[data-preset="2"] .swiper-pagination-fraction {
+  right: 48px;
+  bottom: 75px;
 }
 
 /*!***************************************************************************************************************************************************************************************************************!*\
