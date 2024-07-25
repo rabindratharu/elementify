@@ -7609,7 +7609,6 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   transform: scale(1.25);
   transition: all 1s;
   opacity: 0;
-  padding: 50px;
 }
 .swiper-slide .ele-hero-content > * {
   margin-bottom: var(--ele-card-items-spacing, 20px);
@@ -7620,7 +7619,6 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   opacity: 1;
 }
 .ele-hero-content .entry-title {
-  font-family: Cormorant Garamond;
   font-size: 4vw;
   font-weight: 700;
   letter-spacing: 1px;
