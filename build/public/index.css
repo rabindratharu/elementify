@@ -8255,6 +8255,12 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   -webkit-transition: all 1s;
   transition: all 1s;
   opacity: 0;
+  -webkit-box-pack: var(--ele-hero-justify-content, center);
+      -ms-flex-pack: var(--ele-hero-justify-content, center);
+          justify-content: var(--ele-hero-justify-content, center);
+  -webkit-box-align: var(--ele-hero-items-align, center);
+      -ms-flex-align: var(--ele-hero-items-align, center);
+          align-items: var(--ele-hero-items-align, center);
 }
 .swiper-slide .ele-hero-content > * {
   margin-bottom: var(--ele-card-items-spacing, 20px);

@@ -7609,6 +7609,8 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   transform: scale(1.25);
   transition: all 1s;
   opacity: 0;
+  justify-content: var(--ele-hero-justify-content, center);
+  align-items: var(--ele-hero-items-align, center);
 }
 .swiper-slide .ele-hero-content > * {
   margin-bottom: var(--ele-card-items-spacing, 20px);
