@@ -7611,6 +7611,7 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   opacity: 0;
   justify-content: var(--ele-hero-justify-content, center);
   align-items: var(--ele-hero-items-align, center);
+  box-sizing: border-box; /* Include padding in the height calculation */
 }
 .swiper-slide .ele-hero-content > * {
   margin-bottom: var(--ele-card-items-spacing, 20px);
@@ -7627,19 +7628,6 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   line-height: 1.4;
   text-transform: none;
 }
-.ele-hero-slider-section .swiper-button-prev,
-.ele-hero-slider-section .swiper-button-next {
-  bottom: 15px;
-  top: auto;
-  z-index: 12;
-}
-.ele-hero-slider-section .swiper-button-prev {
-  left: auto;
-  right: 70px;
-}
-.ele-hero-slider-section .swiper-button-next {
-  right: 20px;
-}
 
 .ele-hero-slider-section .swiper-button-prev:after,
 .ele-hero-slider-section .swiper-button-next:after {
@@ -7648,8 +7636,8 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
 .ele-hero-slider-section .swiper-pagination-fraction {
   width: auto;
   left: auto;
-  right: 40px;
-  bottom: 55px;
+  right: 75px;
+  bottom: 105px;
 }
 .swiper-pagination-bullet {
   width: 20px;
@@ -7658,6 +7646,9 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
 }
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 44px;
+}
+.ele-hero-slider-section .ele-swiper-container .ele-hero-content {
+  width: auto;
 }
 .ele-hero-slider-section .swiper-button-prev,
 .ele-hero-slider-section .swiper-button-next {
@@ -7693,16 +7684,15 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 44px;
 }
-.ele-hero-slider-section .ele-swiper-container .ele-hero-content {
-  width: auto;
-}
-
 .ele-hero-slider-section div[data-preset="2"] .swiper-button-prev,
 .ele-hero-slider-section div[data-preset="2"] .swiper-button-next {
+  height: 40px;
+  width: 40px;
   background: var(--ele-primary-color);
   padding: 7px;
   color: #fff;
   transition: all 0.3s ease 0s;
+  bottom: 0;
 }
 .ele-hero-slider-section div[data-preset="2"] .swiper-button-prev:hover,
 .ele-hero-slider-section div[data-preset="2"] .swiper-button-next:hover {
@@ -7710,6 +7700,12 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   transition: all 0.3s ease 0s;
 }
 .ele-hero-slider-section div[data-preset="2"] .swiper-pagination-fraction {
-  right: 48px;
-  bottom: 75px;
+  right: 25px;
+  bottom: 55px;
+}
+.ele-hero-slider-section div[data-preset="2"] .swiper-button-next {
+  right: 0;
+}
+.ele-hero-slider-section div[data-preset="2"] .swiper-button-prev {
+  right: 40px;
 }
