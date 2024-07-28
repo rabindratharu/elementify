@@ -8213,7 +8213,7 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  height: calc(100vh - 150px);
+  height: calc(100vh - var(--ele-hero-slide-height, 150px));
   overflow: hidden;
 }
 .ele-hero-content-wrap .swiper-slide .ele-flex-item {
@@ -8263,6 +8263,7 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
           align-items: var(--ele-hero-items-align, center);
   -webkit-box-sizing: border-box;
           box-sizing: border-box; /* Include padding in the height calculation */
+  padding: 10px 25px;
 }
 .swiper-slide .ele-hero-content > * {
   margin-bottom: var(--ele-card-items-spacing, 20px);
