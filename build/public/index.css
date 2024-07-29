@@ -8305,18 +8305,9 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
 }
 .ele-hero-slider-section .swiper-button-prev,
 .ele-hero-slider-section .swiper-button-next {
-  bottom: 15px;
-  top: auto;
   z-index: 12;
   height: auto;
   width: auto;
-}
-.ele-hero-slider-section .swiper-button-prev {
-  left: auto;
-  right: 70px;
-}
-.ele-hero-slider-section .swiper-button-next {
-  right: 20px;
 }
 
 .ele-hero-slider-section .swiper-button-prev:after,
@@ -8329,7 +8320,7 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   right: 75px;
   bottom: 105px;
 }
-.swiper-pagination-bullet {
+.ele-hero-slider-section .swiper-pagination-bullet {
   width: 20px;
   height: 5px;
   border-radius: 5px;
