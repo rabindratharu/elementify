@@ -7623,11 +7623,10 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   opacity: 1;
 }
 .ele-hero-content .entry-title {
-  font-size: 4vw;
-  font-weight: 700;
-  letter-spacing: 1px;
-  line-height: 1.4;
-  text-transform: none;
+  --ele-font-size: 4vw;
+  --ele-font-weight: 700;
+  --ele-letter-spacing: 1px;
+  --ele-line-height: 1.4;
 }
 
 .ele-hero-slider-section .swiper-button-prev:after,
