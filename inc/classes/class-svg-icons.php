@@ -433,6 +433,18 @@ class SVG_Icons {
 	);
 
 	/**
+	 * Gets list of svg icons.
+	 *
+	 * @static
+	 *
+	 * @since   1.0.0
+	 * @return array
+	 */
+	public static function get_svg_list() {
+		return wp_parse_args( self::$social_icons, self::$icons );
+	}
+
+	/**
 	 * Gets the SVG code for a given icon.
 	 *
 	 * @static
