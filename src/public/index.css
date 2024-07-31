@@ -6611,7 +6611,7 @@ form textarea {
   --ele-link-normal-color: var(--ele-base-100);
   --ele-link-hover-color: var(--ele-base-100);
   --ele-go-top-box-shadow: 0 5px 16px 0 var(--ele-transparent);
-  --ele-font-size: 15px;
+  --ele-font-size: 30px;
   position: fixed;
   z-index: 100;
   bottom: calc(
@@ -6620,7 +6620,7 @@ form textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  padding: 5px;
   opacity: var(--opacity, 0);
   visibility: var(--visibility, hidden);
   transform: var(--transform, translate3d(0, 15px, 0));
@@ -6666,8 +6666,8 @@ form textarea {
 .ele-svg-icon,
 .ele-container svg,
 .ele-header-theme-switch-wrap svg {
-  width: 100%;
-  height: 100%;
+  width: var(--ele-font-size, 100%);
+  height: var(--ele-font-size, 100%);
   object-fit: contain;
   transform-origin: center;
 }
