@@ -6,6 +6,7 @@
  */
 
 use Elementify\Inc\Utils;
+use Elementify\Inc\Svg_Icons;
 /*
 |--------------------------------------------------------------------------
 | Menu Option
@@ -306,36 +307,14 @@ if ( ! function_exists( 'elementify_collapsible_menu_fallback' ) ) {
 /*--------------------------------------------------------------
 # Get SVG Code
 --------------------------------------------------------------*/
-if ( !function_exists( 'elementify_get_icon_svg' ) ) {
-    /**
-     * Gets the SVG code for a given icon.
-     *
-     * @param   string $group The icon group.
-     * @param   string $icon The icon.
-     * @param   int    $size The icon size in pixels.
-     * @return  string
-     * @since   1.0.0
-     */
-    function elementify_get_icon_svg( $group, $icon, $size = 24 ) {
-        return Elementify\Inc\SVG_Icons::get_svg( $group, $icon, $size );
-    }
+/**
+ * Gets the SVG code for a given icon.
+ */
+function elementify_get_the_svg( $group = 'ui', $icon, $size = 24 ) {
+	return Svg_Icons::get_svg( $group = 'ui', $icon, $size );
 }
-
-/*--------------------------------------------------------------
-# Get SVG Code from social url
---------------------------------------------------------------*/
-if ( !function_exists( 'elementify_get_social_link_svg' ) ) {
-    /**
-     * Detects the social network from a URL and returns the SVG code for its icon.
-     *
-     * @param   string $uri Social link.
-     * @param   int    $size The icon size in pixels.
-     * @return  string
-     * @since   1.0.0
-     */
-    function elementify_get_social_link_svg( $uri, $size = 24 ) {
-        return Elementify\Inc\SVG_Icons::get_social_link_svg( $uri, $size );
-    }
+function elementify_the_svg( $group = 'ui', $icon, $size = 24 ) {
+	echo Svg_Icons::get_svg( $group = 'ui', $icon, $size ); //phpcs:ignore WordPress.Security.EscapeOutput
 }
 
 /*--------------------------------------------------------------
@@ -441,7 +420,7 @@ if ( ! function_exists( 'elementify_submenu_icon' ) ) {
         if ( $has_children ) {
             $item_output = str_replace(
                 '</a>',
-                '<span class="ele-submenu-icon">' . elementify_get_icon_svg( 'ui', 'angle-down', 18 ) . '</span></a>',
+                '<span class="ele-submenu-icon">' . elementify_get_the_svg( 'ui', 'angle-down', 18 ) . '</span></a>',
                 $item_output
             );
         }
