@@ -30,7 +30,7 @@ class SVG_Icons {
 	 *
 	 * @var array
 	 */
-	protected static $icons = array(
+	protected static $ui_icons = array(
 		'activity'       => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>',
 		'airplay'        => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg>',
 		'alert-circle'   => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>',
@@ -441,7 +441,11 @@ class SVG_Icons {
 	 * @return array
 	 */
 	public static function get_svg_list() {
-		return wp_parse_args( self::$social_icons, self::$icons );
+		return array(
+			'ui' 		=> self::$ui_icons,
+			'social' 	=> self::$social_icons,
+		);
+		//return wp_parse_args( self::$social_icons, self::$ui_icons );
 	}
 
 	/**
@@ -459,7 +463,7 @@ class SVG_Icons {
 	public static function get_svg( $group, $icon, $size ) {
 
 		if ( 'ui' === $group ) {
-			$arr = self::$icons;
+			$arr = self::$ui_icons;
 		} elseif ( 'social' === $group ) {
 			$arr = self::$social_icons;
 		} else {
