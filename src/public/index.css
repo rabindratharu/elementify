@@ -7684,6 +7684,7 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   color: #fff;
   transition: all 0.3s ease 0s;
   bottom: 0;
+  top: auto;
 }
 .ele-hero-slider-section div[data-preset="2"] .swiper-button-prev:hover,
 .ele-hero-slider-section div[data-preset="2"] .swiper-button-next:hover {
@@ -7699,4 +7700,5 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
 }
 .ele-hero-slider-section div[data-preset="2"] .swiper-button-prev {
   right: 40px;
+  left: auto;
 }
