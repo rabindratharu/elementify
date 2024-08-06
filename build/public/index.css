@@ -810,6 +810,7 @@ label,
 figcaption,
 .wp-block-quote,
 .wp-block-pullquote,
+.ele-button,
 .ele-label,
 .ele-site-title,
 .ele-site-description,
@@ -969,7 +970,7 @@ input[type="submit"],
 .wp-block-file__button,
 .wp-block-read-more {
   display: var(--display, inline-flex);
-  text-transform: capitalize;
+  text-transform: var(--ele-text-transform, capitalize);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -980,13 +981,13 @@ input[type="submit"],
   padding: var(--ele-button-padding, 5px 20px);
   border-radius: var(--ele-button-border-radius, 3px);
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   cursor: pointer;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   text-align: center;
   -webkit-transition: all var(--ele-button-transition, var(--ele-transition-normal))
     ease-in-out;
