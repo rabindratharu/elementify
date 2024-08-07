@@ -4327,9 +4327,7 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
   color: var(--ele-accent-active);
 }
 .ele-breadcrumb-trail .trail-items .ele-separator svg {
-  fill: currentColor;
-  height: var(--ele-sept-size);
-  width: var(--ele-sept-size);
+  --ele-font-size: 15px;
 }
 .ele-breadcrumb-trail .trail-items .trail-end .ele-separator {
   display: none;
