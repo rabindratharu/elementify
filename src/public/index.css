@@ -53,13 +53,6 @@ License: GNU General Public License v2 or later
   --ele-dark-base-200: #484852;
   --ele-dark-base-300: #656571;
 
-  --ele-button-box-initial-color: var(--ele-base-color);
-  --ele-button-box-hover-color: var(--ele-base-color);
-  --ele-button-outline-initial-color: var(--ele-accent-color);
-  --ele-button-outline-hover-color: var(--ele-primary-color);
-}
-[data-theme="light"] {
-  color-scheme: light;
   --ele-primary-color: var(--ele-light-primary-color);
   --ele-primary-active: var(--ele-light-primary-active);
   --ele-accent-color: var(--ele-light-accent-color);
@@ -68,10 +61,37 @@ License: GNU General Public License v2 or later
   --ele-base-100: var(--ele-light-base-100);
   --ele-base-200: var(--ele-light-base-200);
   --ele-base-300: var(--ele-light-base-300);
+
+  --ele-button-box-initial-color: var(--ele-base-color);
+  --ele-button-box-hover-color: var(--ele-base-color);
+  --ele-button-outline-initial-color: var(--ele-accent-color);
+  --ele-button-outline-hover-color: var(--ele-primary-color);
   --ele-button-box-initial-background: var(--ele-primary-color);
   --ele-button-box-hover-background: var(--ele-primary-active);
 }
-
+[data-theme="light"] {
+  color-scheme: light;
+  --ele-primary-color: var(
+    --ele-light-primary-color,
+    var(--ele-light-primary-color)
+  );
+  --ele-primary-active: var(
+    --ele-light-primary-active,
+    var(--ele-light-primary-active)
+  );
+  --ele-accent-color: var(
+    --ele-light-accent-color,
+    var(--ele-light-accent-color)
+  );
+  --ele-accent-active: var(
+    --ele-light-accent-active,
+    var(--ele-light-accent-active)
+  );
+  --ele-base-color: var(--ele-light-base-color, var(--ele-light-base-color));
+  --ele-base-100: var(--ele-light-base-100, var(--ele-light-base-100));
+  --ele-base-200: var(--ele-light-base-200, var(--ele-light-base-200));
+  --ele-base-300: var(--ele-light-base-300, var(--ele-light-base-300));
+}
 [data-theme="dark"] {
   color-scheme: dark;
   --ele-primary-color: var(
@@ -94,8 +114,6 @@ License: GNU General Public License v2 or later
   --ele-base-100: var(--ele-dark-base-100, var(--ele-light-base-100));
   --ele-base-200: var(--ele-dark-base-200, var(--ele-light-base-200));
   --ele-base-300: var(--ele-dark-base-300, var(--ele-light-base-300));
-  --ele-button-box-initial-background: var(--ele-accent-color);
-  --ele-button-box-hover-background: var(--ele-accent-active);
 }
 
 /*--------------------------------------------------------------`
