@@ -6641,7 +6641,7 @@ Pagination
 
 [data-sidebar] aside[data-layout="2"]::after,
 [data-sidebar] aside[data-layout="5"]::after {
-  z-index: -1;
+  z-index: 1;
 }
 .ele-sidebar > *:not(:last-child),
 .ele-sidebar[data-sticky="widgets"] .ele-sticky-widget > *:not(:last-child) {

@@ -310,11 +310,11 @@ if ( ! function_exists( 'elementify_collapsible_menu_fallback' ) ) {
 /**
  * Gets the SVG code for a given icon.
  */
-function elementify_get_the_svg( $group = 'ui', $icon, $size = 24 ) {
-	return Svg_Icons::get_svg( $group = 'ui', $icon, $size );
+function elementify_get_the_svg( $group, $icon, $size ) {
+	return Svg_Icons::get_svg( $group, $icon, $size );
 }
-function elementify_the_svg( $group = 'ui', $icon, $size = 24 ) {
-	echo Svg_Icons::get_svg( $group = 'ui', $icon, $size ); //phpcs:ignore WordPress.Security.EscapeOutput
+function elementify_the_svg( $group, $icon, $size ) {
+	echo Svg_Icons::get_svg( $group, $icon, $size ); //phpcs:ignore WordPress.Security.EscapeOutput
 }
 
 /*--------------------------------------------------------------
