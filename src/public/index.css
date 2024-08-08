@@ -53,8 +53,10 @@ License: GNU General Public License v2 or later
   --ele-dark-base-200: #484852;
   --ele-dark-base-300: #656571;
 
-  --ele-button-text-initial-color: var(--ele-base-color);
-  --ele-button-text-hover-color: var(--ele-base-color);
+  --ele-button-box-initial-color: var(--ele-base-color);
+  --ele-button-box-hover-color: var(--ele-base-color);
+  --ele-button-outline-initial-color: var(--ele-accent-color);
+  --ele-button-outline-hover-color: var(--ele-primary-color);
 }
 [data-theme="light"] {
   color-scheme: light;
@@ -66,8 +68,8 @@ License: GNU General Public License v2 or later
   --ele-base-100: var(--ele-light-base-100);
   --ele-base-200: var(--ele-light-base-200);
   --ele-base-300: var(--ele-light-base-300);
-  --ele-button-bg-initial-color: var(--ele-primary-color);
-  --ele-button-bg-hover-color: var(--ele-primary-active);
+  --ele-button-box-initial-background: var(--ele-primary-color);
+  --ele-button-box-hover-background: var(--ele-primary-active);
 }
 
 [data-theme="dark"] {
@@ -92,8 +94,8 @@ License: GNU General Public License v2 or later
   --ele-base-100: var(--ele-dark-base-100, var(--ele-light-base-100));
   --ele-base-200: var(--ele-dark-base-200, var(--ele-light-base-200));
   --ele-base-300: var(--ele-dark-base-300, var(--ele-light-base-300));
-  --ele-button-bg-initial-color: var(--ele-accent-color);
-  --ele-button-bg-hover-color: var(--ele-accent-active);
+  --ele-button-box-initial-background: var(--ele-accent-color);
+  --ele-button-box-hover-background: var(--ele-accent-active);
 }
 
 /*--------------------------------------------------------------`
@@ -978,8 +980,8 @@ input[type="submit"],
 .ele-button-fill .wp-block-file__button,
 .ele-button-fill .wp-block-read-more {
   --ele-button-border: 0px;
-  background-color: var(--ele-button-bg-initial-color);
-  color: var(--ele-button-text-initial-color);
+  background-color: var(--ele-button-box-initial-background);
+  color: var(--ele-button-box-initial-color);
   gap: 10px;
   font-size: var(--ele-font-size);
 }
@@ -997,8 +999,8 @@ input[type="submit"],
 .ele-button-fill .wp-block-file__button:hover,
 .ele-button-fill .wp-block-read-more:hover {
   transform: var(--button-transform, none);
-  background-color: var(--ele-button-bg-hover-color);
-  color: var(--ele-button-text-hover-color);
+  background-color: var(--ele-button-box-hover-background);
+  color: var(--ele-button-box-hover-color);
 }
 
 .ele-button-outline button,
@@ -1014,7 +1016,7 @@ input[type="submit"],
 .ele-button-outline .wp-block-file__button,
 .ele-button-outline .wp-block-read-more {
   background-color: var(--ele-transparent);
-  color: var(--ele-link-normal-color, var(--ele-accent-color));
+  color: var(--ele-button-outline-initial-color);
   --ele-button-border: 1px solid;
 }
 
@@ -1031,7 +1033,7 @@ input[type="submit"],
 .ele-button-outline .wp-block-file__button:hover,
 .ele-button-outline .wp-block-read-more:hover {
   background-color: var(--ele-transparent);
-  color: var(--ele-link-hover-color, var(--ele-primary-color));
+  color: var(--ele-button-outline-hover-color);
   transform: var(--button-transform, none);
   --ele-button-border: 1px solid;
 }
@@ -1400,13 +1402,13 @@ a:active {
 .wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color),
 .wp-block-button.is-style-outline
   > .wp-block-button__link:not(.has-text-color) {
-  color: var(--ele-button-text-initial-color);
+  color: var(--ele-button-box-initial-color);
 }
 .wp-block-button
   .wp-block-button__link.is-style-outline:not(.has-text-color):hover,
 .wp-block-button.is-style-outline
   > .wp-block-button__link:not(.has-text-color):hover {
-  color: var(--ele-button-text-hover-color);
+  color: var(--ele-button-box-hover-color);
 }
 
 /*--------------------------------------------------------------
@@ -6039,14 +6041,14 @@ Layout 3
  Read More
 ----------------------------------------*/
 .ele-read-more-wrap a:not(.ele-button) {
-  color: var(--ele-button-text-initial-color, var(--ele-link-normal-color));
-  fill: var(--ele-button-text-initial-color, var(--ele-link-normal-color));
+  color: var(--ele-button-box-initial-color, var(--ele-link-normal-color));
+  fill: var(--ele-button-box-initial-color, var(--ele-link-normal-color));
 }
 .ele-read-more-wrap a:not(.ele-button):hover,
 .ele-read-more-wrap a:not(.ele-button):focus,
 .ele-read-more-wrap a:not(.ele-button):active {
-  color: var(--ele-button-text-hover-color, var(--ele-link-hover-color));
-  fill: var(--ele-button-text-hover-color, var(--ele-link-hover-color));
+  color: var(--ele-button-box-hover-color, var(--ele-link-hover-color));
+  fill: var(--ele-button-box-hover-color, var(--ele-link-hover-color));
 }
 
 /*
@@ -6091,11 +6093,11 @@ Pagination
 }
 
 .ele-pagination-wrap .nav-links svg {
-  fill: var(--ele-button-text-initial-color, var(--ele-base-300));
+  fill: var(--ele-button-box-initial-color, var(--ele-base-300));
 }
 
 .ele-pagination-wrap .nav-links .ele-button:hover svg {
-  fill: var(--ele-button-text-hover-color, var(--ele-base-300));
+  fill: var(--ele-button-box-hover-color, var(--ele-base-300));
 }
 
 .ele-pagination-wrap .nav-links .ele-pagination-prev-btn,
@@ -6142,10 +6144,10 @@ Pagination
   width: 10em;
 }
 .ele-pagination-wrap .page-numbers.ele-button {
-  color: var(--ele-button-text-initial-color, var(--ele-base-300));
+  color: var(--ele-button-box-initial-color, var(--ele-base-300));
 }
 .ele-pagination-wrap .page-numbers.ele-button:hover {
-  color: var(--ele-button-text-hover-color, var(--ele-base-300));
+  color: var(--ele-button-box-hover-color, var(--ele-base-300));
 }
 
 .ele-pagination-wrap .page-numbers.current,
