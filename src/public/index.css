@@ -1095,7 +1095,7 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a:not(.ele-button) {
-  color: var(--ele-link-normal-color, var(--ele-accent-color));
+  color: var(--ele-link-normal-color, var(--ele-accent-active));
   transition-duration: 0.3s;
   transition-property:
     color,
@@ -1131,6 +1131,9 @@ a:not(.ele-button):focus {
 a:hover,
 a:active {
   outline: 0;
+}
+.entry-title a {
+  --ele-link-normal-color: var(--ele-accent-color);
 }
 
 /*--------------------------------------------------------------
@@ -3922,7 +3925,7 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
   );
 }
 .ele-main-menu li:hover ul li a {
-  --ele-dropdown-items-sept: 1px solid var(--ele-accent-active);
+  --ele-dropdown-items-sept: 1px solid var(--ele-base-300);
   border-bottom: var(--ele-dropdown-items-sept);
 }
 .ele-main-menu li:hover ul li:last-child a {
@@ -5062,6 +5065,7 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
+  gap: 4px;
 }
 
 .ele-post-navigation-wrap .item-label {
@@ -5073,10 +5077,13 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
 }
 
 .ele-post-navigation-wrap .item-title {
-  display: block;
   font-size: 14px;
   font-weight: 700;
   word-break: break-word;
+  color: var(--ele-link-normal-color, var(--ele-accent-color));
+}
+.ele-post-navigation-wrap .nav-links a:hover .item-title {
+  color: var(--ele-link-hover-color, var(--ele-primary-color));
 }
 
 .ele-post-navigation-wrap .item-wrap {
@@ -5847,7 +5854,7 @@ Layout 3
 ----------------------------------------*/
 .ele-post-metas {
   gap: 10px;
-  --ele-meta-link-initial-color: var(--ele-accent-color);
+  --ele-meta-link-initial-color: var(--ele-accent-active);
   --ele-meta-link-hover-color: var(--ele-primary-color);
 }
 .ele-post-metas a:not(.ele-button) {
@@ -7514,9 +7521,6 @@ form textarea {
 }
 .ele-modal .ele-modal-actions .ele-close-modal:hover svg {
   transform: rotate(180deg);
-}
-.ele-post-navigation-wrap .item-title {
-  display: none;
 }
 .ele-post-navigation-wrap .nav-previous a .post-thumbnail,
 .ele-post-navigation-wrap .nav-next a .post-thumbnail {

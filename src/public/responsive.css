@@ -127,9 +127,6 @@
 
 /* base */
 @media (min-width: 640px) {
-  .ele-post-navigation-wrap .item-title {
-    display: block;
-  }
   .ele-post-navigation-wrap[data-layout="2"] .nav-previous a,
   .ele-post-navigation-wrap[data-layout="2"] .nav-next a {
     min-height: 80px;
