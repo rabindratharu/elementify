@@ -5755,6 +5755,11 @@ Comments
   font-size: 12px;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  background-color: var(
+    --ele-form-field-background-focus-color,
+    var(--ele-base-200)
+  );
+  border-radius: 3px;
 }
 .comment-content a {
   color: var(--ele-primary-active);
