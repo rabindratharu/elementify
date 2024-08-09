@@ -6203,6 +6203,9 @@ Pagination
   border-radius: 3px;
   border-color: var(--ele-base-300);
 }
+[data-sidebar] aside[data-layout] .ele-sidebar {
+  z-index: 2;
+}
 
 [data-sidebar] aside[data-layout="2"]::after,
 [data-sidebar] aside[data-layout="5"]::after {
