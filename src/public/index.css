@@ -4744,6 +4744,10 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
   transition:
     background 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955),
     border-color 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  background-color: var(--ele-accent-active);
+}
+.ele-social-share li:hover a {
+  background-color: var(--ele-accent-color);
 }
 
 .ele-social-share
