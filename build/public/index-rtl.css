@@ -4972,6 +4972,7 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
 .ele-social-share-wrap > label {
   color: var(--ele-social-share-label-color, var(--ele-accent-active));
   margin: 0;
+  line-height: 1;
 }
 
 .ele-social-share-wrap[data-layout="1"],
@@ -5057,9 +5058,16 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
   transition:
     background 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955),
     border-color 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.ele-social-share
+  li
+  a:not(.ele-social-share-wrap[data-layout="2"] .ele-social-share li a) {
   background-color: var(--ele-accent-active);
 }
-.ele-social-share li:hover a {
+
+.ele-social-share
+  li:hover
+  a:not(.ele-social-share-wrap[data-layout="2"] .ele-social-share li:hover a) {
   background-color: var(--ele-accent-color);
 }
 
@@ -5126,17 +5134,28 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
   --ele-item-gap: 0;
   --ele-social-share-normal-color: var(--ele-accent-color);
   --ele-social-share-hover-color: var(--ele-accent-color);
-  border-top: 1px solid var(--ele-accent-color);
-  -webkit-border-start: 1px solid var(--ele-accent-color);
-          border-inline-start: 1px solid var(--ele-accent-color);
+  border-top: var(--ele-border);
+  -webkit-border-start: var(--ele-border);
+          border-inline-start: var(--ele-border);
 }
 
 .ele-social-share-wrap[data-layout="2"] .ele-social-share > li,
 .ele-header-social-wrap[data-layout="2"] .ele-social-share > li,
 .ele-footer-social-wrap[data-layout="2"] .ele-social-share > li {
-  -webkit-border-end: 1px solid var(--ele-accent-color);
-          border-inline-end: 1px solid var(--ele-accent-color);
-  border-bottom: 1px solid var(--ele-accent-color);
+  -webkit-border-end: var(--ele-border);
+          border-inline-end: var(--ele-border);
+  border-bottom: var(--ele-border);
+}
+.ele-social-share-wrap[data-layout="2"] .ele-social-share > li:not(:last-child),
+.ele-header-social-wrap[data-layout="2"]
+  .ele-social-share
+  > li:not(:last-child),
+.ele-footer-social-wrap[data-layout="2"]
+  .ele-social-share
+  > li:not(:last-child) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto; /* Default flex value */
 }
 
 /*
