@@ -3225,7 +3225,6 @@ Header: Social Icon
   content: "";
   display: block;
   position: absolute;
-  z-index: 1;
   height: 6px;
   width: 6px;
   border-left: 1px solid rgba(0, 0, 0, 0.2);
@@ -3234,6 +3233,7 @@ Header: Social Icon
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background: #fff;
+  z-index: 10;
 }
 .ele-social-share li a.ele-tooltip-enable:hover::after {
   top: -33px;
@@ -3249,6 +3249,7 @@ Header: Social Icon
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   line-height: 1.2;
+  z-index: 9;
 }
 .ele-header-row-top {
   z-index: 10;
@@ -3265,7 +3266,7 @@ Header: Social Icon
 }
 .ele-header-row-top .ele-social-share li a.ele-tooltip-enable:hover::before {
   top: auto;
-  bottom: -10px;
+  bottom: -11px;
   -webkit-transform: rotate(-225deg);
       -ms-transform: rotate(-225deg);
           transform: rotate(-225deg);
@@ -5003,22 +5004,6 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
   padding: 10px 20px;
   background: #fff;
 }
-
-/*.ele-social-share-wrap.ele-float-left[data-layout="3"],
-.ele-social-share-wrap.ele-float-left[data-layout="4"] {
-  left: 57px;
-  transform: rotate(-90deg);
-  transform-origin: 0 100%;
-  bottom: 100px;
-}
-
-.ele-social-share-wrap.ele-float-right[data-layout="3"],
-.ele-social-share-wrap.ele-float-right[data-layout="4"] {
-  right: 57px;
-  transform: rotate(-90deg);
-  transform-origin: 100% 0;
-  bottom: 400px;
-}*/
 
 .ele-social-share-wrap:hover .ele-inline-arrow {
   opacity: 1;
