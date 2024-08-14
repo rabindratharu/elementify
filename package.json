@@ -4,7 +4,8 @@
   "description": "",
   "main": "Gruntfile.js",
   "scripts": {
-    "build": "wp-scripts build",
+    "clean": "rm -rf build/*",
+    "build": "npm run clean && wp-scripts build",
     "check-engines": "wp-scripts check-engines",
     "check-licenses": "wp-scripts check-licenses",
     "format": "wp-scripts format",
@@ -14,10 +15,9 @@
     "lint:pkg-json": "wp-scripts lint-pkg-json",
     "packages-update": "wp-scripts packages-update",
     "plugin-zip": "wp-scripts plugin-zip",
-    "start": "wp-scripts start",
+    "start": "npm run clean && wp-scripts start",
     "test:e2e": "wp-scripts test-e2e",
-    "test:unit": "wp-scripts test-unit-js",
-    "clean": "rm -rf build/*"
+    "test:unit": "wp-scripts test-unit-js"
   },
   "keywords": [],
   "author": "",
