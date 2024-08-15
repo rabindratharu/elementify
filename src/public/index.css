@@ -6857,7 +6857,6 @@ form textarea {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #fff;
   position: absolute;
   animation: preloader4 2s linear infinite;
   transform: translate(-50%, -50%);
@@ -6866,6 +6865,10 @@ form textarea {
 }
 .ele-preloader-wrap[data-preset="4"]::after {
   animation: preloader4 1s linear infinite;
+  background: var(--ele-preloader-primary);
+}
+.ele-preloader-wrap[data-preset="4"]::before {
+  background: var(--ele-preloader-accent);
 }
 
 @keyframes preloader4 {
@@ -6942,7 +6945,6 @@ form textarea {
   height: 100%;
 }
 .ele-off-canvas .ele-modal-inner {
-  box-shadow: rgba(44, 62, 80, 0.35) 0px 0px 70px 0px;
   --ele-modal-action-initial: var(--ele-accent-color);
   --ele-modal-action-hover: var(--ele-primary-color);
 }
