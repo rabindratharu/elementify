@@ -7114,9 +7114,6 @@ form textarea {
 # Go to Top
 --------------------------------------------------------------*/
 .ele-go-to-top {
-  --ele-link-normal-color: var(--ele-base-100);
-  --ele-link-hover-color: var(--ele-base-100);
-  --ele-go-top-box-shadow: 0 5px 16px 0 var(--ele-transparent);
   --ele-font-size: 30px;
   position: fixed;
   z-index: 100;
@@ -7137,9 +7134,6 @@ form textarea {
   visibility: var(--visibility, hidden);
   -webkit-transform: var(--transform, translate3d(0, 15px, 0));
           transform: var(--transform, translate3d(0, 15px, 0));
-  -webkit-box-shadow: var(--ele-go-top-box-shadow);
-          box-shadow: var(--ele-go-top-box-shadow);
-  border-radius: 3px;
   -webkit-transition:
     opacity 0.3s ease,
     color 0.3s ease,
@@ -7165,24 +7159,14 @@ form textarea {
     transform 0.3s ease,
     visibility 0.3s ease,
     -webkit-transform 0.3s ease;
-  background: var(
-    --ele-go-top-button-background-initial-color,
-    var(--ele-accent-active)
-  );
   font-size: var(--ele-font-size);
 }
-.ele-go-to-top:hover {
-  background: var(
-    --ele-go-top-button-background-hover-color,
-    var(--ele-accent-color)
-  );
-}
-.ele-go-to-top.ele-position-left {
+.ele-go-to-top.ele-position-start {
   left: calc(
     var(--ele-frame-size, 0px) + var(--ele-go-to-top-side-offset, 25px)
   );
 }
-.ele-go-to-top.ele-position-right {
+.ele-go-to-top.ele-position-end {
   right: calc(
     var(--ele-frame-size, 0px) + var(--ele-go-to-top-side-offset, 25px)
   );
