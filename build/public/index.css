@@ -7504,13 +7504,13 @@ form textarea {
 }
 .ele-modal .ele-modal-inner {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 .ele-off-canvas .ele-modal-inner {
   --ele-modal-action-initial: var(--ele-accent-color);
   --ele-modal-action-hover: var(--ele-primary-color);
 }
-.ele-off-canvas .ele-modal-inner::after {
+.ele-off-canvas .ele-modal-inner article.post {
   background-color: var(--ele-base-color);
 }
 .ele-off-canvas[data-toggle-behaviour="drawer-right"] .ele-modal-inner {
@@ -7536,8 +7536,7 @@ form textarea {
   width: 50%;
   min-height: 360px;
   border-radius: 3px;
-  -webkit-box-shadow: var(--ele-box-shadow);
-          box-shadow: var(--ele-box-shadow);
+  /* box-shadow: var(--ele-box-shadow); */
 }
 .ele-popup-box .ele-modal-inner .post .ele-featured-image {
   height: 100%;
