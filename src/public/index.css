@@ -4816,6 +4816,11 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
   flex: 1 1 auto; /* Default flex value */
 }
 
+.ele-header-social-wrap[data-layout="1"],
+.ele-footer-social-wrap[data-layout="1"] {
+  --ele-item-spacing: 0;
+}
+
 /*
  Author Info
 ----------------------------------------*/
