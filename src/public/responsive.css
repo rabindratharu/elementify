@@ -1337,6 +1337,10 @@
 
 /* lg */
 @media (min-width: 1024px) {
+  .ele-has-boxed.customize-partial-edit-shortcuts-shown .site {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
   .ele-header-row[data-header-sm="true"] {
     display: none;
   }

@@ -107,16 +107,19 @@ License: GNU General Public License v2 or later
   );
   --ele-accent-color: var(
     --ele-dark-accent-color,
-    var(--ele-light-accent-color)
+    var(--ele-dark-accent-color)
   );
   --ele-accent-active: var(
     --ele-dark-accent-active,
-    var(--ele-light-accent-active)
+    var(--ele-dark-accent-active)
   );
-  --ele-base-color: var(--ele-dark-base-color, var(--ele-light-base-color));
-  --ele-base-100: var(--ele-dark-base-100, var(--ele-light-base-100));
-  --ele-base-200: var(--ele-dark-base-200, var(--ele-light-base-200));
-  --ele-base-300: var(--ele-dark-base-300, var(--ele-light-base-300));
+  --ele-base-color: var(--ele-dark-base-color);
+  --ele-base-100: var(--ele-dark-base-100);
+  --ele-base-200: var(--ele-dark-base-200);
+  --ele-base-300: var(--ele-dark-base-300);
+
+  --ele-button-box-initial-color: var(--ele-dark-accent-color);
+  --ele-button-box-hover-color: var(--ele-dark-accent-active);
 }
 
 /*--------------------------------------------------------------`
@@ -1089,6 +1092,13 @@ input[type="submit"],
       -ms-transform: var(--button-transform, none);
           transform: var(--button-transform, none);
   --ele-button-border: 1px solid;
+}
+
+.ele-button-outline .ele-button svg {
+  fill: var(--ele-button-outline-initial-color);
+}
+.ele-button-outline .ele-button:hover svg {
+  fill: var(--ele-button-outline-hover-color);
 }
 
 input[type="text"]:focus,
@@ -3518,6 +3528,9 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
 .ele-main-menu li > a:not(.ele-main-menu > li .children a) {
   color: var(--ele-menu-initial-color);
 }
+.ele-main-menu li > a svg {
+  fill: var(--ele-menu-initial-color);
+}
 .ele-main-menu
   li
   > a.ele-menu-link:hover:not(.ele-main-menu > li .sub-menu a:hover),
@@ -5143,8 +5156,8 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
           flex: 1 1 auto; /* Default flex value */
 }
 
-.ele-header-social-wrap[data-layout="1"],
-.ele-footer-social-wrap[data-layout="1"] {
+.ele-header-social-wrap,
+.ele-footer-social-wrap {
   --ele-item-spacing: 0;
 }
 
@@ -7509,11 +7522,16 @@ form textarea {
 }
 .ele-modal .ele-modal-inner {
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
+}
+.ele-off-canvas .ele-modal-inner::after {
+  background-color: var(--ele-base-color);
 }
 .ele-off-canvas .ele-modal-inner {
   --ele-modal-action-initial: var(--ele-accent-color);
   --ele-modal-action-hover: var(--ele-primary-color);
+  -webkit-box-shadow: rgba(44, 62, 80, 0.35) 0px 0px 70px 0px;
+          box-shadow: rgba(44, 62, 80, 0.35) 0px 0px 70px 0px;
 }
 .ele-off-canvas .ele-modal-inner article.post {
   background-color: var(--ele-base-color);
@@ -9919,6 +9937,10 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
 
 /* lg */
 @media (min-width: 1024px) {
+  .ele-has-boxed.customize-partial-edit-shortcuts-shown .site {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
   .ele-header-row[data-header-sm="true"] {
     display: none;
   }
