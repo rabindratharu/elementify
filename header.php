@@ -129,6 +129,7 @@ do_action( 'elementify/body_top' );
 	// 		['--ele-base-300','--ele-base-200','--ele-base-100','--ele-base-color']
 	// 	));
     // echo '</pre>';
+    echo elementify_framework_is_transparent_header();
     ?>
 
         <?php

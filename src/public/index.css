@@ -1059,10 +1059,12 @@ input[type="submit"],
   --ele-button-border: 1px solid;
 }
 
-.ele-button-outline .ele-button svg {
+.ele-button-outline .ele-button svg:not(.ele-button svg[fill="none"]) {
   fill: var(--ele-button-outline-initial-color);
 }
-.ele-button-outline .ele-button:hover svg {
+.ele-button-outline
+  .ele-button:hover
+  svg:not(.ele-button:hover svg[fill="none"]) {
   fill: var(--ele-button-outline-hover-color);
 }
 
@@ -4780,7 +4782,6 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
 
 .ele-social-share li a svg,
 .ele-social-share li a span {
-  fill: var(--ele-social-share-normal-color, var(--ele-base-300));
   display: flex;
   transition: var(
     --icon-transition,
@@ -4789,12 +4790,23 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
 }
 .ele-social-share li a:hover svg,
 .ele-social-share li a:hover span {
-  fill: var(--ele-social-share-hover-color, var(--ele-base-300));
   transition: var(
     --icon-transition,
     fill 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955)
   );
 }
+.ele-social-share li a svg:not(.ele-social-share li a svg[fill="none"]),
+.ele-social-share li a span {
+  fill: var(--ele-social-share-normal-color, var(--ele-base-300));
+}
+.ele-social-share
+  li
+  a:hover
+  svg:not(.ele-social-share li a:hover svg[fill="none"]),
+.ele-social-share li a:hover span {
+  fill: var(--ele-social-share-hover-color, var(--ele-base-300));
+}
+
 .ele-social-share li a span {
   font-size: var(--ele-font-size, 15px);
   color: var(--ele-social-share-normal-color, var(--ele-base-300));
