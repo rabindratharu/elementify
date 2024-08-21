@@ -7664,11 +7664,9 @@ form textarea {
   width: 100%;
   position: relative;
 }
-.ele-header-search-enable[data-row="top"] .ele-container,
-.ele-header-search-enable[data-row="bottom"] .ele-container,
-.ele-header-search-enable .ele-container {
-  /* width: 100%;
-  margin: 0; */
+.ele-header-search-enable[data-row="top"] .ele-container:first-child,
+.ele-header-search-enable[data-row="bottom"] .ele-container:first-child,
+.ele-header-search-enable .ele-container:first-child {
   position: static;
 }
 .ele-header-search-enable
