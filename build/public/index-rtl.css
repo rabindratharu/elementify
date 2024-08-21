@@ -7668,6 +7668,7 @@ form textarea {
 .ele-header-search-enable[data-row="bottom"] .ele-container:first-child,
 .ele-header-search-enable .ele-container:first-child {
   position: static;
+  z-index: 99;
 }
 .ele-header-search-enable
   .ele-off-canvas[data-toggle-behaviour="drawer-right"]
