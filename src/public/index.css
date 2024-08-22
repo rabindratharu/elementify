@@ -2716,14 +2716,23 @@ object {
   max-width: var(--ele-container-max-width);
   padding: 0 var(--content-h-gap, 10px);
 }
+.ele-header-row::before {
+  width: calc(var(--ele-container-width) - 2 * var(--content-h-gap, 10px));
+  max-width: calc(
+    var(--ele-container-max-width) - 2 * var(--content-h-gap, 10px)
+  );
+  margin: 0 auto;
+}
 
 .ele-container-narrow {
   --ele-container-max-width: var(--ele-container-narrow-width-2);
 }
 
-.ele-container-wide {
+.ele-container-wide,
+.ele-border-width-wide {
   --ele-container-width: 100%;
   --ele-container-max-width: 100%;
+  --content-h-gap: 0px;
 }
 
 [data-sidebar="left"] .site-content > .ele-container-narrow,

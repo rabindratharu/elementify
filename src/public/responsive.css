@@ -123,6 +123,10 @@
     width: var(--ele-container-width);
     padding: 0 var(--content-h-gap, 10px);
   }
+  .ele-header-row::before {
+    width: calc(var(--ele-container-width) - 2 * var(--content-h-gap, 10px));
+    padding: 0 var(--content-h-gap, 10px);
+  }
 }
 
 /* base */
