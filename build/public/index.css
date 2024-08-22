@@ -3162,6 +3162,11 @@ Header: Builder
   --ele-col-items-direction: column;
   --ele-col-items-align: start;
 }
+.ele-header-row[data-row="sidebar"] .ele-modal-inner {
+  -webkit-box-align: var(--ele-col-justify-content, start);
+      -ms-flex-align: var(--ele-col-justify-content, start);
+          align-items: var(--ele-col-justify-content, start);
+}
 .ele-header-row .ele-builder-column {
   display: grid;
   grid-template-columns: var(--ele-header-template-columns);
@@ -7565,6 +7570,27 @@ form textarea {
   width: 90%;
   max-width: 100%;
 }
+.ele-off-canvas[data-toggle-behaviour="drawer-right"]
+  .ele-builder-col-element[data-builder-element="menu_3"],
+.ele-off-canvas[data-toggle-behaviour="drawer-left"]
+  .ele-builder-col-element[data-builder-element="menu_3"],
+.ele-off-canvas[data-toggle-behaviour="drawer-right"]
+  .ele-builder-col-element[data-builder-element="menu_3"]
+  nav,
+.ele-off-canvas[data-toggle-behaviour="drawer-left"]
+  .ele-builder-col-element[data-builder-element="menu_3"]
+  nav {
+  min-width: 100%;
+}
+.ele-off-canvas[data-toggle-behaviour="drawer-right"]
+  .ele-builder-col-element[data-builder-element="menu_3"]
+  .ele-header-menu-3-wrap,
+.ele-off-canvas[data-toggle-behaviour="drawer-left"]
+  .ele-builder-col-element[data-builder-element="menu_3"]
+  .ele-header-menu-3-wrap {
+  text-align: var(--ele-col-items-align, center);
+}
+
 .ele-popup-box {
   position: fixed;
   top: 50%;
@@ -7958,7 +7984,7 @@ form textarea {
   font-weight: 600;
   padding-top: 10px;
   padding-bottom: 13px;
-  display: inline-block;
+  display: block;
   padding-left: 7px;
 }
 .ele-header-menu-3-wrap nav ul .children,
