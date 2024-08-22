@@ -81,9 +81,6 @@
     .ele-column:nth-of-type(even)::after {
     display: none;
   }
-  .ele-modal-visible {
-    --scrollbar-width: 0;
-  }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
@@ -1341,6 +1338,9 @@
 
 /* lg */
 @media (min-width: 1024px) {
+  .ele-modal-visible {
+    padding-right: var(--scrollbar-width, 17px);
+  }
   .ele-has-boxed.customize-partial-edit-shortcuts-shown .site {
     margin-right: 30px;
     margin-left: 30px;

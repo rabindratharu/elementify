@@ -7662,7 +7662,6 @@ form textarea {
 .ele-modal-visible {
   height: 100%;
   overflow: hidden;
-  padding-left: var(--scrollbar-width, 17px);
 }
 
 /*--------------------------------------------------------------
@@ -8513,9 +8512,6 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   .ele-d-grid[data-layout="3"][data-column-divider="on"]
     .ele-column:nth-of-type(even)::after {
     display: none;
-  }
-  .ele-modal-visible {
-    --scrollbar-width: 0;
   }
 }
 
@@ -9961,6 +9957,9 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
 
 /* lg */
 @media (min-width: 1024px) {
+  .ele-modal-visible {
+    padding-left: var(--scrollbar-width, 17px);
+  }
   .ele-has-boxed.customize-partial-edit-shortcuts-shown .site {
     margin-left: 30px;
     margin-right: 30px;
