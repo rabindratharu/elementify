@@ -2885,7 +2885,7 @@ object {
 }
 
 .ele-container-wide,
-.ele-border-width-wide {
+.ele-border-width-wide::before {
   --ele-container-width: 100%;
   --ele-container-max-width: 100%;
   --content-h-gap: 0px;
