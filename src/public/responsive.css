@@ -651,6 +651,10 @@
 
 /* md */
 @media (min-width: 768px) {
+  .ele-off-canvas[data-toggle-behaviour="drawer-right"] .ele-modal-inner,
+  .ele-off-canvas[data-toggle-behaviour="drawer-left"] .ele-modal-inner {
+    width: 60%;
+  }
   .ele-social-share-wrap.ele-float-left[data-layout="3"],
   .ele-social-share-wrap.ele-float-left[data-layout="4"] {
     left: 57px;
@@ -1338,6 +1342,10 @@
 
 /* lg */
 @media (min-width: 1024px) {
+  .ele-off-canvas[data-toggle-behaviour="drawer-right"] .ele-modal-inner,
+  .ele-off-canvas[data-toggle-behaviour="drawer-left"] .ele-modal-inner {
+    width: 30%;
+  }
   .ele-modal-visible {
     padding-right: var(--scrollbar-width, 17px);
   }
