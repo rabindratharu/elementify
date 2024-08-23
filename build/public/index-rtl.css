@@ -7776,6 +7776,55 @@ form textarea {
   top: -100%;
 }
 .ele-header-search-enable
+  .ele-modal[data-toggle-behaviour="drawer-top"]
+  .ele-modal-inner,
+.ele-header-search-enable
+  .ele-modal[data-toggle-behaviour="drawer-left"]
+  .ele-modal-inner,
+.ele-header-search-enable
+  .ele-modal[data-toggle-behaviour="drawer-right"]
+  .ele-modal-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  padding: 0 60px;
+}
+.ele-header-search-enable
+  .ele-modal[data-toggle-behaviour="drawer-top"]
+  .ele-modal-actions,
+.ele-header-search-enable
+  .ele-modal[data-toggle-behaviour="drawer-left"]
+  .ele-modal-actions,
+.ele-header-search-enable
+  .ele-modal[data-toggle-behaviour="drawer-right"]
+  .ele-modal-actions {
+  position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  padding-left: 15px;
+}
+.ele-header-search-enable
+  .ele-modal[data-toggle-behaviour="toggle"]
+  .ele-modal-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.ele-header-search-enable
   .ele-modal.active[data-toggle-behaviour="drawer-top"] {
   top: 0;
 }

@@ -7200,6 +7200,42 @@ form textarea {
   top: -100%;
 }
 .ele-header-search-enable
+  .ele-modal[data-toggle-behaviour="drawer-top"]
+  .ele-modal-inner,
+.ele-header-search-enable
+  .ele-modal[data-toggle-behaviour="drawer-left"]
+  .ele-modal-inner,
+.ele-header-search-enable
+  .ele-modal[data-toggle-behaviour="drawer-right"]
+  .ele-modal-inner {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 60px;
+}
+.ele-header-search-enable
+  .ele-modal[data-toggle-behaviour="drawer-top"]
+  .ele-modal-actions,
+.ele-header-search-enable
+  .ele-modal[data-toggle-behaviour="drawer-left"]
+  .ele-modal-actions,
+.ele-header-search-enable
+  .ele-modal[data-toggle-behaviour="drawer-right"]
+  .ele-modal-actions {
+  position: static;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  padding-right: 15px;
+}
+.ele-header-search-enable
+  .ele-modal[data-toggle-behaviour="toggle"]
+  .ele-modal-inner {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.ele-header-search-enable
   .ele-modal.active[data-toggle-behaviour="drawer-top"] {
   top: 0;
 }
