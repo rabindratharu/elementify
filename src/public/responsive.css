@@ -1346,9 +1346,6 @@
   .ele-off-canvas[data-toggle-behaviour="drawer-left"] .ele-modal-inner {
     width: 30%;
   }
-  .ele-modal-visible {
-    padding-right: var(--scrollbar-width, 17px);
-  }
   .ele-has-boxed.customize-partial-edit-shortcuts-shown .site {
     margin-right: 30px;
     margin-left: 30px;

@@ -3101,6 +3101,11 @@ object {
   width: var(--ele-container-width);
   padding: 0 var(--content-h-gap, 10px);
 }
+.ele-site-header
+  .ele-header-sticky.ele-item-is-fixed[data-shrink="true"]
+  .ele-header-row {
+  --ele-header-row-min-height: 40px;
+}
 
 /*
 Header: Builder
@@ -10039,9 +10044,6 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   .ele-off-canvas[data-toggle-behaviour="drawer-right"] .ele-modal-inner,
   .ele-off-canvas[data-toggle-behaviour="drawer-left"] .ele-modal-inner {
     width: 30%;
-  }
-  .ele-modal-visible {
-    padding-right: var(--scrollbar-width, 17px);
   }
   .ele-has-boxed.customize-partial-edit-shortcuts-shown .site {
     margin-right: 30px;

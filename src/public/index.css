@@ -2944,6 +2944,11 @@ object {
   width: var(--ele-container-width);
   padding: 0 var(--content-h-gap, 10px);
 }
+.ele-site-header
+  .ele-header-sticky.ele-item-is-fixed[data-shrink="true"]
+  .ele-header-row {
+  --ele-header-row-min-height: 40px;
+}
 
 /*
 Header: Builder
