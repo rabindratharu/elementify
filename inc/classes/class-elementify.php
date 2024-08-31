@@ -16,6 +16,7 @@ class Elementify {
 		Customizer::get_instance();
 		Menus::get_instance();
 		Sidebars::get_instance();
+		Svg_Render::get_instance();
 		
 		$this->setup_hooks();
 	}

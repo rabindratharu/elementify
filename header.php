@@ -12,6 +12,7 @@
 namespace Elementify;
 
 use Elementify\Inc\Utils;
+use Elementify\Inc\Svg_Render;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -129,6 +130,7 @@ do_action( 'elementify/body_top' );
 	// 		['--ele-base-300','--ele-base-200','--ele-base-100','--ele-base-color']
 	// 	));
     // echo '</pre>';
+    echo $svg = Svg_Render::render( 'fas_archway', 'currentColor', 2, '', false );
     ?>
 
         <?php
