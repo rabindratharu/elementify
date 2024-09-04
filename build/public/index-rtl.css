@@ -3552,6 +3552,13 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
 .ele-main-menu li > a svg {
   fill: var(--ele-menu-initial-color);
 }
+.ele-main-menu li > a:hover svg {
+  fill: var(--ele-menu-hover-color);
+}
+.ele-main-menu li.current-menu-parent > a svg,
+.ele-main-menu li.current-menu-item > a svg {
+  fill: var(--ele-menu-active-color);
+}
 .ele-main-menu
   li
   > a.ele-menu-link:hover:not(.ele-main-menu > li .sub-menu a:hover),
