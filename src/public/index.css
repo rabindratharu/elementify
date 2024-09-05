@@ -3361,16 +3361,6 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
 .ele-main-menu li > a:not(.ele-main-menu > li .children a) {
   color: var(--ele-menu-initial-color);
 }
-.ele-main-menu li > a svg {
-  fill: var(--ele-menu-initial-color);
-}
-.ele-main-menu li > a:hover svg {
-  fill: var(--ele-menu-hover-color);
-}
-.ele-main-menu li.current-menu-parent > a svg,
-.ele-main-menu li.current-menu-item > a svg {
-  fill: var(--ele-menu-active-color);
-}
 .ele-main-menu
   li
   > a.ele-menu-link:hover:not(.ele-main-menu > li .sub-menu a:hover),
@@ -3401,7 +3391,6 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
 .ele-main-menu > li .ele-submenu-icon {
   position: static;
   margin: 0;
-  height: 10px;
   line-height: 0;
 }
 .ele-header-menu-1-wrap nav[data-layout="1"] > ul > li:first-child > a,
@@ -4132,6 +4121,12 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
 .ele-collapsible-icon-enable li.menu-item-has-children ul {
   display: none;
 }
+
+.ele-collapsible-icon-enable li.page_item_has_children.is-open ul,
+.ele-collapsible-icon-enable li.menu-item-has-children.is-open ul {
+  display: block;
+}
+
 .ele-collapsible-icon-enable li.page_item_has_children i.mobile-arrows,
 .ele-collapsible-icon-enable li.menu-item-has-children i.mobile-arrows {
   position: absolute;
