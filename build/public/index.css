@@ -3484,12 +3484,26 @@ Header: Logo
 /*--------------------------------------------------------------
 # Primary Menu
 --------------------------------------------------------------*/
+.ele-header-menu-1-wrap nav ul li a.ele-submenu-icon,
+.ele-header-menu-2-wrap nav ul li a.ele-submenu-icon,
+.ele-header-menu-3-wrap nav ul li a.ele-submenu-icon,
 nav .ele-submenu-icon {
   display: none;
 }
-nav .page_item_has_children > a > .ele-submenu-icon,
-nav .menu-item-has-children > a > .ele-submenu-icon {
-  display: inline-block;
+.ele-header-menu-1-wrap nav ul li.page_item_has_children > a.ele-submenu-icon,
+.ele-header-menu-1-wrap nav ul li.menu-item-has-children > a.ele-submenu-icon,
+.ele-header-menu-1-wrap nav .page_item_has_children > a > .ele-submenu-icon,
+.ele-header-menu-1-wrap nav .menu-item-has-children > a > .ele-submenu-icon,
+.ele-header-menu-2-wrap nav ul li.page_item_has_children > a.ele-submenu-icon,
+.ele-header-menu-2-wrap nav ul li.menu-item-has-children > a.ele-submenu-icon,
+.ele-header-menu-2-wrap nav .page_item_has_children > a > .ele-submenu-icon,
+.ele-header-menu-2-wrap nav .menu-item-has-children > a > .ele-submenu-icon,
+.ele-header-menu-3-wrap nav ul li.page_item_has_children > a.ele-submenu-icon,
+.ele-header-menu-3-wrap nav ul li.menu-item-has-children > a.ele-submenu-icon,
+.ele-header-menu-3-wrap nav .page_item_has_children > a > .ele-submenu-icon,
+.ele-header-menu-3-wrap nav .menu-item-has-children > a > .ele-submenu-icon {
+  display: block;
+  line-height: 0.5;
 }
 .ele-main-menu li {
   position: relative;
@@ -4229,7 +4243,8 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.ele-main-menu > li a:not(.ele-main-menu > li .sub-menu a) {
+.ele-main-menu > li a:not(.ele-main-menu > li .sub-menu a),
+.ele-main-menu > li a svg:not(.ele-main-menu > li .sub-menu a svg) {
   /* white-space: nowrap; */
   /* justify-content: var(--ele-menu-item-alignment, center); */
   height: var(--ele-menu-item-height, 100%);
@@ -4312,18 +4327,6 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
   left: -100%;
 }
 
-.sub-menu .menu-item-has-children > a,
-.children .page_item_has_children > a {
-  position: relative;
-}
-.sub-menu .menu-item-has-children > a > .ele-submenu-icon,
-.children .page_item_has_children > a > .ele-submenu-icon {
-  right: 3px;
-  position: absolute;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
 .ele-builder-col-0 .sub-menu .menu-item-has-children > a > .ele-submenu-icon,
 .ele-builder-col-0 .children .page_item_has_children > a > .ele-submenu-icon {
   -webkit-transform: rotate(-90deg);
@@ -4342,6 +4345,12 @@ nav .menu-item-has-children > a > .ele-submenu-icon {
 .ele-collapsible-icon-enable li.menu-item-has-children ul {
   display: none;
 }
+
+.ele-collapsible-icon-enable li.page_item_has_children.is-open > ul,
+.ele-collapsible-icon-enable li.menu-item-has-children.is-open > ul {
+  display: block;
+}
+
 .ele-collapsible-icon-enable li.page_item_has_children i.mobile-arrows,
 .ele-collapsible-icon-enable li.menu-item-has-children i.mobile-arrows {
   position: absolute;
@@ -8013,13 +8022,37 @@ form textarea {
   padding: 6px 10px;
   font-size: 14px;
 }
-.ele-header-menu-3-wrap nav {
+/* .ele-header-menu-3-wrap nav {
   padding-right: 15px;
-}
+} */
 /* .ele-modal-content .ele-builder-col-element,
 .ele-header-menu-3-wrap nav{
   width: 100%;
 } */
+.ele-header-menu-3-wrap nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ele-header-menu-3-wrap nav ul li a.ele-menu-link {
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 13px;
+  display: block;
+  padding-left: 7px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 .ele-header-menu-3-wrap nav > ul > li:first-child {
   border-top: none;
 }
@@ -8030,23 +8063,17 @@ form textarea {
   list-style: none;
   border-top: var(--ele-collapsible-border, var(--ele-border));
 }
-.ele-header-menu-3-wrap nav ul li a {
-  font-weight: 600;
-  padding-top: 10px;
-  padding-bottom: 13px;
-  display: block;
-  padding-left: 7px;
-}
 .ele-header-menu-3-wrap nav ul .children,
 .ele-header-menu-3-wrap nav ul .sub-menu {
   padding-left: 17px;
+  width: 100%;
 }
 .ele-header-menu-3-wrap nav ul ul .children,
 .ele-header-menu-3-wrap nav ul ul .sub-menu {
   padding-left: 30px;
 }
-.ele-header-menu-3-wrap nav ul li.page_item_has_children .ele-submenu-icon,
-.ele-header-menu-3-wrap nav ul li.menu-item-has-children .ele-submenu-icon {
+.ele-header-menu-3-wrap nav ul li.page_item_has_children > a .ele-submenu-icon,
+.ele-header-menu-3-wrap nav ul li.menu-item-has-children > a .ele-submenu-icon {
   position: absolute;
   right: 0;
   height: 24px;
@@ -8067,10 +8094,7 @@ form textarea {
 .ele-header-menu-3-wrap nav ul li.menu-item-has-children {
   position: relative;
 }
-.ele-header-menu-3-wrap nav ul li.page_item_has_children > a,
-.ele-header-menu-3-wrap nav ul li.menu-item-has-children > a {
-  padding-right: 30px;
-}
+/*  */
 /*--------------------------------------------------------------
 # Theme Switch
 -------------------------------------------------------------- */
