@@ -7063,6 +7063,7 @@ form textarea {
   margin-inline-start: auto;
   --ele-font-size: 30px;
   display: inline-flex;
+  margin: 0;
 }
 
 .ele-modal .ele-modal-actions button {
@@ -7114,14 +7115,21 @@ form textarea {
   margin: 0 auto;
 }
 .ele-header-search-enable .ele-modal .ele-modal-content .search-form {
-  position: relative;
+  /* position: relative; */
   width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.ele-header-search-enable .search-form .search-submit {
+.ele-header-search-enable .search-form > label {
+  flex: 1 1 100%;
+  margin: 0;
+}
+/* .ele-header-search-enable .search-form .search-submit {
   position: absolute;
   right: 0;
   top: 0;
-}
+} */
 .ele-header-search-enable .search-form input[type="search"] {
   padding-right: 100px;
 }
