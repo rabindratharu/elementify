@@ -819,55 +819,7 @@ body::after {
   background: var(--ele-base-100);
 }
 body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-kbd,
-code,
-samp,
-label,
-figcaption,
-.wp-block-quote,
-.wp-block-pullquote,
-.ele-button,
-.ele-label,
-.ele-site-title,
-.ele-site-description,
-.entry-meta,
-.ele-menu-badge,
-.entry-excerpt,
-.ele-post-title,
-.ele-breadcrumb-trail,
-.ele-header-text,
-.ele-product-sku,
-.author-box-bio,
-.author-box-name,
-.ele-contact-info,
-.site-description,
-.page-description,
-.ele-main-menu li a,
-.menu .ele-menu-link,
-.comment-reply-title,
-.ele-footer-copyright,
-.ele-language-switcher,
-.entry-summary .price,
-[data-products] .price,
-.woocommerce-tabs .tabs,
-.woocommerce-tabs .ele-accordion-heading,
-.ele-shortcuts-bar,
-.ele-widget > *,
-.ele-dynamic-data-layer,
-.ele-dynamic-filter,
-.ele-search-results,
-.tutor-ratings,
-.tutor-meta > *,
-.tutor-course-details-title,
-.tutor-course-details-actions > a,
-.ele-language-switcher ul[data-placement] {
+body * {
   font-family: var(--ele-font-family);
   font-size: var(--ele-font-size);
   font-weight: var(--ele-font-weight);
@@ -7237,6 +7189,7 @@ form textarea {
 .ele-svg-icon,
 .ele-container svg,
 .ele-header-theme-switch-wrap svg {
+  --ele-font-size: 15px;
   width: var(--ele-font-size, 100%);
   height: var(--ele-font-size, 100%);
   -o-object-fit: contain;

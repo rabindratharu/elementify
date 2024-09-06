@@ -104,7 +104,7 @@ do_action( 'elementify/body_top' );
     // print_r($enable);
     // echo '</pre>';
     
-    // $base = get_theme_mod('elementify_framework_fonts_base_typo',[
+    // $base = get_theme_mod('elementify_framework_header_site_title_typo',[
     //     'font-family'   => 'default',
     //     'font-weight'   => '400',
     //     'subsets'       => ['latin'],
@@ -122,12 +122,7 @@ do_action( 'elementify/body_top' );
     //     'text-decoration'   => 'none',
     // ]);
     // echo '<pre>';
-    // print_r(Generated_Styles::color(
-	// 		[':root'],
-	// 		'elementify_framework_colors_base',
-	// 		'',
-	// 		['--ele-base-300','--ele-base-200','--ele-base-100','--ele-base-color']
-	// 	));
+    // print_r($base);
     // echo '</pre>';
     ?>
 
