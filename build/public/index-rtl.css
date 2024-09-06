@@ -3461,7 +3461,8 @@ nav .ele-submenu-icon {
   position: relative;
   z-index: 1;
 }
-.ele-main-menu li a {
+.ele-main-menu li a,
+.ele-collapsible-menu li a {
   --ele-font-weight: 500;
   --ele-text-transform: uppercase;
   --ele-font-size: 14px;
@@ -7989,13 +7990,6 @@ form textarea {
   padding: 6px 10px;
   font-size: 14px;
 }
-/* .ele-header-menu-3-wrap nav {
-  padding-right: 15px;
-} */
-/* .ele-modal-content .ele-builder-col-element,
-.ele-header-menu-3-wrap nav{
-  width: 100%;
-} */
 .ele-header-menu-3-wrap nav ul li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8018,6 +8012,20 @@ form textarea {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+.ele-collapsible-menu li > a.ele-menu-link,
+.ele-collapsible-menu li > a {
+  color: var(--ele-menu-initial-color);
+}
+.ele-collapsible-menu li > a.ele-menu-link:hover,
+.ele-collapsible-menu li > a:hover {
+  color: var(--ele-menu-hover-color);
+}
+.ele-collapsible-menu li.current-menu-parent > a.ele-menu-link,
+.ele-collapsible-menu li.current-menu-parent > a,
+.ele-collapsible-menu li.current-menu-item > a.ele-menu-link,
+.ele-collapsible-menu li.current-menu-item > a {
+  color: var(--ele-menu-active-color);
 }
 
 .ele-header-menu-3-wrap nav > ul > li:first-child {
