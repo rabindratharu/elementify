@@ -4805,15 +4805,19 @@ nav .ele-submenu-icon {
   --ele-item-gap: 0;
   --ele-social-share-normal-color: var(--ele-accent-color);
   --ele-social-share-hover-color: var(--ele-accent-color);
-  border-top: var(--ele-border);
-  border-inline-start: var(--ele-border);
+  border-top: 1px solid
+    var(--ele-social-share-normal-color, var(--ele-base-300));
+  border-inline-start: 1px solid
+    var(--ele-social-share-normal-color, var(--ele-base-300));
 }
 
 .ele-social-share-wrap[data-layout="2"] .ele-social-share > li,
 .ele-header-social-wrap[data-layout="2"] .ele-social-share > li,
 .ele-footer-social-wrap[data-layout="2"] .ele-social-share > li {
-  border-inline-end: var(--ele-border);
-  border-bottom: var(--ele-border);
+  border-inline-end: 1px solid
+    var(--ele-social-share-normal-color, var(--ele-base-300));
+  border-bottom: 1px solid
+    var(--ele-social-share-normal-color, var(--ele-base-300));
 }
 .ele-social-share-wrap[data-layout="2"] .ele-social-share > li:not(:last-child),
 .ele-header-social-wrap[data-layout="2"]
