@@ -680,3 +680,46 @@ if ( ! function_exists( 'elementify_get_post_id' ) ) {
 		return $post_id;
 	}
 }
+
+
+
+class Elementify_Walker_Page_Menu extends Walker_Page {
+    // Modify the start of each element (each link) to add the custom class
+    function start_el(&$output, $page, $depth = 0, $args = array(), $current_page = 0) {
+        $indent = ($depth) ? str_repeat("\t", $depth) : '';
+
+        $css_class = array('page_item', 'page-item-' . $page->ID);
+        if (!empty($current_page)) {
+            $_current_page = get_post($current_page);
+            if (in_array($page->ID, $_current_page->ancestors)) {
+                $css_class[] = 'current_page_ancestor';
+            }
+            if ($page->ID == $current_page) {
+                $css_class[] = 'current_page_item';
+            } elseif ($_current_page && $page->ID == $_current_page->post_parent) {
+                $css_class[] = 'current_page_parent';
+            }
+        } elseif ($page->ID == get_option('page_for_posts')) {
+            $css_class[] = 'current_page_parent';
+        }
+
+        $css_class = implode(' ', apply_filters('page_css_class', $css_class, $page, $depth, $args, $current_page));
+
+        // Here we add the custom class 'ele-menu-link' to the anchor tag
+        $output .= $indent . sprintf(
+            '<li class="%s"><a href="%s" class="ele-menu-link">%s</a>',
+            $css_class,
+            esc_url(get_permalink($page->ID)),
+            apply_filters('the_title', $page->post_title, $page->ID)
+        );
+
+        if (!empty($args['show_date'])) {
+            if ('modified' == $args['show_date']) {
+                $time = $page->post_modified;
+            } else {
+                $time = $page->post_date;
+            }
+            $output .= " " . mysql2date(get_option('date_format'), $time);
+        }
+    }
+}
