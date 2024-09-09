@@ -3429,6 +3429,13 @@ Header: Logo
 /*--------------------------------------------------------------
 # html #1
 --------------------------------------------------------------*/
+.ele-header-html-1-wrap {
+  color: var(--ele-accent-active);
+  gap: 5px;
+}
+.ele-header-html-1-wrap a {
+  --ele-text-decoration: underline;
+}
 .ele-header-html-1-wrap li {
   color: var(--ele-accent-color);
 }
