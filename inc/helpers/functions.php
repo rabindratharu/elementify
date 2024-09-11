@@ -420,7 +420,7 @@ if ( ! function_exists( 'elementify_submenu_icon' ) ) {
         if ( $has_children ) {
             $item_output = str_replace(
                 '</a>',
-                '<span class="ele-submenu-icon">' . elementify_get_the_svg( 'ui', 'angle-down', 18 ) . '</span></a>',
+                '<span class="ele-submenu-icon">' . elementify_get_the_svg( 'ui', 'angle-down', 15 ) . '</span></a>',
                 $item_output
             );
         }
