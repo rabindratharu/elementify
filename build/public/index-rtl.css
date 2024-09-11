@@ -3185,20 +3185,6 @@ Header: Builder
 /*
 Header: Social Icon
 /*----------------------------------*/
-.ele-header-social-wrap.ele-custom-color
-  .ele-social-share
-  li
-  a:not(.ele-header-social-wrap[data-layout="2"] .ele-social-share li a) {
-  background-color: var(--ele-icon-background, var(--ele-primary-color));
-}
-.ele-header-social-wrap.ele-custom-color
-  .ele-social-share
-  li
-  a:hover:not(
-    .ele-header-social-wrap[data-layout="2"] .ele-social-share li a:hover
-  ) {
-  background-color: var(--ele-icon-hover-background, var(--ele-primary-active));
-}
 .ele-social-share li a.ele-tooltip-enable {
   position: relative;
 }
@@ -5043,38 +5029,11 @@ nav .ele-submenu-icon {
     background 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955),
     border-color 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-.ele-social-share
-  li
-  a:not(.ele-social-share-wrap[data-layout="2"] .ele-social-share li a) {
-  background-color: var(--ele-accent-active);
-}
-
-.ele-social-share
-  li:hover
-  a:not(.ele-social-share-wrap[data-layout="2"] .ele-social-share li:hover a) {
-  background-color: var(--ele-accent-color);
-}
 
 .ele-social-share
   li
   a:not(.ele-social-share-wrap[data-layout="2"] .ele-social-share li a) {
   border-radius: var(--border-radius);
-}
-
-.ele-social-share-wrap.ele-custom-color
-  .ele-social-share
-  li
-  a:not(.ele-social-share-wrap[data-layout="2"] .ele-social-share li a) {
-  background-color: var(--ele-icon-background, var(--ele-primary-color));
-}
-
-.ele-social-share-wrap.ele-custom-color
-  .ele-social-share
-  li
-  a:hover:not(
-    .ele-social-share-wrap[data-layout="2"] .ele-social-share li a:hover
-  ) {
-  background-color: var(--ele-icon-hover-background, var(--ele-primary-active));
 }
 
 .ele-social-share li a svg,
@@ -5102,18 +5061,6 @@ nav .ele-submenu-icon {
     fill 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955)
   );
 }
-.ele-social-share li a svg:not(.ele-social-share li a svg[fill="none"]),
-.ele-social-share li a span {
-  fill: var(--ele-social-share-normal-color, var(--ele-base-300));
-}
-.ele-social-share
-  li
-  a:hover
-  svg:not(.ele-social-share li a:hover svg[fill="none"]),
-.ele-social-share li a:hover span {
-  fill: var(--ele-social-share-hover-color, var(--ele-base-300));
-}
-
 .ele-social-share li a span {
   font-size: var(--ele-font-size, 15px);
   color: var(--ele-social-share-normal-color, var(--ele-base-300));
@@ -5134,6 +5081,14 @@ nav .ele-submenu-icon {
     var(--ele-social-share-normal-color, var(--ele-base-300));
           border-inline-start: 1px solid
     var(--ele-social-share-normal-color, var(--ele-base-300));
+}
+.ele-social-share-wrap[data-layout="2"] .ele-social-share a,
+.ele-header-social-wrap[data-layout="2"] .ele-social-share a,
+.ele-footer-social-wrap[data-layout="2"] .ele-social-share a {
+  color: var(--ele-social-share-normal-color);
+}
+.ele-social-share-wrap[data-layout="4"] .ele-social-share a {
+  padding: 0px;
 }
 
 .ele-social-share-wrap[data-layout="2"] .ele-social-share > li,
