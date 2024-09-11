@@ -4738,14 +4738,6 @@ nav .ele-submenu-icon {
     fill 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955)
   );
 }
-.ele-social-share li a span {
-  font-size: var(--ele-font-size, 15px);
-  color: var(--ele-social-share-normal-color, var(--ele-base-300));
-}
-.ele-social-share li a:hover span {
-  color: var(--ele-social-share-hover-color, var(--ele-base-300));
-}
-
 .ele-social-share-wrap[data-layout="2"] .ele-social-share,
 .ele-header-social-wrap[data-layout="2"] .ele-social-share,
 .ele-footer-social-wrap[data-layout="2"] .ele-social-share {
