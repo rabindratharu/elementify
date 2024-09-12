@@ -4333,7 +4333,6 @@ nav .ele-submenu-icon {
   --ele-sept-size: 10px;
   --ele-sept-spacing: 8px;
   --ele-home-icon-size: 25px;
-  color: var(--ele-accent-active);
 }
 .ele-breadcrumb-trail .trail-items .ele-separator svg {
   --ele-font-size: 15px;
@@ -4349,9 +4348,9 @@ nav .ele-submenu-icon {
   padding: 6px 10px;
   border-radius: 2px;
 }
-.ele-breadcrumb-trail[data-layout="1"] ul,
 .ele-breadcrumb-trail .trail-items li.trail-item {
   column-gap: var(--ele-sept-spacing);
+  color: var(--ele-link-normal-color, var(--ele-accent-active));
 }
 .ele-breadcrumb-trail
   .trail-items
