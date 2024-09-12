@@ -4348,7 +4348,7 @@ nav .ele-submenu-icon {
   padding: 6px 10px;
   border-radius: 2px;
 }
-.ele-breadcrumb-trail .trail-items li.trail-item {
+.ele-breadcrumb-trail .trail-items li.trail-item:not(:last-child) {
   column-gap: var(--ele-sept-spacing);
   color: var(--ele-link-normal-color, var(--ele-accent-active));
 }
@@ -7416,12 +7416,13 @@ form textarea {
 #ele-theme-color-scheme {
   position: relative;
   isolation: isolate;
+  color: var(--ele-link-normal-color, var(--ele-accent-active));
 }
 #ele-theme-color-scheme .toggle-circle {
   transition: transform 500ms ease-out;
 }
 
-[data-theme="light"] #ele-theme-color-scheme .toggle-circle {
+[data-theme="dark"] #ele-theme-color-scheme .toggle-circle {
   transform: translateX(-15%);
 }
 #ele-theme-color-scheme .toggle-sun {

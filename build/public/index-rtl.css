@@ -4586,7 +4586,7 @@ nav .ele-submenu-icon {
   padding: 6px 10px;
   border-radius: 2px;
 }
-.ele-breadcrumb-trail .trail-items li.trail-item {
+.ele-breadcrumb-trail .trail-items li.trail-item:not(:last-child) {
   -webkit-column-gap: var(--ele-sept-spacing);
      -moz-column-gap: var(--ele-sept-spacing);
           column-gap: var(--ele-sept-spacing);
@@ -8041,6 +8041,7 @@ form textarea {
 #ele-theme-color-scheme {
   position: relative;
   isolation: isolate;
+  color: var(--ele-link-normal-color, var(--ele-accent-active));
 }
 #ele-theme-color-scheme .toggle-circle {
   -webkit-transition: -webkit-transform 500ms ease-out;
@@ -8049,7 +8050,7 @@ form textarea {
   transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
 }
 
-[data-theme="light"] #ele-theme-color-scheme .toggle-circle {
+[data-theme="dark"] #ele-theme-color-scheme .toggle-circle {
   -webkit-transform: translateX(15%);
       -ms-transform: translateX(15%);
           transform: translateX(15%);
