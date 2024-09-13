@@ -120,7 +120,8 @@
     width: var(--ele-container-width);
     padding: 0 var(--content-h-gap, 10px);
   }
-  .ele-header-row::before {
+  .ele-header-row::before,
+  .ele-footer-row::before {
     width: calc(var(--ele-container-width) - 2 * var(--content-h-gap, 10px));
     padding: 0 var(--content-h-gap, 10px);
   }
@@ -636,7 +637,7 @@
     .ele-col-sept-enable
     [class~="ele-builder-column"]
     > .ele-builder-column-items:nth-child(odd):not(:last-child):before {
-    border-right: var(--ele-builder-col-sept, var(--ele-border));
+    border-right: var(--ele-builder-col-sept, 0px solid var(--ele-base-300));
   }
 
   /*.ele-posts-wrap[data-columns-sm="1"] .ele-column:nth-last-of-type(1),*/
@@ -1254,7 +1255,7 @@
     .ele-col-sept-enable
     [class~="ele-builder-column"]
     > .ele-builder-column-items:not(:last-child):before {
-    border-right: var(--ele-builder-col-sept, var(--ele-border));
+    border-right: var(--ele-builder-col-sept, 0px solid var(--ele-base-300));
     border-bottom: none;
     top: 0;
     right: -1px;
@@ -1933,7 +1934,7 @@
     .ele-col-sept-enable
     [class~="ele-builder-column"]
     > .ele-builder-column-items:not(:last-child):before {
-    border-right: var(--ele-builder-col-sept, var(--ele-border));
+    border-right: var(--ele-builder-col-sept, 0px solid var(--ele-base-300));
     border-bottom: none;
     top: 0;
     right: -1px;

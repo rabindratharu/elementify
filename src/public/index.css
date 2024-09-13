@@ -2668,12 +2668,14 @@ object {
   max-width: var(--ele-container-max-width);
   padding: 0 var(--content-h-gap, 10px);
 }
-.ele-header-row::before {
+.ele-header-row::before,
+.ele-footer-row::before {
   width: calc(var(--ele-container-width) - 2 * var(--content-h-gap, 10px));
   max-width: calc(
     var(--ele-container-max-width) - 2 * var(--content-h-gap, 10px)
   );
   margin: 0 auto;
+  z-index: 11;
 }
 
 .ele-container-narrow {
@@ -2684,7 +2686,6 @@ object {
 .ele-border-width-wide::before {
   --ele-container-width: 100%;
   --ele-container-max-width: 100%;
-  --content-h-gap: 0px;
 }
 
 [data-sidebar="left"] .site-content > .ele-container-narrow,
@@ -7465,7 +7466,7 @@ form textarea {
   width: 100%;
   right: 0;
   top: 1px;
-  border-bottom: var(--ele-builder-col-sept, var(--ele-border));
+  border-bottom: var(--ele-builder-col-sept, 0px solid var(--ele-base-300));
   z-index: -1;
 }
 .ele-site-footer [class~="ele-builder-column"] > .ele-builder-column-items {
