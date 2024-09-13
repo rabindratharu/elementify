@@ -8254,7 +8254,7 @@ form textarea {
   padding: 0 var(--content-h-gap, 15px);
   width: 100%;
 }
-.ele-footer-row .ele-builder-column {
+.ele-footer-row .ele-builder-column .ele-builder-column-items {
   -webkit-box-align: var(--ele-col-items-align, center);
       -ms-flex-align: var(--ele-col-items-align, center);
           align-items: var(--ele-col-items-align, center);

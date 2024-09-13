@@ -7597,7 +7597,7 @@ form textarea {
   padding: 0 var(--content-h-gap, 15px);
   width: 100%;
 }
-.ele-footer-row .ele-builder-column {
+.ele-footer-row .ele-builder-column .ele-builder-column-items {
   align-items: var(--ele-col-items-align, center);
 }
 .ele-footer-row .ele-builder-column .ele-builder-col-element > div {
