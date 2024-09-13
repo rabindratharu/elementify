@@ -1011,12 +1011,18 @@ input[type="submit"],
   --ele-button-border: 1px solid;
 }
 
-.ele-button-outline .ele-button svg:not(.ele-button svg[fill="none"]) {
+.ele-button-outline
+  .ele-button
+  svg:not(.ele-button svg[fill="none"]):not(
+    .ele-header-theme-switch-wrap .ele-button svg
+  ) {
   fill: var(--ele-button-outline-initial-color);
 }
 .ele-button-outline
   .ele-button:hover
-  svg:not(.ele-button:hover svg[fill="none"]) {
+  svg:not(.ele-button:hover svg[fill="none"]):not(
+    .ele-header-theme-switch-wrap .ele-button svg
+  ) {
   fill: var(--ele-button-outline-hover-color);
 }
 
@@ -2675,6 +2681,8 @@ object {
     var(--ele-container-max-width) - 2 * var(--content-h-gap, 10px)
   );
   margin: 0 auto;
+}
+.ele-footer-row::before {
   z-index: 11;
 }
 
@@ -7432,6 +7440,14 @@ form textarea {
 }
 [data-theme="light"] #ele-theme-color-scheme .toggle-sun {
   transform: rotate(0.5turn);
+}
+[data-theme="light"] #ele-theme-color-scheme {
+  --ele-button-box-initial-background: var(--ele-light-base-200);
+  --ele-button-box-hover-background: var(--ele-button-box-initial-background);
+}
+[data-theme="dark"] #ele-theme-color-scheme {
+  --ele-button-box-initial-background: var(--ele-dark-base-200);
+  --ele-button-box-hover-background: var(--ele-button-box-initial-background);
 }
 
 /*--------------------------------------------------------------
