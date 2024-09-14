@@ -1337,8 +1337,8 @@ a:active {
   margin-bottom: 10px;
 }
 
-.widget h2 {
-  --ele-font-size: 24px;
+.widget_block .wp-block-heading,
+.widget .widget-title {
   margin-bottom: 15px;
   display: block;
 }
@@ -5047,7 +5047,8 @@ nav .ele-submenu-icon {
   gap: 4px;
 }
 
-.ele-post-navigation-wrap .item-label {
+.ele-post-navigation-wrap .item-label,
+.ele-post-navigation-wrap .item-label span {
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
@@ -6218,45 +6219,39 @@ Pagination
 --------------------------------------------------------------*/
 
 /* ele-link-type-2 */
-.widget-area[data-link-type="2"] a {
+[data-link-type="2"] a {
   text-decoration: underline;
 }
 
 /* ele-link-type-3 */
-.widget-area[data-link-type="3"] a {
-  background-size: var(--has-link-decoration-effect, 100% 1px);
-  background-image: var(
-    --has-link-decoration-effect,
-    linear-gradient(currentColor, currentColor)
-  );
+[data-link-type="3"] a {
+  background-size: 100% 1px;
+  background-image: linear-gradient(currentColor, currentColor);
 }
-.widget-area[data-link-type="3"] a:hover {
-  color: var(--has-link-decoration-effect, var(--ele-base-color));
-  background-size: var(--has-link-decoration-effect, 100% 100%);
-  background-image: var(
-    --has-link-decoration-effect,
-    linear-gradient(var(--ele-primary-color), var(--ele-primary-color))
+[data-link-type="3"] a:hover {
+  color: var(--ele-link-hover-color, var(--ele-base-color));
+  background-size: 100% 100%;
+  background-image: linear-gradient(
+    var(--ele-link-normal-color, var(--ele-accent-active)),
+    var(--ele-link-normal-color, var(--ele-accent-active))
   );
   transition: all 0.3s ease 0s;
 }
 
 /* ele-link-type-4 */
-.widget-area[data-link-type="4"] a {
-  background-size: var(--has-link-decoration-effect, 0% 1px);
-  background-image: var(
-    --has-link-decoration-effect,
-    linear-gradient(currentColor, currentColor)
-  );
+[data-link-type="4"] a {
+  background-size: 0% 1px;
+  background-image: linear-gradient(currentColor, currentColor);
 }
-.widget-area[data-link-type="4"] a:hover {
-  background-size: var(--has-link-decoration-effect, 100% 1px);
+[data-link-type="4"] a:hover {
+  background-size: 100% 1px;
 }
 
 /* combined hover on ele-link-type-3, ele-link-type-4 */
-.widget-area[data-link-type="3"] a,
-.widget-area[data-link-type="4"] a {
-  background-position: var(--has-link-decoration-effect, 0% 100%);
-  background-repeat: var(--has-link-decoration-effect, no-repeat);
+[data-link-type="3"] a,
+[data-link-type="4"] a {
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
   transition: all 0.3s ease 0s;
 }
 
@@ -6289,11 +6284,6 @@ Pagination
   background-color: var(--ele-base-color);
   color: var(--ele-accent-active);
 }
-
-.site-footer a {
-  text-decoration: none;
-}
-
 /* link hover effect */
 
 /*.ele-link-type-2 .entry-content p>a, 
@@ -6604,14 +6594,14 @@ form textarea {
 .site-footer .ele-copyright {
   color: var(--ele-accent-active);
 }
+/* 
 .site-footer .ele-copyright a {
   color: var(--ele-primary-color);
   transition: all 0.25s ease;
 }
 .site-footer .ele-copyright a:hover {
   color: var(--ele-primary-active);
-  text-decoration: underline;
-}
+} */
 
 /*--------------------------------------------------------------
 # Go to Top
