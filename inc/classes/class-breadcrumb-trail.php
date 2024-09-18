@@ -110,6 +110,7 @@ class Breadcrumb_Trail {
         $defaults = array(
             'container'       => 'nav',
             'layout'          => '1',
+            'link_type'       => '1',
             'before'          => '',
             'after'           => '',
             'browse_tag'      => 'h2',
@@ -168,8 +169,9 @@ class Breadcrumb_Trail {
 
             // Open the unordered list.
             $breadcrumb .= sprintf(
-                '<%s class="trail-items ele-list-style-none ele-m-0 ele-p-0 ele-d-inline-flex ele-flex-wrap ele-align-items-center" itemscope itemtype="http://schema.org/BreadcrumbList">',
-                tag_escape( $this->args['list_tag'] )
+                '<%1$s class="trail-items ele-list-style-none ele-m-0 ele-p-0 ele-d-inline-flex ele-flex-wrap ele-align-items-center" data-link-type="%2$s" itemscope itemtype="http://schema.org/BreadcrumbList">',
+                tag_escape( $this->args['list_tag'] ),
+                esc_attr( $this->args['link_type'] ),
             );
 
             // Add the number of items and item list order schema.
