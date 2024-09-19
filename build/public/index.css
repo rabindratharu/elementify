@@ -3518,20 +3518,16 @@ nav .ele-submenu-icon {
 .ele-main-menu li > a:not(.ele-main-menu > li .children a) {
   color: var(--ele-menu-initial-color);
 }
-.ele-main-menu
-  li
-  > a.ele-menu-link:hover:not(.ele-main-menu > li .sub-menu a:hover),
+.ele-main-menu li > a.ele-menu-link:hover:not(.ele-main-menu > li .sub-menu a:hover),
 .ele-main-menu li > a:hover:not(.ele-main-menu > li .children a:hover) {
   color: var(--ele-menu-hover-color);
 }
-.ele-main-menu
-  li.current-menu-parent
-  > a.ele-menu-link:not(.ele-main-menu > li .sub-menu a),
+.ele-main-menu li.current-menu-parent > a.ele-menu-link:not(.ele-main-menu > li .sub-menu a),
 .ele-main-menu li.current-menu-parent > a:not(.ele-main-menu > li .children a),
-.ele-main-menu
-  li.current-menu-item
-  > a.ele-menu-link:not(.ele-main-menu > li .sub-menu a),
-.ele-main-menu li.current-menu-item > a:not(.ele-main-menu > li .children a) {
+.ele-main-menu li.current-menu-item > a.ele-menu-link:not(.ele-main-menu > li .sub-menu a),
+.ele-main-menu li.current-menu-item > a:not(.ele-main-menu > li .children a),
+.ele-main-menu li.current_page_item > a.ele-menu-link:not(.ele-main-menu > li .sub-menu a),
+.ele-main-menu li.current_page_item > a:not(.ele-main-menu > li .children a) {
   color: var(--ele-menu-active-color);
 }
 .ele-modal-content .ele-main-menu li a {
@@ -3611,141 +3607,39 @@ nav .ele-submenu-icon {
   z-index: -1;
 }
 
-.ele-header-menu-1-wrap
-  nav[data-layout="2"]
-  .ele-main-menu
-  > li
-  > a:hover::before,
-.ele-header-menu-1-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li
-  > a:hover::before,
-.ele-header-menu-1-wrap
-  nav[data-layout="4"]
-  .ele-main-menu
-  > li
-  > a:hover::before,
-.ele-header-menu-1-wrap
-  nav[data-layout="2"]
-  .ele-main-menu
-  > li.current-menu-parent
-  > a::before,
-.ele-header-menu-1-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li.current-menu-parent
-  > a::before,
-.ele-header-menu-1-wrap
-  nav[data-layout="4"]
-  .ele-main-menu
-  > li.current-menu-parent
-  > a::before,
-.ele-header-menu-1-wrap
-  nav[data-layout="2"]
-  .ele-main-menu
-  > li.current-menu-item
-  > a::before,
-.ele-header-menu-1-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li.current-menu-item
-  > a::before,
-.ele-header-menu-1-wrap
-  nav[data-layout="4"]
-  .ele-main-menu
-  > li.current-menu-item
-  > a::before,
-.ele-header-menu-2-wrap
-  nav[data-layout="2"]
-  .ele-main-menu
-  > li
-  > a:hover::before,
-.ele-header-menu-2-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li
-  > a:hover::before,
-.ele-header-menu-2-wrap
-  nav[data-layout="4"]
-  .ele-main-menu
-  > li
-  > a:hover::before,
-.ele-header-menu-2-wrap
-  nav[data-layout="2"]
-  .ele-main-menu
-  > li.current-menu-parent
-  > a::before,
-.ele-header-menu-2-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li.current-menu-parent
-  > a::before,
-.ele-header-menu-2-wrap
-  nav[data-layout="4"]
-  .ele-main-menu
-  > li.current-menu-parent
-  > a::before,
-.ele-header-menu-2-wrap
-  nav[data-layout="2"]
-  .ele-main-menu
-  > li.current-menu-item
-  > a::before,
-.ele-header-menu-2-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li.current-menu-item
-  > a::before,
-.ele-header-menu-2-wrap
-  nav[data-layout="4"]
-  .ele-main-menu
-  > li.current-menu-item
-  > a::before,
-.ele-footer-menu-wrap
-  nav[data-layout="2"]
-  .ele-main-menu
-  > li
-  > a:hover::before,
-.ele-footer-menu-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li
-  > a:hover::before,
-.ele-footer-menu-wrap
-  nav[data-layout="4"]
-  .ele-main-menu
-  > li
-  > a:hover::before,
-.ele-footer-menu-wrap
-  nav[data-layout="2"]
-  .ele-main-menu
-  > li.current-menu-parent
-  > a::before,
-.ele-footer-menu-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li.current-menu-parent
-  > a::before,
-.ele-footer-menu-wrap
-  nav[data-layout="4"]
-  .ele-main-menu
-  > li.current-menu-parent
-  > a::before,
-.ele-footer-menu-wrap
-  nav[data-layout="2"]
-  .ele-main-menu
-  > li.current-menu-item
-  > a::before,
-.ele-footer-menu-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li.current-menu-item
-  > a::before,
-.ele-footer-menu-wrap
-  nav[data-layout="4"]
-  .ele-main-menu
-  > li.current-menu-item
-  > a::before {
+.ele-header-menu-1-wrap nav[data-layout="2"] .ele-main-menu > li > a:hover::before,
+.ele-header-menu-1-wrap nav[data-layout="3"] .ele-main-menu > li > a:hover::before,
+.ele-header-menu-1-wrap nav[data-layout="4"] .ele-main-menu > li > a:hover::before,
+.ele-header-menu-1-wrap nav[data-layout="2"] .ele-main-menu > li.current-menu-parent > a::before,
+.ele-header-menu-1-wrap nav[data-layout="3"] .ele-main-menu > li.current-menu-parent > a::before,
+.ele-header-menu-1-wrap nav[data-layout="4"] .ele-main-menu > li.current-menu-parent > a::before,
+.ele-header-menu-1-wrap nav[data-layout="2"] .ele-main-menu > li.current-menu-item > a::before,
+.ele-header-menu-1-wrap nav[data-layout="3"] .ele-main-menu > li.current-menu-item > a::before,
+.ele-header-menu-1-wrap nav[data-layout="4"] .ele-main-menu > li.current-menu-item > a::before,
+.ele-header-menu-1-wrap nav[data-layout="2"] .ele-main-menu > li.current_page_item > a::before,
+.ele-header-menu-1-wrap nav[data-layout="3"] .ele-main-menu > li.current_page_item > a::before,
+.ele-header-menu-1-wrap nav[data-layout="4"] .ele-main-menu > li.current_page_item > a::before,
+.ele-header-menu-2-wrap nav[data-layout="2"] .ele-main-menu > li > a:hover::before,
+.ele-header-menu-2-wrap nav[data-layout="3"] .ele-main-menu > li > a:hover::before,
+.ele-header-menu-2-wrap nav[data-layout="4"] .ele-main-menu > li > a:hover::before,
+.ele-header-menu-2-wrap nav[data-layout="2"] .ele-main-menu > li.current-menu-parent > a::before,
+.ele-header-menu-2-wrap nav[data-layout="3"] .ele-main-menu > li.current-menu-parent > a::before,
+.ele-header-menu-2-wrap nav[data-layout="4"] .ele-main-menu > li.current-menu-parent > a::before,
+.ele-header-menu-2-wrap nav[data-layout="2"] .ele-main-menu > li.current-menu-item > a::before,
+.ele-header-menu-2-wrap nav[data-layout="3"] .ele-main-menu > li.current-menu-item > a::before,
+.ele-header-menu-2-wrap nav[data-layout="4"] .ele-main-menu > li.current-menu-item > a::before,
+.ele-footer-menu-wrap nav[data-layout="2"] .ele-main-menu > li > a:hover::before,
+.ele-footer-menu-wrap nav[data-layout="3"] .ele-main-menu > li > a:hover::before,
+.ele-footer-menu-wrap nav[data-layout="4"] .ele-main-menu > li > a:hover::before,
+.ele-footer-menu-wrap nav[data-layout="2"] .ele-main-menu > li.current-menu-parent > a::before,
+.ele-footer-menu-wrap nav[data-layout="3"] .ele-main-menu > li.current-menu-parent > a::before,
+.ele-footer-menu-wrap nav[data-layout="4"] .ele-main-menu > li.current-menu-parent > a::before,
+.ele-footer-menu-wrap nav[data-layout="2"] .ele-main-menu > li.current-menu-item > a::before,
+.ele-footer-menu-wrap nav[data-layout="3"] .ele-main-menu > li.current-menu-item > a::before,
+.ele-footer-menu-wrap nav[data-layout="4"] .ele-main-menu > li.current-menu-item > a::before,
+.ele-footer-menu-wrap nav[data-layout="2"] .ele-main-menu > li.current_page_item > a::before,
+.ele-footer-menu-wrap nav[data-layout="3"] .ele-main-menu > li.current_page_item > a::before,
+.ele-footer-menu-wrap nav[data-layout="4"] .ele-main-menu > li.current_page_item > a::before {
   width: 100%;
   right: auto;
   left: 0;
