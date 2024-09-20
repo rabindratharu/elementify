@@ -8192,6 +8192,9 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   right: 40px;
   left: auto;
 }
+.ele-hero-slider-section .ele-container {
+  --content-h-gap: 0px;
+}
 
 /*!***************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/public/responsive.css ***!

@@ -7496,3 +7496,6 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   right: 40px;
   left: auto;
 }
+.ele-hero-slider-section .ele-container {
+  --content-h-gap: 0px;
+}
