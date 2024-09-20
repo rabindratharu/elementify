@@ -3652,47 +3652,16 @@ nav .ele-submenu-icon {
   bottom: auto;
   top: 0;
 }
-.ele-header-menu-1-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li
-  > a:hover::after,
-.ele-header-menu-1-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li.current-menu-parent
-  > a::after,
-.ele-header-menu-1-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li.current-menu-item
-  > a::after,
-.ele-header-menu-2-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li
-  > a:hover::after,
-.ele-header-menu-2-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li.current-menu-parent
-  > a::after,
-.ele-header-menu-2-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li.current-menu-item
-  > a::after,
+.ele-header-menu-1-wrap nav[data-layout="3"] .ele-main-menu > li > a:hover::after,
+.ele-header-menu-1-wrap nav[data-layout="3"] .ele-main-menu > li.current-menu-parent > a::after,
+.ele-header-menu-1-wrap nav[data-layout="3"] .ele-main-menu > li.current-menu-item > a::after,
+.ele-header-menu-2-wrap nav[data-layout="3"] .ele-main-menu > li > a:hover::after,
+.ele-header-menu-2-wrap nav[data-layout="3"] .ele-main-menu > li.current-menu-parent > a::after,
+.ele-header-menu-2-wrap nav[data-layout="3"] .ele-main-menu > li.current-menu-item > a::after,
 .ele-footer-menu-wrap nav[data-layout="3"] .ele-main-menu > li > a:hover::after,
-.ele-footer-menu-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li.current-menu-parent
-  > a::after,
-.ele-footer-menu-wrap
-  nav[data-layout="3"]
-  .ele-main-menu
-  > li.current-menu-item
-  > a::after {
+.ele-footer-menu-wrap nav[data-layout="3"] .ele-main-menu > li.current-menu-parent > a::after,
+.ele-footer-menu-wrap nav[data-layout="3"] .ele-main-menu > li.current-menu-item > a::after,
+.ele-footer-menu-wrap nav[data-layout="3"] .ele-main-menu > li.current_page_item > a::after {
   width: 100%;
   right: 0;
   left: auto;
@@ -3730,99 +3699,27 @@ nav .ele-submenu-icon {
 
 /* fade-up-menu */
 .ele-dropdown-reveal-fade-up.ele-main-menu li ul,
-.ele-header-menu-1-wrap
-  nav[data-layout="2"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li
-  > ul,
-.ele-header-menu-1-wrap
-  nav[data-layout="3"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li
-  > ul,
-.ele-header-menu-1-wrap
-  nav[data-layout="4"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li
-  > ul,
-.ele-header-menu-2-wrap
-  nav[data-layout="2"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li
-  > ul,
-.ele-header-menu-2-wrap
-  nav[data-layout="3"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li
-  > ul,
-.ele-header-menu-2-wrap
-  nav[data-layout="4"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li
-  > ul,
-.ele-footer-menu-wrap
-  nav[data-layout="2"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li
-  > ul,
-.ele-footer-menu-wrap
-  nav[data-layout="3"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li
-  > ul,
-.ele-footer-menu-wrap
-  nav[data-layout="4"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li
-  > ul {
+.ele-header-menu-1-wrap nav[data-layout="2"] .ele-main-menu.ele-dropdown-reveal-fade-up > li > ul,
+.ele-header-menu-1-wrap nav[data-layout="3"] .ele-main-menu.ele-dropdown-reveal-fade-up > li > ul,
+.ele-header-menu-1-wrap nav[data-layout="4"] .ele-main-menu.ele-dropdown-reveal-fade-up > li > ul,
+.ele-header-menu-2-wrap nav[data-layout="2"] .ele-main-menu.ele-dropdown-reveal-fade-up > li > ul,
+.ele-header-menu-2-wrap nav[data-layout="3"] .ele-main-menu.ele-dropdown-reveal-fade-up > li > ul,
+.ele-header-menu-2-wrap nav[data-layout="4"] .ele-main-menu.ele-dropdown-reveal-fade-up > li > ul,
+.ele-footer-menu-wrap nav[data-layout="2"] .ele-main-menu.ele-dropdown-reveal-fade-up > li > ul,
+.ele-footer-menu-wrap nav[data-layout="3"] .ele-main-menu.ele-dropdown-reveal-fade-up > li > ul,
+.ele-footer-menu-wrap nav[data-layout="4"] .ele-main-menu.ele-dropdown-reveal-fade-up > li > ul {
   top: 200%;
 }
 .ele-dropdown-reveal-fade-up.ele-main-menu li:hover ul,
-.ele-header-menu-1-wrap
-  nav[data-layout="2"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li:hover
-  > ul,
-.ele-header-menu-1-wrap
-  nav[data-layout="3"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li:hover
-  > ul,
-.ele-header-menu-1-wrap
-  nav[data-layout="4"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li:hover
-  > ul,
-.ele-header-menu-2-wrap
-  nav[data-layout="2"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li:hover
-  > ul,
-.ele-header-menu-2-wrap
-  nav[data-layout="3"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li:hover
-  > ul,
-.ele-header-menu-2-wrap
-  nav[data-layout="4"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li:hover
-  > ul,
-.ele-footer-menu-wrap
-  nav[data-layout="2"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li:hover
-  > ul,
-.ele-footer-menu-wrap
-  nav[data-layout="3"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li:hover
-  > ul,
-.ele-footer-menu-wrap
-  nav[data-layout="4"]
-  .ele-main-menu.ele-dropdown-reveal-fade-up
-  > li:hover
-  > ul {
+.ele-header-menu-1-wrap nav[data-layout="2"] .ele-main-menu.ele-dropdown-reveal-fade-up > li:hover > ul,
+.ele-header-menu-1-wrap nav[data-layout="3"] .ele-main-menu.ele-dropdown-reveal-fade-up > li:hover > ul,
+.ele-header-menu-1-wrap nav[data-layout="4"] .ele-main-menu.ele-dropdown-reveal-fade-up > li:hover > ul,
+.ele-header-menu-2-wrap nav[data-layout="2"] .ele-main-menu.ele-dropdown-reveal-fade-up > li:hover > ul,
+.ele-header-menu-2-wrap nav[data-layout="3"] .ele-main-menu.ele-dropdown-reveal-fade-up > li:hover > ul,
+.ele-header-menu-2-wrap nav[data-layout="4"] .ele-main-menu.ele-dropdown-reveal-fade-up > li:hover > ul,
+.ele-footer-menu-wrap nav[data-layout="2"] .ele-main-menu.ele-dropdown-reveal-fade-up > li:hover > ul,
+.ele-footer-menu-wrap nav[data-layout="3"] .ele-main-menu.ele-dropdown-reveal-fade-up > li:hover > ul,
+.ele-footer-menu-wrap nav[data-layout="4"] .ele-main-menu.ele-dropdown-reveal-fade-up > li:hover > ul {
   top: 100%;
 }
 .ele-main-menu.ele-dropdown-reveal-fade-up li:hover ul ul {
@@ -3834,100 +3731,28 @@ nav .ele-submenu-icon {
 
 /* fade-down-menu */
 .ele-dropdown-reveal-fade-down.ele-main-menu li ul,
-.ele-header-menu-1-wrap
-  nav[data-layout="2"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li
-  > ul,
-.ele-header-menu-1-wrap
-  nav[data-layout="3"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li
-  > ul,
-.ele-header-menu-1-wrap
-  nav[data-layout="4"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li
-  > ul,
-.ele-header-menu-2-wrap
-  nav[data-layout="2"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li
-  > ul,
-.ele-header-menu-2-wrap
-  nav[data-layout="3"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li
-  > ul,
-.ele-header-menu-2-wrap
-  nav[data-layout="4"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li
-  > ul,
-.ele-footer-menu-wrap
-  nav[data-layout="2"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li
-  > ul,
-.ele-footer-menu-wrap
-  nav[data-layout="3"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li
-  > ul,
-.ele-footer-menu-wrap
-  nav[data-layout="4"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li
-  > ul {
+.ele-header-menu-1-wrap nav[data-layout="2"] .ele-main-menu.ele-dropdown-reveal-fade-down > li > ul,
+.ele-header-menu-1-wrap nav[data-layout="3"] .ele-main-menu.ele-dropdown-reveal-fade-down > li > ul,
+.ele-header-menu-1-wrap nav[data-layout="4"] .ele-main-menu.ele-dropdown-reveal-fade-down > li > ul,
+.ele-header-menu-2-wrap nav[data-layout="2"] .ele-main-menu.ele-dropdown-reveal-fade-down > li > ul,
+.ele-header-menu-2-wrap nav[data-layout="3"] .ele-main-menu.ele-dropdown-reveal-fade-down > li > ul,
+.ele-header-menu-2-wrap nav[data-layout="4"] .ele-main-menu.ele-dropdown-reveal-fade-down > li > ul,
+.ele-footer-menu-wrap nav[data-layout="2"] .ele-main-menu.ele-dropdown-reveal-fade-down > li > ul,
+.ele-footer-menu-wrap nav[data-layout="3"] .ele-main-menu.ele-dropdown-reveal-fade-down > li > ul,
+.ele-footer-menu-wrap nav[data-layout="4"] .ele-main-menu.ele-dropdown-reveal-fade-down > li > ul {
   top: 0;
   z-index: -1;
 }
 .ele-dropdown-reveal-fade-down.ele-main-menu li:hover ul,
-.ele-header-menu-1-wrap
-  nav[data-layout="2"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li:hover
-  > ul,
-.ele-header-menu-1-wrap
-  nav[data-layout="3"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li:hover
-  > ul,
-.ele-header-menu-1-wrap
-  nav[data-layout="4"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li:hover
-  > ul,
-.ele-header-menu-2-wrap
-  nav[data-layout="2"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li:hover
-  > ul,
-.ele-header-menu-2-wrap
-  nav[data-layout="3"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li:hover
-  > ul,
-.ele-header-menu-2-wrap
-  nav[data-layout="4"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li:hover
-  > ul,
-.ele-footer-menu-wrap
-  nav[data-layout="2"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li:hover
-  > ul,
-.ele-footer-menu-wrap
-  nav[data-layout="3"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li:hover
-  > ul,
-.ele-footer-menu-wrap
-  nav[data-layout="4"]
-  .ele-main-menu.ele-dropdown-reveal-fade-down
-  > li:hover
-  > ul {
+.ele-header-menu-1-wrap nav[data-layout="2"] .ele-main-menu.ele-dropdown-reveal-fade-down > li:hover > ul,
+.ele-header-menu-1-wrap nav[data-layout="3"] .ele-main-menu.ele-dropdown-reveal-fade-down > li:hover > ul,
+.ele-header-menu-1-wrap nav[data-layout="4"] .ele-main-menu.ele-dropdown-reveal-fade-down > li:hover > ul,
+.ele-header-menu-2-wrap nav[data-layout="2"] .ele-main-menu.ele-dropdown-reveal-fade-down > li:hover > ul,
+.ele-header-menu-2-wrap nav[data-layout="3"] .ele-main-menu.ele-dropdown-reveal-fade-down > li:hover > ul,
+.ele-header-menu-2-wrap nav[data-layout="4"] .ele-main-menu.ele-dropdown-reveal-fade-down > li:hover > ul,
+.ele-footer-menu-wrap nav[data-layout="2"] .ele-main-menu.ele-dropdown-reveal-fade-down > li:hover > ul,
+.ele-footer-menu-wrap nav[data-layout="3"] .ele-main-menu.ele-dropdown-reveal-fade-down > li:hover > ul,
+.ele-footer-menu-wrap nav[data-layout="4"] .ele-main-menu.ele-dropdown-reveal-fade-down > li:hover > ul {
   top: 100%;
 }
 .ele-main-menu.ele-dropdown-reveal-fade-down li:hover ul ul {
