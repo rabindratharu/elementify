@@ -7394,10 +7394,6 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   transition: all 0.85s;
   opacity: 1;
 }
-.swiper-slide .ele-hero-image::before,
-.swiper-slide .ele-hero-content {
-  border-radius: 3px;
-}
 .swiper-slide .ele-hero-content {
   inset: 0;
   transform: scale(1.25);
