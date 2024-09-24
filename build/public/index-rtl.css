@@ -6875,7 +6875,9 @@ form textarea {
 }
 .ele-svg-icon,
 .ele-container svg,
-.ele-header-theme-switch-wrap svg {
+.ele-header-theme-switch-wrap svg,
+.swiper-button-prev svg.ele-svg-icon,
+.swiper-button-next svg.ele-svg-icon  {
   --ele-font-size: 15px;
   width: var(--ele-font-size, 100%);
   height: var(--ele-font-size, 100%);
@@ -8139,6 +8141,7 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   z-index: 12;
   height: auto;
   width: auto;
+  --ele-button-padding: 10px;
 }
 
 .ele-hero-slider-section .swiper-button-prev:after,
@@ -8192,6 +8195,9 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   --content-h-gap: 0px;
 }
 
+.ele-hero-slider-section .ele-swiper-container .ele-svg-icon {
+  --ele-font-size: 30px;
+}
 /*!***************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/public/responsive.css ***!
   \***************************************************************************************************************************************************************************************************************/
