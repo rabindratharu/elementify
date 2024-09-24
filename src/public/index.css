@@ -7468,33 +7468,6 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 44px;
 }
-.ele-hero-slider-section div[data-preset="2"] .swiper-button-prev,
-.ele-hero-slider-section div[data-preset="2"] .swiper-button-next {
-  height: 40px;
-  width: 40px;
-  background: var(--ele-primary-color);
-  padding: 7px;
-  color: #fff;
-  transition: all 0.3s ease 0s;
-  bottom: 0;
-  top: auto;
-}
-.ele-hero-slider-section div[data-preset="2"] .swiper-button-prev:hover,
-.ele-hero-slider-section div[data-preset="2"] .swiper-button-next:hover {
-  background: var(--ele-primary-active);
-  transition: all 0.3s ease 0s;
-}
-.ele-hero-slider-section div[data-preset="2"] .swiper-pagination-fraction {
-  right: 25px;
-  bottom: 55px;
-}
-.ele-hero-slider-section div[data-preset="2"] .swiper-button-next {
-  right: 0;
-}
-.ele-hero-slider-section div[data-preset="2"] .swiper-button-prev {
-  right: 40px;
-  left: auto;
-}
 .ele-hero-slider-section .ele-container {
   --content-h-gap: 0px;
 }
