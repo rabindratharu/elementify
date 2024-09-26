@@ -7386,20 +7386,22 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
-.swiper-slide .ele-hero-image {
+[data-animation="true"] .ele-hero-content-wrap .swiper-slide .ele-hero-image {
   transform: scale(1.25);
   transition: all 0.85s;
   opacity: 0;
 }
-.swiper-slide-active .ele-hero-image {
+[data-animation="true"] .ele-hero-content-wrap .swiper-slide-active .ele-hero-image {
   transform: scale(1);
   transition: all 0.85s;
   opacity: 1;
 }
-.swiper-slide .ele-hero-content {
-  inset: 0;
+[data-animation="true"] .ele-hero-content-wrap .swiper-slide .ele-hero-content {
   transform: scale(1.25);
   transition: all 1s;
+}
+.swiper-slide .ele-hero-content {
+  inset: 0;
   opacity: 0;
   justify-content: var(--ele-hero-justify-content, center);
   align-items: var(--ele-hero-items-align, center);

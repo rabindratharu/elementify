@@ -8064,7 +8064,7 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
-.swiper-slide .ele-hero-image {
+[data-animation="true"] .ele-hero-content-wrap .swiper-slide .ele-hero-image {
   -webkit-transform: scale(1.25);
       -ms-transform: scale(1.25);
           transform: scale(1.25);
@@ -8072,7 +8072,7 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   transition: all 0.85s;
   opacity: 0;
 }
-.swiper-slide-active .ele-hero-image {
+[data-animation="true"] .ele-hero-content-wrap .swiper-slide-active .ele-hero-image {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
@@ -8080,13 +8080,15 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   transition: all 0.85s;
   opacity: 1;
 }
-.swiper-slide .ele-hero-content {
-  inset: 0;
+[data-animation="true"] .ele-hero-content-wrap .swiper-slide .ele-hero-content {
   -webkit-transform: scale(1.25);
       -ms-transform: scale(1.25);
           transform: scale(1.25);
   -webkit-transition: all 1s;
   transition: all 1s;
+}
+.swiper-slide .ele-hero-content {
+  inset: 0;
   opacity: 0;
   -webkit-box-pack: var(--ele-hero-justify-content, center);
       -ms-flex-pack: var(--ele-hero-justify-content, center);
