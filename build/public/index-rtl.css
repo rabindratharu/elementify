@@ -4286,9 +4286,9 @@ nav .ele-submenu-icon {
   > *:not(:last-child) {
   margin-bottom: var(--ele-item-spacing, 20px);
 }
-
 .ele-hero-section .entry-header .archive-description p {
   margin: 0;
+  color: var(--ele-accent-active);
 }
 
 /*--------------------------------------------------------------
