@@ -7396,10 +7396,6 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   transition: all 0.85s;
   opacity: 1;
 }
-[data-animation="true"] .ele-hero-content-wrap .swiper-slide .ele-hero-content {
-  transform: scale(1.25);
-  transition: all 1s;
-}
 .swiper-slide .ele-hero-content {
   inset: 0;
   opacity: 0;
