@@ -33,6 +33,9 @@
     width: 100%;
     height: 100%;
   }
+  .ele-site-footer div[class*="ele-footer-widget-"] .widget-area {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 639px) {
