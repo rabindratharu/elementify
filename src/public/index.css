@@ -5553,8 +5553,12 @@ Layout 3
 ----------------------------------------*/
 .ele-post-metas {
   gap: 10px;
-  /* --ele-meta-link-initial-color: var(--ele-accent-active);
-  --ele-meta-link-hover-color: var(--ele-primary-color); */
+}
+.ele-post-metas .ele-post-meta {
+  gap: 6px;
+}
+.ele-post-metas .ele-post-meta .ele-label-text {
+  flex: 0 0 auto;
 }
 /* .ele-post-metas a:not(.ele-button) {
   color: var(--ele-meta-link-initial-color);
@@ -5581,6 +5585,7 @@ Layout 3
 .ele-post-metas .ele-meta-text {
   gap: 5px;
   text-transform: capitalize;
+  flex: 1;
 }
 .ele-post-metas li.ele-meta-separator:last-child {
   display: none;
@@ -5588,11 +5593,7 @@ Layout 3
 .ele-post-tags {
   margin-bottom: var(--ele-item-spacing, 20px);
 }
-.ele-post-meta .ele-meta-icon,
-.ele-post-meta .ele-label-text {
-  margin-right: 6px;
-}
-.ele-post-metas-wrap .ele-post-meta > * {
+.ele-post-meta > * {
   color: var(--ele-link-normal-color, var(--ele-accent-active))
 }
 .ele-post-meta .ele-meta-icon {
