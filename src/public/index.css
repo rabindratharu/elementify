@@ -5540,10 +5540,8 @@ Layout 3
  Post Title
 ----------------------------------------*/
 .ele-posts-wrap .entry-title a:hover,
-.ele-posts-wrap .ele-post-meta a:hover,
-.ele-related-posts-items .entry-title a:hover,
-.ele-related-posts-items .ele-post-meta a:hover {
-  color: var(--ele-primary-color);
+.ele-related-posts-items .entry-title a:hover {
+  color: var(--ele-link-hover-color, var(--ele-primary-color));
 }
 .entry-title {
   word-break: break-word;
@@ -5555,24 +5553,19 @@ Layout 3
 ----------------------------------------*/
 .ele-post-metas {
   gap: 10px;
-  --ele-meta-link-initial-color: var(--ele-accent-active);
-  --ele-meta-link-hover-color: var(--ele-primary-color);
+  /* --ele-meta-link-initial-color: var(--ele-accent-active);
+  --ele-meta-link-hover-color: var(--ele-primary-color); */
 }
-.ele-post-metas a:not(.ele-button) {
+/* .ele-post-metas a:not(.ele-button) {
   color: var(--ele-meta-link-initial-color);
   transition: all 0.25s ease;
-}
-.ele-post-metas a:not(.ele-button):hover {
+} */
+/* .ele-post-metas a:not(.ele-button):hover {
   color: var(--ele-meta-link-hover-color);
-}
+} */
 .ele-post-meta a.ele-button {
-  color: var(--ele-primary-color);
   --ele-button-min-height: 20px;
 }
-.ele-post-meta a.ele-button:hover {
-  color: var(--ele-primary-active);
-}
-
 .ele-posts-wrap .ele-text-center .ele-post-metas,
 .ele-posts-wrap .ele-text-center .ele-social-share,
 .ele-related-posts-items .ele-text-center .ele-post-metas,
@@ -5600,7 +5593,7 @@ Layout 3
   margin-right: 6px;
 }
 .ele-post-metas-wrap .ele-post-meta > * {
-  color: var(--ele-meta-link-initial-color);
+  color: var(--ele-link-normal-color, var(--ele-accent-active))
 }
 .ele-post-meta .ele-meta-icon {
   border-radius: 3px;
@@ -5617,7 +5610,7 @@ Layout 3
 }
 /* Separator */
 .ele-meta-separator {
-  background-color: var(--ele-meta-link-initial-color);
+  background-color: var(--ele-link-normal-color, var(--ele-accent-active))
 }
 
 .ele-meta-separator.ele-dash-icon {
@@ -5662,21 +5655,8 @@ Layout 3
   --ele-tax-bg-hover: var(--ele-primary-active);
   --ele-tax-border: 0px;
 }
-.ele-post-taxonomy-wrap .ele-post-metas .ele-meta-icon svg {
-  fill: var(--ele-tax-text-initial);
-  width: 100%;
-  height: 100%;
-}
-.ele-post-taxonomy-wrap .ele-post-metas a {
-  background: var(--ele-tax-bg-initial);
-  transition: all 0.25s ease;
-  border: var(--ele-tax-border, 1px solid);
-}
 .ele-post-taxonomy-wrap .ele-post-metas a:not(.ele-button) {
   --ele-tax-border: 0px;
-}
-.ele-post-taxonomy-wrap .ele-post-metas a:hover {
-  background: var(--ele-tax-bg-hover);
 }
 
 /*
