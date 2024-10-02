@@ -781,6 +781,7 @@ big {
 html {
   box-sizing: border-box;
   color-scheme: dark light;
+  padding: 0px !important;
 }
 
 *,

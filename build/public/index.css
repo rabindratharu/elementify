@@ -798,6 +798,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color-scheme: dark light;
+  padding: 0px !important;
 }
 
 *,
