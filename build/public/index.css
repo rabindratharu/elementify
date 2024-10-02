@@ -5796,6 +5796,7 @@ Related Posts
   padding: var(--ele-column-inner-spacing);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(-5%, transparent), color-stop(35%, var(--ele-base-color)));
   background: linear-gradient(180deg, transparent -5%, var(--ele-base-color) 35%);
+  border-radius: 3px;
 }
 
 /*
@@ -5812,6 +5813,7 @@ Layout 2
 }
 .ele-posts-wrap[data-layout="2"] article .ele-featured-image-wrap {
   width: 100%;
+  border-radius: 3px;
 }
 
 /*
