@@ -955,7 +955,7 @@ input[type="submit"],
   --ele-button-border: 0px;
   background-color: var(--ele-button-box-initial-background);
   color: var(--ele-button-box-initial-color);
-  gap: 10px;
+  gap: 5px;
   font-size: var(--ele-font-size);
 }
 
@@ -1067,24 +1067,9 @@ textarea {
 a:not(.ele-button) {
   color: var(--ele-link-normal-color, var(--ele-accent-active));
   transition-duration: 0.3s;
-  transition-property:
-    color,
-    background-color,
-    border-color,
-    fill,
-    stroke,
-    -webkit-text-decoration-color;
-  transition-property: color, background-color, border-color,
-    text-decoration-color, fill, stroke;
-  transition-property:
-    color,
-    background-color,
-    border-color,
-    text-decoration-color,
-    fill,
-    stroke,
-    -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  gap: 5px;
 }
 .content-area article > a:not(.ele-button):visited {
   color: var(--ele-base-200);
@@ -5731,20 +5716,6 @@ Layout 3
 .wp-block-page-list,
 .wp-block-post-template {
   --ele-list-indent: 0;
-}
-
-/*
- Read More
-----------------------------------------*/
-.ele-read-more-wrap a:not(.ele-button) {
-  color: var(--ele-button-box-initial-color, var(--ele-link-normal-color));
-  fill: var(--ele-button-box-initial-color, var(--ele-link-normal-color));
-}
-.ele-read-more-wrap a:not(.ele-button):hover,
-.ele-read-more-wrap a:not(.ele-button):focus,
-.ele-read-more-wrap a:not(.ele-button):active {
-  color: var(--ele-button-box-hover-color, var(--ele-link-hover-color));
-  fill: var(--ele-button-box-hover-color, var(--ele-link-hover-color));
 }
 
 /*
