@@ -5256,7 +5256,8 @@ Related Posts
   height: 100% !important;
 }
 [data-prefix="blog"] .ele-posts-wrap[data-cards="boxed"] .ele-column-content .ele-featured-image-wrap.ele-boundless,
-[data-prefix="blog"] .ele-posts-wrap[data-cards="boxed"] .ele-column-content .ele-entry-divider.ele-boundless {
+[data-prefix="blog"] .ele-posts-wrap[data-cards="boxed"] .ele-column-content .ele-entry-divider.ele-boundless,
+[data-prefix="blog"] .ele-posts-wrap[data-cards="cover"] .ele-column-content .ele-entry-divider.ele-boundless {
   --ele-column-inner-spacing: 30px;
 }
 
