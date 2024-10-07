@@ -5323,7 +5323,7 @@ Layout 2
   display: flex;
 }
 .ele-posts-wrap[data-layout="2"] article .ele-featured-image-wrap {
-  width: 100%;
+  width: calc(100% - var(--ele-card-img-width, 0%));
   border-radius: 3px;
 }
 .ele-zig-zag[data-layout="2"] .ele-column:nth-child(odd) {
