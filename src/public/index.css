@@ -4009,7 +4009,7 @@ nav .ele-submenu-icon {
   min-height: var(--min-height, 400px);
 }
 .ele-hero-section .entry-header {
-  justify-content: var(--vertical-alignment, center);
+  justify-content: var(--ele-vertical-alignment, center);
 }
 .ele-hero-section .entry-header .ele-card-content {
   align-items: var(--alignment, left);
@@ -5160,8 +5160,9 @@ Related Posts
 }
 .ele-posts-wrap[data-layout] .ele-column-content,
 .ele-related-posts-wrap[data-layout] .ele-column-content {
-  justify-content: var(--vertical-alignment);
+  justify-content: var(--ele-vertical-alignment);
 }
+
 .ele-posts-wrap[data-layout][data-cards="cover"] .ele-column-content {
   position: relative;
   min-height: var(--ele-column-min-height, 400px);
