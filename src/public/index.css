@@ -5704,22 +5704,6 @@ Pagination
   border-color: var(--ele-pagination-accent-color);
   color: var(--ele-pagination-accent-color);
 }
-
-.ele-pagination-wrap .nav-links[data-pagination-type="numbered"] svg {
-  fill: var(--ele-pagination-initial-color);
-}
-.ele-pagination-wrap .nav-links[data-pagination-type="numbered"] a:hover svg {
-  fill: var(--ele-pagination-accent-color);
-}
-
-.ele-pagination-wrap .nav-links svg {
-  fill: var(--ele-button-box-initial-color, var(--ele-base-300));
-}
-
-.ele-pagination-wrap .nav-links .ele-button:hover svg {
-  fill: var(--ele-button-box-hover-color, var(--ele-base-300));
-}
-
 .ele-pagination-wrap .nav-links .ele-pagination-prev-btn,
 .ele-pagination-wrap .nav-links .ele-pagination-next-btn {
   padding: 0 1.25em;
