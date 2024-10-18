@@ -4030,7 +4030,7 @@ nav .ele-submenu-icon {
   color: var(--ele-accent-active);
 }
 .ele-hero-section .entry-header .entry-excerpt,
-.entry-content > * {
+.entry-content {
   color: var(--ele-accent-active);
 }
 
