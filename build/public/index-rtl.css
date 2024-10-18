@@ -4267,6 +4267,10 @@ nav .ele-submenu-icon {
   margin: 0;
   color: var(--ele-accent-active);
 }
+.ele-hero-section .entry-header .entry-excerpt,
+.entry-content > * {
+  color: var(--ele-accent-active);
+}
 
 /*--------------------------------------------------------------
 # Breadcrumbs
