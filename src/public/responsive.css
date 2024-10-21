@@ -695,8 +695,8 @@
   .ele-off-canvas[data-toggle-behaviour="drawer-left"] .ele-modal-inner {
     width: 60%;
   }
-  .ele-social-share-wrap.ele-float-left[data-layout="3"],
-  .ele-social-share-wrap.ele-float-left[data-layout="4"] {
+  .ele-social-share-wrap.ele-float-left,
+  .ele-social-share-wrap.ele-float-left {
     left: 57px;
     transform: rotate(-90deg);
     transform-origin: 0 100%;
@@ -711,8 +711,8 @@
     justify-content: unset;
   }
 
-  .ele-social-share-wrap.ele-float-right[data-layout="3"],
-  .ele-social-share-wrap.ele-float-right[data-layout="4"] {
+  .ele-social-share-wrap.ele-float-right,
+  .ele-social-share-wrap.ele-float-right {
     right: 57px;
     transform: rotate(-90deg);
     transform-origin: 100% 0;

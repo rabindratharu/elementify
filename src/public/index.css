@@ -4370,16 +4370,13 @@ nav .ele-submenu-icon {
   line-height: 1;
 }
 
-.ele-social-share-wrap[data-layout="1"],
-.ele-social-share-wrap[data-layout="2"] {
+.ele-social-share-wrap,
+.ele-social-share-wrap {
   justify-content: var(--ele-alignment, flex-start);
   margin-bottom: var(--ele-item-spacing, 20px);
 }
 
-.ele-social-share-wrap.ele-float-left[data-layout="3"],
-.ele-social-share-wrap.ele-float-left[data-layout="4"],
-.ele-social-share-wrap.ele-float-right[data-layout="3"],
-.ele-social-share-wrap.ele-float-right[data-layout="4"] {
+.ele-social-share-wrap.ele-floating-share {
   transform: rotate(0);
   max-width: 100%;
   bottom: 0;
