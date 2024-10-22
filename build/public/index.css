@@ -919,8 +919,6 @@ blockquote {
   border: none;
 }
 label {
-  font-size: 15px;
-  line-height: inherit;
   cursor: pointer;
   margin: 0 0 0.5em 0;
 }
@@ -4669,7 +4667,6 @@ nav .ele-submenu-icon {
 .ele-social-share-wrap > label {
   color: var(--ele-social-share-label-color, var(--ele-accent-active));
   margin: 0;
-  line-height: 1;
 }
 
 .ele-social-share-wrap,
