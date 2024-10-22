@@ -4500,6 +4500,7 @@ nav .ele-submenu-icon {
 .ele-author-bio-container .ele-author-content-wrap {
   align-items: var(--ele-align);
   text-align: var(--ele-align);
+  flex-grow: 1;
 }
 
 .ele-author-bio-container .ele-author-bio-name {
@@ -4513,7 +4514,6 @@ nav .ele-submenu-icon {
 
 .ele-author-bio-container[data-layout="1"],
 .ele-author-bio-container[data-layout="2"] {
-  box-shadow: var(--ele-box-shadow);
   border-radius: var(--ele-author-container-radius, 3px);
 }
 
@@ -4535,9 +4535,8 @@ nav .ele-submenu-icon {
 
 [data-prefix="single-post"] .ele-author-bio-container[data-layout="1"],
 [data-prefix="single-post"] .ele-author-bio-container[data-layout="2"] {
-  background-color: var(--ele-base-color);
   align-items: var(--ele-align, start);
-  border-color: var(--ele-base-300);
+  border: 1px solid var(--ele-base-300);
 }
 .ele-author-bio-container[data-layout="3"] {
   --ele-align: center;
@@ -4580,25 +4579,6 @@ nav .ele-submenu-icon {
 
 .ele-author-bio-container .ele-author-socials {
   gap: 6px;
-}
-
-.ele-author-bio-container .ele-author-socials li a {
-  width: 30px;
-  height: 30px;
-  border-radius: 3px;
-  background: var(--ele-icon-background, var(--ele-primary-color));
-}
-
-.ele-author-bio-container .ele-author-socials li:hover a {
-  background: var(--ele-icon-hover-background, var(--ele-primary-active));
-}
-
-.ele-author-bio-container .ele-author-socials li a svg {
-  fill: var(--ele-icon-color, var(--ele-base-color));
-}
-
-.ele-author-bio-container .ele-author-socials li:hover a svg {
-  fill: var(--ele-icon-hover-color, var(--ele-base-color));
 }
 
 .ele-author-bio-container .ele-author-avatar-link::before {
