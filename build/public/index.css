@@ -4768,7 +4768,8 @@ nav .ele-submenu-icon {
 }
 .ele-social-share-wrap[data-layout="2"] .ele-social-share,
 .ele-header-social-wrap[data-layout="2"] .ele-social-share,
-.ele-footer-social-wrap[data-layout="2"] .ele-social-share {
+.ele-footer-social-wrap[data-layout="2"] .ele-social-share,
+.ele-author-socials[data-layout="2"] .ele-social-share {
   --ele-item-gap: 0;
   --ele-social-share-normal-color: var(--ele-accent-color);
   --ele-social-share-hover-color: var(--ele-accent-color);
@@ -4781,16 +4782,19 @@ nav .ele-submenu-icon {
 }
 .ele-social-share-wrap[data-layout="2"] .ele-social-share a,
 .ele-header-social-wrap[data-layout="2"] .ele-social-share a,
-.ele-footer-social-wrap[data-layout="2"] .ele-social-share a {
+.ele-footer-social-wrap[data-layout="2"] .ele-social-share a,
+.ele-author-socials[data-layout="2"] .ele-social-share a {
   color: var(--ele-social-share-normal-color);
 }
-.ele-social-share-wrap[data-layout="4"] .ele-social-share a {
+.ele-social-share-wrap[data-layout="4"] .ele-social-share a,
+.ele-author-socials[data-layout="4"] .ele-social-share a {
   padding: 0px;
 }
 
 .ele-social-share-wrap[data-layout="2"] .ele-social-share > li,
 .ele-header-social-wrap[data-layout="2"] .ele-social-share > li,
-.ele-footer-social-wrap[data-layout="2"] .ele-social-share > li {
+.ele-footer-social-wrap[data-layout="2"] .ele-social-share > li,
+.ele-author-socials[data-layout="2"] .ele-social-share > li {
   -webkit-border-end: 1px solid
     var(--ele-social-share-normal-color, var(--ele-base-300));
           border-inline-end: 1px solid
@@ -4799,12 +4803,9 @@ nav .ele-submenu-icon {
     var(--ele-social-share-normal-color, var(--ele-base-300));
 }
 .ele-social-share-wrap[data-layout="2"] .ele-social-share > li:not(:last-child),
-.ele-header-social-wrap[data-layout="2"]
-  .ele-social-share
-  > li:not(:last-child),
-.ele-footer-social-wrap[data-layout="2"]
-  .ele-social-share
-  > li:not(:last-child) {
+.ele-header-social-wrap[data-layout="2"] .ele-social-share > li:not(:last-child),
+.ele-footer-social-wrap[data-layout="2"] .ele-social-share > li:not(:last-child),
+.ele-author-socials[data-layout="2"] .ele-social-share > li:not(:last-child) {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto; /* Default flex value */
