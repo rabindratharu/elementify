@@ -104,7 +104,7 @@ do_action( 'elementify/body_top' );
     // print_r($enable);
     // echo '</pre>';
     
-    // $base = get_theme_mod('elementify_framework_header_site_title_typo',[
+    // $base = get_theme_mod('elementify_framework_single_post_author_info_border',[
     //     'font-family'   => 'default',
     //     'font-weight'   => '400',
     //     'subsets'       => ['latin'],

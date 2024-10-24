@@ -4554,6 +4554,7 @@ nav .ele-submenu-icon {
 
 .ele-author-bio-container[data-layout="3"]::after,
 .ele-author-bio-container[data-layout="3"]::before {
+  z-index: 1;
   top: -1px;
   width: calc(50% - calc(var(--ele-avatar-size, 80px) / 2 + 20px));
   height: 1px;
