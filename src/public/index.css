@@ -4629,7 +4629,7 @@ nav .ele-submenu-icon {
 }
 .ele-post-navigation-wrap .nav-previous a svg,
 .ele-post-navigation-wrap .nav-next a svg {
-  fill: var(--ele-base-300);
+  color: var(--ele-base-300);
 }
 .ele-post-navigation-wrap .nav-previous a {
   justify-content: flex-start;
