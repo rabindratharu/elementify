@@ -5125,6 +5125,7 @@ Related Posts
 .ele-header-logo-wrap .ele-site-branding .ele-site-identity.ele-site-title-gradient .ele-site-title,
 .ele-footer-logo-wrap .ele-site-branding .ele-site-identity.ele-site-title-gradient .ele-site-title,
 [data-prefix="blog"] .ele-posts-wrap .ele-post-title-gradient .entry-title,
+[data-prefix="single-post"] .ele-post-navigation-wrap .ele-post-title-gradient .item-wrap .item-title,
 [data-prefix="single-post"] .ele-related-posts-wrap[data-layout] .ele-related-posts-items .ele-post-title-gradient .entry-title {
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
