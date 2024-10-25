@@ -4616,8 +4616,8 @@ nav .ele-submenu-icon {
 }
 .ele-post-navigation-wrap[data-layout="3"] .nav-previous,
 .ele-post-navigation-wrap[data-layout="3"] .nav-next {
-  box-shadow: var(--ele-box-shadow);
-  padding: 20px;
+  border: var(--ele-border);
+  padding: 10px;
   border-radius: 3px;
 }
 .ele-post-navigation-wrap[data-layout="3"] .nav-previous a svg {
