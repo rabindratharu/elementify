@@ -2888,6 +2888,18 @@ object {
   margin-bottom: var(--ele-content-inner-spacing, 35px);
 }
 
+[data-singular-layout="3"] .site-main {
+  background: var(--ele-sidebar-bg-color, var(--ele-base-200));
+  border-radius: 3px;
+  border-color: var(--ele-base-300);
+  padding: var(--ele-main-inner-spacing, 35px);
+}
+[data-singular-layout="3"] .site-main .ele-comments-wrap .comments-area .comment-respond {
+  -webkit-padding-after: 0px;
+          padding-block-end: 0px;
+}
+
+
 /*.site.is-boxed,*/
 /*.site-header .ele-container,*/
 /*body:not([class*=elementor-page-]) .site-content .ele-container,*/
@@ -4255,10 +4267,11 @@ nav .ele-submenu-icon {
 .ele-hero-section[data-type="1"] .entry-header > *,
 .ele-hero-section[data-type="1"] .entry-header .ele-card-content > *,
 .ele-hero-section[data-type="2"] .entry-header > *:not(:last-child),
-.ele-hero-section[data-type="2"]
-  .entry-header
-  .ele-card-content
-  > *:not(:last-child) {
+.ele-hero-section[data-type="2"] .entry-header .ele-card-content > *:not(:last-child),
+.ele-hero-section[data-type="3"] .entry-header > *,
+.ele-hero-section[data-type="3"] .entry-header .ele-card-content > *,
+.ele-hero-section[data-type="4"] .entry-header > *,
+.ele-hero-section[data-type="4"] .entry-header .ele-card-content > * {
   margin-bottom: var(--ele-item-spacing, 20px);
 }
 .ele-hero-section .entry-header .archive-description p {
