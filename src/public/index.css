@@ -2732,11 +2732,15 @@ object {
   margin-bottom: var(--ele-content-inner-spacing, 35px);
 }
 
-[data-singular-layout="3"] .site-main {
+[data-singular-layout="3"] .site-main,
+[data-singular-layout="4"] .site-main > *:not(.ele-post-navigation-wrap):not(.ele-author-bio-container) {
   background: var(--ele-main-bg-color, var(--ele-base-200));
   border-radius: 3px;
   border-color: var(--ele-base-300);
   padding: var(--ele-main-inner-spacing, 35px);
+}
+[data-singular-layout="4"] .site-main {
+  gap: var(--ele-main-inner-gap, 20px);
 }
 
 
