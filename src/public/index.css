@@ -5213,6 +5213,7 @@ Related Posts
 .ele-related-posts-wrap[data-layout] .ele-column-content .ele-card-content:last-child {
   flex: 1 0 auto;
   z-index: 2;
+  overflow: hidden;
 }
 
 

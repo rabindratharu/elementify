@@ -5638,6 +5638,7 @@ Related Posts
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   z-index: 2;
+  overflow: hidden;
 }
 
 
