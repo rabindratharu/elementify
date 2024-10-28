@@ -2889,14 +2889,10 @@ object {
 }
 
 [data-singular-layout="3"] .site-main {
-  background: var(--ele-sidebar-bg-color, var(--ele-base-200));
+  background: var(--ele-main-bg-color, var(--ele-base-200));
   border-radius: 3px;
   border-color: var(--ele-base-300);
   padding: var(--ele-main-inner-spacing, 35px);
-}
-[data-singular-layout="3"] .site-main .ele-comments-wrap .comments-area .comment-respond {
-  -webkit-padding-after: 0px;
-          padding-block-end: 0px;
 }
 
 
@@ -5452,8 +5448,8 @@ Comments
   margin-right: 50px;
 }
 .comments-area .comment-respond {
-  -webkit-padding-after: 50px;
-          padding-block-end: 50px;
+  -webkit-padding-after: 20px;
+          padding-block-end: 20px;
 }
 .ele-comments-wrap[data-module="default"]
   .comments-area
