@@ -90,6 +90,8 @@ class Elementify {
 
 		add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
 
+		add_post_type_support( 'page', 'excerpt' ); //change page with your post type slug.
+
 
 		/**
 		 * Register image sizes.

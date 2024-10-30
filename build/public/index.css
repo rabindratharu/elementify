@@ -5271,6 +5271,7 @@ nav .ele-submenu-icon {
 Comments
 ----------------------------------------*/
 [data-prefix="single-post"] .ele-comments-wrap[data-module="separated"]::after,
+[data-prefix="single-page"] .ele-comments-wrap[data-module="separated"]::after,
 [data-prefix="single-post"] .ele-related-posts-wrap[data-module="separated"]::after {
   z-index: 1;
 }
@@ -6481,11 +6482,6 @@ Pagination
   transition: all 0.3s ease 0s;
 }
 
-/* Delete those styles */
-/*.ele-container {*/
-/*    box-shadow: 0 0 5px 0 rgba(0,0,0,.5);*/
-/*}*/
-
 /* conent */
 .entry-content hr {
   border-color: var(--ele-base-300);
@@ -7151,7 +7147,6 @@ form textarea {
   width: 50%;
   min-height: 360px;
   border-radius: 3px;
-  /* box-shadow: var(--ele-box-shadow); */
 }
 .ele-popup-box .ele-modal-inner .post .ele-featured-image {
   height: 100%;
