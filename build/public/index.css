@@ -6696,7 +6696,6 @@ form textarea {
 # Go to Top
 --------------------------------------------------------------*/
 .ele-go-to-top {
-  --ele-font-size: 30px;
   position: fixed;
   z-index: 100;
   bottom: calc(
@@ -6711,7 +6710,6 @@ form textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5px;
   opacity: var(--opacity, 0);
   visibility: var(--visibility, hidden);
   -webkit-transform: var(--transform, translate3d(0, 15px, 0));
@@ -6741,7 +6739,6 @@ form textarea {
     transform 0.3s ease,
     visibility 0.3s ease,
     -webkit-transform 0.3s ease;
-  font-size: var(--ele-font-size);
 }
 .ele-go-to-top.ele-position-start {
   left: calc(
