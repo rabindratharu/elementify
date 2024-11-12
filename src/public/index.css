@@ -7796,4 +7796,6 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   .ele-swiper-container[data-preset="1"]
   .ele-hero-content {
   z-index: 2;
+  transform: scale(1.25);
+  transition: all 1s;
 }
