@@ -16,7 +16,6 @@ $the_post_id   = get_the_ID();
 	/**
 	 * Hook for entry content.
 	 *
-	 * @hooked elementify/loop/entry_thumbnail - 10
 	 * @hooked elementify/loop/entry_post_card - 20
 	 */
 	do_action( 'elementify/loop/entry_content' );
