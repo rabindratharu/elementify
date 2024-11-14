@@ -4645,7 +4645,7 @@ nav .ele-submenu-icon {
 .ele-breadcrumb-trail .trail-items .trail-end .ele-separator {
   display: none;
 }
-.ele-breadcrumb-trail ul {
+.ele-breadcrumb-trail[data-layout="2"] ul {
   gap: 8px;
 }
 .ele-breadcrumb-trail[data-layout="2"] ul > li:not(:last-child) {
