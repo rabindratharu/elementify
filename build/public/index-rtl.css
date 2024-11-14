@@ -4636,6 +4636,9 @@ nav .ele-submenu-icon {
   --ele-sept-spacing: 8px;
   --ele-home-icon-size: 25px;
 }
+.ele-breadcrumb-trail .trail-items .ele-separator {
+  color: var(--ele-link-normal-color, var(--ele-accent-active));
+}
 .ele-breadcrumb-trail .trail-items .ele-separator svg {
   --ele-font-size: 15px;
 }
@@ -4650,10 +4653,7 @@ nav .ele-submenu-icon {
   padding: 6px 10px;
   border-radius: 2px;
 }
-.ele-breadcrumb-trail .trail-items li.trail-item:not(:last-child) {
-  -webkit-column-gap: var(--ele-sept-spacing);
-     -moz-column-gap: var(--ele-sept-spacing);
-          column-gap: var(--ele-sept-spacing);
+.ele-breadcrumb-trail .trail-items li.trail-end {
   color: var(--ele-link-normal-color, var(--ele-accent-active));
 }
 .ele-breadcrumb-trail
