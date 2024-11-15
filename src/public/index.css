@@ -4385,7 +4385,9 @@ nav .ele-submenu-icon {
 .entry-content {
   color: var(--ele-accent-active);
 }
-
+.author[data-prefix="blog"] .ele-hero-section .ele-author-bio-avatar {
+  --ele-item-spacing: 5px;
+}
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
