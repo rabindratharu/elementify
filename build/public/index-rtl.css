@@ -6387,6 +6387,7 @@ Layout 3
 }
 .ele-post-metas .ele-post-meta {
   gap: 6px;
+  color: var(--ele-link-normal-color, var(--ele-accent-active));
 }
 .ele-post-metas .ele-post-meta .ele-label-text {
   -webkit-box-flex: 0;
