@@ -33,7 +33,7 @@ if ( ! function_exists( 'elementify_body_classes' ) ) {
 		}
 
 		// Adds a class of no-sidebar when there is no sidebar present.
-		if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+		if ( ! is_active_sidebar( 'sidebar-1' ) || is_404() ) {
 			$classes[] = 'no-sidebar';
 		}
 
@@ -558,7 +558,7 @@ if ( ! function_exists( 'elementify_comments_element' ) ) {
 |--------------------------------------------------------------------------
 |
 */
-add_action( 'elementify/404/entry_header', 'elementify_404_page_header', 	10 );
+//add_action( 'elementify/404/entry_header', 'elementify_404_page_header', 	10 );
 add_action( 'elementify/404/entry_content', 'elementify_404_conent', 		10 );
 if ( ! function_exists( 'elementify_404_page_header' ) ) {
 
@@ -581,42 +581,24 @@ if ( ! function_exists( 'elementify_404_conent' ) ) {
      */
     function elementify_404_conent() {
 		?>
-<div class="page-content">
-    <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'elementify' ); ?>
-    </p>
+<div class="page-content ele-d-grid ele-align-items-initial" data-columns="1" data-columns-md="2" data-columns-lg="2">
 
-    <?php
-				get_search_form();
+    <div
+        class="ele-column ele-card-content ele-d-flex ele-flex-column ele-justify-content-initial ele-align-items-initial">
+        <h6 class="entry-sub-title">ERROR CODE: 404</h6><!-- .entry-title -->
+        <h2 class="entry-title">OOOPS!!</h2><!-- .entry-title -->
+        <p><?php esc_html_e( 'This is not the page you are looking for', 'elementify' ); ?>
+        </p>
+    </div>
+    <div class="ele-column ele-featured-image-wrap ele-overflow-hidden">
+        <figure class="ele-featured-image ele-position-relative ele-position-absolute-after" data-ratio="4x3">
+            <img class="post-thumbnail ele-d-block"
+                src="<?php echo esc_url( get_template_directory_uri() . '/assets/image/404.webp' ); ?>">
+        </figure><!-- .ele-featured-image -->
+    </div>
 
-				the_widget( 'WP_Widget_Recent_Posts' );
-				?>
+</div>
 
-    <div class="widget widget_categories">
-        <h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'elementify' ); ?></h2>
-        <ul>
-            <?php
-						wp_list_categories(
-							array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							)
-						);
-						?>
-        </ul>
-    </div><!-- .widget -->
-
-    <?php
-				/* translators: %1$s: smiley */
-				$elementify_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'elementify' ), convert_smilies( ':)' ) ) . '</p>';
-				the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$elementify_archive_content" );
-
-				the_widget( 'WP_Widget_Tag_Cloud' );
-				?>
-
-</div><!-- .page-content -->
 <?php
     }
 }

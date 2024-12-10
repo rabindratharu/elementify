@@ -38,8 +38,8 @@ if ( ! defined( 'ELEMENTIFY_BUILD_JS_DIR_PATH' ) ) {
 	define( 'ELEMENTIFY_BUILD_JS_DIR_PATH', untrailingslashit( get_template_directory() ) . '/build/js' );
 }
 
-if ( ! defined( 'ELEMENTIFY_BUILD_IMG_URI' ) ) {
-	define( 'ELEMENTIFY_BUILD_IMG_URI', untrailingslashit( get_template_directory_uri() ) . '/build/src/img' );
+if ( ! defined( 'ELEMENTIFY_IMG_URI' ) ) {
+	define( 'ELEMENTIFY_IMG_URI', untrailingslashit( get_template_directory_uri() ) . '/assets/image' );
 }
 
 if ( ! defined( 'ELEMENTIFY_BUILD_CSS_URI' ) ) {

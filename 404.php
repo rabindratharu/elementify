@@ -31,7 +31,6 @@ do_action( 'elementify/before_content' );
 		/**
 		 * Functions hooked into elementify_404_content_top action
 		 *
-		 * @hooked elementify_404_page_header - 10
 		 */
 		do_action( 'elementify/404/entry_header' );
 		?>
