@@ -558,22 +558,7 @@ if ( ! function_exists( 'elementify_comments_element' ) ) {
 |--------------------------------------------------------------------------
 |
 */
-//add_action( 'elementify/404/entry_header', 'elementify_404_page_header', 	10 );
 add_action( 'elementify/404/entry_content', 'elementify_404_conent', 		10 );
-if ( ! function_exists( 'elementify_404_page_header' ) ) {
-
-    /**
-     * 404 page header.
-     */
-    function elementify_404_page_header() {
-		?>
-<header class="page-header">
-    <h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'elementify' ); ?></h1>
-</header><!-- .page-header -->
-<?php
-    }
-}
-
 if ( ! function_exists( 'elementify_404_conent' ) ) {
 
     /**
@@ -586,7 +571,7 @@ if ( ! function_exists( 'elementify_404_conent' ) ) {
     <div
         class="ele-column ele-card-content ele-d-flex ele-flex-column ele-justify-content-initial ele-align-items-initial">
         <h6 class="entry-sub-title">ERROR CODE: 404</h6><!-- .entry-title -->
-        <h2 class="entry-title">OOOPS!!</h2><!-- .entry-title -->
+        <h1 class="entry-title">OOOPS!!</h1><!-- .entry-title -->
         <p><?php esc_html_e( 'This is not the page you are looking for', 'elementify' ); ?>
         </p>
     </div>
