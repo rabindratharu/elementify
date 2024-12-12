@@ -7810,3 +7810,7 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   transform: scale(1.25);
   transition: all 1s;
 }
+
+.error404[data-prefix="blog"] .site-content::after {
+  z-index: 1;
+}
