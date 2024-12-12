@@ -99,7 +99,7 @@ do_action( 'elementify/body_top' );
     // use Elementify_Framework\Inc\Generated_Styles;
     // $google_font_subsets = Fonts::add_google_fonts();
     // echo $google_font_subset = Fonts::get_google_font_url();
-    // $enable = get_theme_mod( 'elementify_framework_colors_base');
+    // $enable = get_theme_mod( 'elementify_framework_404_page_image_container_width');
     // echo '<pre>';
     // print_r($enable);
     // echo '</pre>';

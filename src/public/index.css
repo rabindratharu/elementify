@@ -1374,17 +1374,17 @@ a:active {
 .wp-block-search__inside-wrapper {
   position: relative;
 }
-.wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color),
+/* .wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color),
 .wp-block-button.is-style-outline
   > .wp-block-button__link:not(.has-text-color) {
   color: var(--ele-button-box-initial-color);
-}
-.wp-block-button
+} */
+/* .wp-block-button
   .wp-block-button__link.is-style-outline:not(.has-text-color):hover,
 .wp-block-button.is-style-outline
   > .wp-block-button__link:not(.has-text-color):hover {
   color: var(--ele-button-box-hover-color);
-}
+} */
 
 /*--------------------------------------------------------------
 # Content
@@ -2644,7 +2644,7 @@ object {
   --sidebar-helper-top: calc(0px * -1);
   --sidebar-helper-height: calc(100% + 0px * 2);
 }
-
+.error-404 .page-content,
 [data-sidebar] .site-content > .ele-container {
   display: grid;
   grid-template-columns: var(--grid-template-columns, 100%);
@@ -4359,6 +4359,9 @@ nav .ele-submenu-icon {
 .ele-hero-section .entry-header {
   justify-content: var(--ele-vertical-alignment, center);
 }
+.error-404 .ele-card-content {
+  justify-content: var(--ele-vertical-alignment, start);
+}
 .ele-hero-section .entry-header .ele-card-content {
   align-items: var(--alignment, left);
   text-align: var(--alignment, left);
@@ -5588,6 +5591,7 @@ Related Posts
   border-color: var(--ele-base-300);
 }
 .ele-posts-wrap[data-layout] .ele-column-content .ele-card-content,
+.error-404 .ele-card-content,
 .ele-related-posts-wrap[data-layout] .ele-column-content .ele-card-content {
   align-items: var(--alignment, left);
   text-align: var(--alignment, left);
@@ -5604,10 +5608,12 @@ Related Posts
 .ele-related-posts-items[data-layout]
   .ele-column-content
   .ele-card-content
-  > *:not(:last-child) {
+  > *:not(:last-child),
+.error-404 .ele-card-content > *:not(:last-child) {
   margin-bottom: var(--ele-card-items-spacing, 20px);
 }
 .ele-posts-wrap[data-layout] .ele-column-content .ele-card-content:last-child,
+.error-404 .ele-card-content:last-child,
 .ele-related-posts-wrap[data-layout]
   .ele-column-content
   .ele-card-content:last-child {

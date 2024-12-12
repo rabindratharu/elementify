@@ -1835,6 +1835,9 @@
   [data-sidebar="right"] .site-content > .ele-container {
     --grid-template-columns: minmax(100px, 1fr) var(--ele-sidebar-width, 27%);
   }
+  .error-404 .page-content {
+    --grid-template-columns: minmax(100px, 1fr) var(--ele-sidebar-width, 58%);
+  }
 
   [data-sidebar="left"] .site-content > .ele-container {
     --sidebar-order: -1;
