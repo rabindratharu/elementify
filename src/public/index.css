@@ -927,7 +927,9 @@ input[type="submit"],
   align-items: center;
   justify-content: center;
   min-height: var(--ele-button-min-height, 40px);
-  padding: var(--ele-button-padding, 5px 20px);
+  padding: var(--ele-button-padding-top, 5px)
+    var(--ele-button-padding-right, 20px) var(--ele-button-padding-bottom, 5px)
+    var(--ele-button-padding-left, 20px);
   border-radius: var(--ele-button-border-radius, 3px);
   appearance: none;
   cursor: pointer;
