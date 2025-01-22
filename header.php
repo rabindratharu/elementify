@@ -11,7 +11,8 @@
 
 namespace Elementify;
 
-use Elementify\Inc\Utils;
+//use Elementify\Inc\Utils;
+use Elementify_Framework\Inc\Utils;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -81,6 +82,38 @@ do_action( 'elementify/body_top' );
     <div id="page" class="site ele-position-relative ele-position-absolute-after">
 
         <?php
+        // Particles Effect
+		if ( get_theme_mod( 'elementify_framework_particles_enable' ) ) {
+			$section 	= get_theme_mod( 'elementify_framework_particles_section', elementify_framework_get_theme_options()['values']['preset'] );
+			if ( in_array( $section['desktop'], ['1'] ) ) {
+				$particles_type 	= get_theme_mod( 'elementify_framework_particles_preset', elementify_framework_get_theme_options()['values']['preset'] );
+				$particles_colors   = get_theme_mod( 'elementify_framework_particles_color' );
+				$particles  		= Utils::get_particles();
+				$particles_type     = $particles_type['desktop'];
+				if ( $particles_colors && array_key_exists('desktop', $particles_colors) ) {
+					// particle color
+					if ( isset($particles_colors['desktop']['color_1']) ) {
+						$particles[$particles_type]['particles']['color']['value'] = sanitize_text_field($particles_colors['desktop']['color_1']);
+					}
+					// line color
+					if ( isset( $particles_colors['desktop']['color_2']) ) {
+						if ( isset( $particles[$particles_type]['particles']['line_linked']['color'] ) ) {
+							$particles[$particles_type]['particles']['line_linked']['color'] = sanitize_text_field($particles_colors['desktop']['color_2']);
+						}
+						if ( isset( $particles[$particles_type]['particles']['links']['color'] ) ) {
+							$particles[$particles_type]['particles']['links']['color'] = sanitize_text_field($particles_colors['desktop']['color_2']);
+						}
+					}
+				}
+				?>
+        <div <?php Utils::print_attribute_string([
+					'class'             => 'ele-particles-canvas',
+					'id'                => 'ele-site-particles-canvas',
+					'data-particles'    => wp_json_encode($particles[$particles_type])
+				]);?>></div><!-- .ele-particles-canvas -->
+        <?php
+			}
+		}
         /**
          * Functions hooked into elementify/before_header action
          *

@@ -578,7 +578,7 @@ if ( ! function_exists( 'elementify_404_conent' ) ) {
     <div class="ele-column ele-featured-image-wrap ele-overflow-hidden">
         <figure class="ele-featured-image ele-position-relative ele-position-absolute-after" data-ratio="4x3">
             <img class="post-thumbnail ele-d-block"
-                src="<?php echo esc_url( get_template_directory_uri() . '/assets/image/404.webp' ); ?>">
+                src="<?php echo esc_url( get_template_directory_uri() . '/build/images/404.webp' ); ?>">
         </figure><!-- .ele-featured-image -->
     </div>
 

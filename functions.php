@@ -39,7 +39,7 @@ if ( ! defined( 'ELEMENTIFY_BUILD_JS_DIR_PATH' ) ) {
 }
 
 if ( ! defined( 'ELEMENTIFY_IMG_URI' ) ) {
-	define( 'ELEMENTIFY_IMG_URI', untrailingslashit( get_template_directory_uri() ) . '/assets/image' );
+	define( 'ELEMENTIFY_IMG_URI', untrailingslashit( get_template_directory_uri() ) . '/build/images' );
 }
 
 if ( ! defined( 'ELEMENTIFY_BUILD_CSS_URI' ) ) {

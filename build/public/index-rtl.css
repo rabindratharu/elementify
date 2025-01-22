@@ -3183,13 +3183,14 @@ Header: Builder
 .ele-site-header .ele-item-is-fixed .ele-header-row::after {
   background-color: var(--ele-fixed-header-bg, var(--ele-transparent));
 }
-.ele-header-row .ele-particles-canvas {
+.ele-header-row .ele-particles-canvas,
+.site .ele-particles-canvas {
   position: absolute;
   right: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: var(--ele-particles-canvas-z-index, 10);
+  z-index: var(--ele-particles-canvas-z-index, 2);
 }
 /*
 Header: Social Icon
@@ -3229,7 +3230,7 @@ Header: Social Icon
   line-height: 1.2;
   z-index: 9;
 }
-.ele-header-row-top {
+/* .ele-header-row-top {
   z-index: 10;
 }
 .ele-header-row-main {
@@ -3237,7 +3238,7 @@ Header: Social Icon
 }
 .ele-header-row-bottom {
   z-index: 5;
-}
+} */
 .ele-header-row-top .ele-social-share li a.ele-tooltip-enable:hover::after {
   top: auto;
   bottom: -35px;
@@ -8478,7 +8479,10 @@ html.sr .ele-has-scroll-reveal .ele-pagination-wrap {
   z-index: 12;
   height: auto;
   width: auto;
-  --ele-button-padding: 10px;
+  --ele-button-padding-top: 10px;
+  --ele-button-padding-right: 10px;
+  --ele-button-padding-bottom: 10px;
+  --ele-button-padding-left: 10px;
 }
 
 .ele-hero-slider-section .swiper-button-prev:after,
