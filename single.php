@@ -9,9 +9,13 @@
 
 namespace Elementify;
 
+use Elementify_Framework\Inc\Utils;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+//echo Utils::has_container_gaps();
 
 get_header();
 ?>

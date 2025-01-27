@@ -2689,6 +2689,10 @@ object {
 .site-content > .ele-container {
   padding: 40px var(--content-h-gap, 15px);
 }
+.ele-container-no-gaps .site-content > .ele-container {
+  --content-h-gap: 0px;
+  --content-v-gap: 0px;
+}
 /* .site-content > .ele-container-boxed {
     --content-v-gap: 15px;
     --content-h-gap: 15px;
@@ -2738,11 +2742,6 @@ object {
   padding: var(--ele-content-outer-gap, 0) 0;
 }
 
-[data-prefix="single-post"] .site-main > *:not(:last-child),
-[data-prefix="single-page"] .site-main > *:not(:last-child) {
-  margin-bottom: var(--ele-content-inner-spacing, 35px);
-}
-
 [data-singular-layout="3"] .site-main,
 [data-singular-layout="4"]
   .site-main
@@ -2754,6 +2753,13 @@ object {
 }
 [data-singular-layout="4"] .site-main {
   gap: var(--ele-main-inner-gap, 20px);
+}
+
+.ele-container-no-gaps[data-singular-layout="3"] .site-main,
+.ele-container-no-gaps[data-singular-layout="4"]
+  .site-main
+  > *:not(.ele-post-navigation-wrap):not(.ele-author-bio-container) {
+  --ele-main-inner-spacing: 0px;
 }
 
 /*.site.is-boxed,*/
@@ -4944,6 +4950,16 @@ nav .ele-submenu-icon {
   top: calc(-1 * var(--ele-avatar-size, 80px) / 2);
 }
 
+[data-prefix="single-post"][data-singular-layout="3"] .ele-author-bio-container,
+[data-prefix="single-post"][data-singular-layout="4"]
+  .ele-author-bio-container {
+  background: var(--ele-main-bg-color, var(--ele-base-200));
+  border-width: 0;
+}
+[data-singular-layout="4"] .site-main {
+  gap: var(--ele-main-inner-gap, 45px);
+}
+
 .ele-author-bio-container .ele-author-socials {
   gap: 6px;
 }
@@ -4967,6 +4983,12 @@ nav .ele-submenu-icon {
 .ele-post-navigation-wrap .post-navigation {
   margin: 0;
   overflow: inherit;
+  border-radius: 3px;
+}
+[data-singular-layout="3"] .ele-post-navigation-wrap .post-navigation,
+[data-singular-layout="4"] .ele-post-navigation-wrap .post-navigation {
+  padding: var(--ele-main-inner-spacing, 35px);
+  background: var(--ele-main-bg-color, var(--ele-base-200));
 }
 .ele-post-navigation-wrap .nav-links {
   display: grid;
@@ -5024,7 +5046,7 @@ nav .ele-submenu-icon {
   flex-shrink: 0;
   width: var(--ele-image-size, 80px);
   height: var(--ele-image-size, 80px);
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px dashed var(--ele-base-300);
   overflow: hidden;
 }
@@ -5126,7 +5148,6 @@ nav .ele-submenu-icon {
 
 .ele-post-navigation-wrap[data-layout="2"] .nav-links > span,
 .ele-post-navigation-wrap[data-layout="2"] .nav-links > div > span {
-  display: block;
   letter-spacing: 0;
   text-transform: uppercase;
   position: fixed;
@@ -6674,6 +6695,12 @@ form textarea {
     background 0.3s ease,
     transform 0.3s ease,
     visibility 0.3s ease;
+}
+.ele-go-to-top-wrap a.ele-button {
+  --ele-button-padding-top: 5px;
+  --ele-button-padding-bottom: 5px;
+  --ele-button-padding-left: 15px;
+  --ele-button-padding-right: 15px;
 }
 .ele-go-to-top.ele-position-start {
   left: calc(
