@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Template part for displaying page title
@@ -37,23 +36,24 @@ else {
 }
 
 if ( $page_title ) : ?>
-	<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>" data-type="<?php echo esc_attr( $header_preset['desktop'] ); ?>">
+<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>"
+    data-type="<?php echo esc_attr( $header_preset['desktop'] ); ?>">
 
-		<?php 
+    <?php 
 		if ( ! empty( $elements ) ) {
 
 			if ( $header_preset && array_key_exists( 'desktop', $header_preset ) && in_array( $header_preset['desktop'], ['2'] ) ) {
 				$container_width = [ 'desktop'	=> 'default' ];
 				$containerClasses = ['ele-container ele-mx-auto'];
-				if ( in_array( $container_width['desktop'], ['narrow','wide'] ) ) {
+				if ( in_array( $container_width['desktop'], ['narrow','wide','contain'] ) ) {
 					$containerClasses[] = 'ele-container-' . sanitize_text_field( $container_width['desktop'] );
 				}
 				echo '<div class="'. esc_attr( implode( ' ', $containerClasses ) ) .'">'; 
 			}
 			?>
 
-			<header class="entry-header ele-d-flex ele-flex-column">
-				<?php
+    <header class="entry-header ele-d-flex ele-flex-column">
+        <?php
 				$content_open = false;
 				foreach ($elements as $key => $value) {
 					// thumbnail
@@ -158,10 +158,10 @@ if ( $page_title ) : ?>
 					}
 				}
 				?>
-			</header><!-- .entry-header -->
+    </header><!-- .entry-header -->
 
-		<?php if ( $header_preset && array_key_exists( 'desktop', $header_preset ) && in_array( $header_preset['desktop'], ['2'] ) ) { echo '</div><!-- .ele-container --->'; } } ?>
+    <?php if ( $header_preset && array_key_exists( 'desktop', $header_preset ) && in_array( $header_preset['desktop'], ['2'] ) ) { echo '</div><!-- .ele-container --->'; } } ?>
 
-	</div><!-- .ele-hero-section -->
+</div><!-- .ele-hero-section -->
 <?php
 endif;
