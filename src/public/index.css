@@ -2761,6 +2761,10 @@ object {
   > *:not(.ele-post-navigation-wrap):not(.ele-author-bio-container) {
   --ele-main-inner-spacing: 0px;
 }
+[data-prefix="single-post"] .site-main > *:not(:last-child),
+[data-prefix="single-page"] .site-main > *:not(:last-child) {
+  margin-bottom: var(--ele-content-inner-spacing, 35px);
+}
 
 /*.site.is-boxed,*/
 /*.site-header .ele-container,*/
