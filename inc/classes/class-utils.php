@@ -327,7 +327,7 @@ class Utils {
 		if ( 'navigation' === $context ) {
 			$data = 'itemtype="https://schema.org/SiteNavigationElement" itemscope';
 		}
-		
+
 		if ( 'logo' === $context ) {
 			$data = 'itemtype="https://schema.org/Organization" itemscope';
 		}

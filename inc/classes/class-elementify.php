@@ -26,7 +26,6 @@ class Elementify {
 		 * Actions.
 		 */
 		add_action( 'after_setup_theme', [ $this, 'setup_theme' ] );
-
 	}
 
 	/**
@@ -190,5 +189,4 @@ class Elementify {
 			$content_width = 1280;
 		}
 	}
-
 }

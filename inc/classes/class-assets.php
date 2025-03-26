@@ -66,9 +66,9 @@ class Assets {
 
 		wp_enqueue_style(
 			'elementify-main',
-			trailingslashit( ELEMENTIFY_DIR_URI ) . 'build/public/index.css',
+			trailingslashit(ELEMENTIFY_DIR_URI) . 'assets/build/css/main.css',
 			[],
-			filemtime( ELEMENTIFY_DIR_PATH . '/build/public/index.css' ),
+			filemtime(ELEMENTIFY_DIR_PATH . '/assets/build/css/main.css'),
 			'all'
 		);
 		wp_style_add_data( 'elementify-main', 'rtl', 'replace' );
@@ -76,9 +76,9 @@ class Assets {
 		// Enqueue Scripts.
 		wp_enqueue_script(
 			'elementify-main',
-			trailingslashit( ELEMENTIFY_DIR_URI ) . 'build/public/index.js',
+			trailingslashit(ELEMENTIFY_DIR_URI) . 'assets/build/js/main.js',
 			[],
-			filemtime( ELEMENTIFY_DIR_PATH . '/build/public/index.js' ),
+			filemtime(ELEMENTIFY_DIR_PATH . '/assets/build/js/main.js'),
 			true
 		);
 
@@ -111,9 +111,9 @@ class Assets {
 		// Enqueue scripts.
 		wp_enqueue_script(
 			'elementify-customizer-preview',
-			trailingslashit( ELEMENTIFY_DIR_URI ) . 'build/customizer/index.js',
+			trailingslashit(ELEMENTIFY_DIR_URI) . 'assets/build/js/customizer.js',
 			['customize-preview'],
-			filemtime( ELEMENTIFY_DIR_PATH . '/build/customizer/index.js' ),
+			filemtime(ELEMENTIFY_DIR_PATH . '/assets/build/js/customizer.js'),
 			true
 		);
 		

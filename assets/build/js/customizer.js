@@ -1,7 +1,7 @@
 /******/ (function() { // webpackBootstrap
-/*!*********************************!*\
-  !*** ./src/customizer/index.js ***!
-  \*********************************/
+/*!*************************************!*\
+  !*** ./assets/src/js/customizer.js ***!
+  \*************************************/
 /* global wp, jQuery */
 /**
  * File customizer.js.
@@ -46,4 +46,4 @@
 })(jQuery);
 /******/ })()
 ;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=customizer.js.map
