@@ -165,10 +165,10 @@ const assetsConfig = (env, argv) => {
             from: './assets/src/images',
             to: path.resolve(process.cwd(), 'assets', 'build', 'images'),
           },
-          {
-            from: './assets/src/library',
-            to: path.resolve(process.cwd(), 'assets', 'build', 'library'),
-          },
+          // {
+          //   from: './assets/src/library',
+          //   to: path.resolve(process.cwd(), 'assets', 'build', 'library'),
+          // },
         ],
       }),
     ],
