@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Bootstraps the Theme.
  *
@@ -7,25 +8,28 @@
 
 namespace Elementify\Inc;
 
-class Elementify {
+class Elementify
+{
 
-	public function __construct() {
+	public function __construct()
+	{
 
 		Assets::get_instance();
 		Utils::get_instance();
 		Customizer::get_instance();
 		Menus::get_instance();
 		Sidebars::get_instance();
-		
+
 		$this->setup_hooks();
 	}
 
-	private function setup_hooks() {
+	private function setup_hooks()
+	{
 
 		/**
 		 * Actions.
 		 */
-		add_action( 'after_setup_theme', [ $this, 'setup_theme' ] );
+		add_action('after_setup_theme', [$this, 'setup_theme']);
 	}
 
 	/**
@@ -33,7 +37,8 @@ class Elementify {
 	 *
 	 * @return void
 	 */
-	public function setup_theme() {
+	public function setup_theme()
+	{
 
 		/**
 		 * Let WordPress manage the document title.
@@ -41,7 +46,7 @@ class Elementify {
 		 * hard-coded <title> tag in the document head, and expect WordPress to
 		 * provide it for us.
 		 */
-		add_theme_support( 'title-tag' );
+		add_theme_support('title-tag');
 
 		/**
 		 * Custom logo.
@@ -85,11 +90,11 @@ class Elementify {
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support( 'post-thumbnails' );
+		add_theme_support('post-thumbnails');
 
-		add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+		add_theme_support('post-formats', array('aside', 'gallery'));
 
-		add_post_type_support( 'page', 'excerpt' ); //change page with your post type slug.
+		add_post_type_support('page', 'excerpt'); //change page with your post type slug.
 
 
 		/**
@@ -106,10 +111,10 @@ class Elementify {
 		 *
 		 * @link https://make.wordpress.org/core/2016/03/22/implementing-selective-refresh-support-for-widgets/
 		 */
-		add_theme_support( 'customize-selective-refresh-widgets' );
+		add_theme_support('customize-selective-refresh-widgets');
 
 		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+		add_theme_support('automatic-feed-links');
 
 		/**
 		 * Switch default core markup for search form, comment form, comment-list, gallery, caption, script and style
@@ -137,7 +142,7 @@ class Elementify {
 		 * @see Theme Styles.
 		 * @link https://make.wordpress.org/core/2018/06/05/whats-new-in-gutenberg-5th-june/, https://developer.wordpress.org/block-editor/developers/themes/theme-support/#default-block-styles
 		 */
-		add_theme_support( 'wp-block-styles' );
+		add_theme_support('wp-block-styles');
 
 		/**
 		 * Some blocks such as the image block have the possibility to define
@@ -148,7 +153,7 @@ class Elementify {
 		 * @see Wide Alignment
 		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#wide-alignment
 		 */
-		add_theme_support( 'align-wide' );
+		add_theme_support('align-wide');
 
 		/**
 		 * Loads the editor styles in the Gutenberg editor.
@@ -158,7 +163,7 @@ class Elementify {
 		 *
 		 * @see https://developer.wordpress.org/block-editor/developers/themes/theme-support/#editor-styles
 		 */
-		add_theme_support( 'editor-styles' );
+		add_theme_support('editor-styles');
 		/**
 		 *
 		 * Path to our custom editor style.
@@ -172,10 +177,10 @@ class Elementify {
 		 * @see add_editor_style(
 		 * @link https://developer.wordpress.org/reference/functions/add_editor_style/
 		 */
-		add_editor_style( 'build/css/editor.css' );
+		//add_editor_style( 'build/css/editor.css' );
 
 		// Remove the core block patterns
-		remove_theme_support( 'core-block-patterns' );
+		remove_theme_support('core-block-patterns');
 
 		/**
 		 * Set the maximum allowed width for any content in the theme,
@@ -185,7 +190,7 @@ class Elementify {
 		 * @link https://codex.wordpress.org/Content_Width
 		 */
 		global $content_width;
-		if ( ! isset( $content_width ) ) {
+		if (! isset($content_width)) {
 			$content_width = 1280;
 		}
 	}
