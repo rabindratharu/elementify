@@ -177,7 +177,7 @@ class Elementify
 		 * @see add_editor_style(
 		 * @link https://developer.wordpress.org/reference/functions/add_editor_style/
 		 */
-		//add_editor_style( 'build/css/editor.css' );
+		add_editor_style('build/css/main.css');
 
 		// Remove the core block patterns
 		remove_theme_support('core-block-patterns');

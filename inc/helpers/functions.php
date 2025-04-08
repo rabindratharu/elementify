@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Theme helper functions
  *
@@ -14,7 +15,8 @@ use Elementify\Inc\Svg_Icons;
 |
 | Returns an array of navigation menus.
 */
-if ( ! function_exists('bizness_get_nav_menus') ) {
+
+if (! function_exists('bizness_get_nav_menus')) {
     /**
      * Returns an array of navigation menus.
      *
@@ -22,12 +24,13 @@ if ( ! function_exists('bizness_get_nav_menus') ) {
      * @param string $value_field The value to be stored in options. Accepted values: id|slug.
      * @return array
      */
-    function bizness_get_nav_menus( $value_field = 'id' ) {
+    function bizness_get_nav_menus($value_field = 'id')
+    {
         $choices   = [];
         $nav_menus = wp_get_nav_menus();
 
-        foreach ( $nav_menus as $term ) {
-            $choices[ 'slug' === $value_field ? $term->slug : $term->term_id ] = $term->name;
+        foreach ($nav_menus as $term) {
+            $choices['slug' === $value_field ? $term->slug : $term->term_id] = $term->name;
         }
 
         return $choices;
@@ -37,7 +40,7 @@ if ( ! function_exists('bizness_get_nav_menus') ) {
 /*--------------------------------------------------------------
 # Site Title
 --------------------------------------------------------------*/
-if ( ! function_exists( 'elementify_site_title' ) ) {
+if (! function_exists('elementify_site_title')) {
     /**
      * Displays the site title
      *
@@ -46,15 +49,16 @@ if ( ! function_exists( 'elementify_site_title' ) ) {
      * @return string $html Compiled HTML based on our arguments.
      * @since 1.0.0
      */
-    function elementify_site_title( $args = array(), $echo = true ) {
+    function elementify_site_title($args = array(), $echo = true)
+    {
 
         $defaults   = array(
             'title'       => '<a href="%1$s">%2$s</a>',
             'title_class' => 'ele-site-title',
             'wrapper'     => '<div class="%1$s" itemprop="name">%2$s</div>',
-            'condition'   => ( is_front_page() || is_home() ) && ! is_page(),
+            'condition'   => (is_front_page() || is_home()) && ! is_page(),
         );
-        $args       = wp_parse_args( $args, $defaults );
+        $args       = wp_parse_args($args, $defaults);
 
         /**
          * Filters the arguments for `elementify_site_title()`.
@@ -62,11 +66,11 @@ if ( ! function_exists( 'elementify_site_title' ) ) {
          * @param array  $args     Parsed arguments.
          * @param array  $defaults Function's default arguments.
          */
-        $args       = apply_filters( 'elementify_site_title_args', $args, $defaults );
-        $contents   = sprintf( $args['title'], esc_url( get_home_url( null, '/' ) ), esc_html( get_bloginfo( 'name' ) ) );
+        $args       = apply_filters('elementify_site_title_args', $args, $defaults);
+        $contents   = sprintf($args['title'], esc_url(get_home_url(null, '/')), esc_html(get_bloginfo('name')));
         $classname  = $args['title_class'];
         $wrap       = $args['wrapper'];
-        $html       = sprintf( $wrap, $classname, $contents );
+        $html       = sprintf($wrap, $classname, $contents);
 
         /**
          * Filters the arguments for `elementify_site_title()`.
@@ -76,9 +80,9 @@ if ( ! function_exists( 'elementify_site_title' ) ) {
          * @param string $classname Class name based on current view, home or single.
          * @param string $contents  HTML for site title or logo.
          */
-        $html = apply_filters( 'elementify_site_title', $html, $args, $classname, $contents );
+        $html = apply_filters('elementify_site_title', $html, $args, $classname, $contents);
 
-        if ( ! $echo ) {
+        if (! $echo) {
             return $html;
         }
 
@@ -90,7 +94,7 @@ if ( ! function_exists( 'elementify_site_title' ) ) {
 /*--------------------------------------------------------------
 # Site Description
 --------------------------------------------------------------*/
-if ( ! function_exists( 'elementify_site_description' ) ) {
+if (! function_exists('elementify_site_description')) {
     /**
      * Displays the site description.
      *
@@ -98,10 +102,11 @@ if ( ! function_exists( 'elementify_site_description' ) ) {
      * @return  string $html The HTML to display.
      * @since   1.0.0
      */
-    function elementify_site_description( $echo = true ) {
-        $description    = get_bloginfo( 'description' );
+    function elementify_site_description($echo = true)
+    {
+        $description    = get_bloginfo('description');
         $wrapper        = '<p class="ele-site-description" itemprop="description">%s</p><!-- .ele-site-description -->';
-        $html           = sprintf( $wrapper, esc_html( $description ) );
+        $html           = sprintf($wrapper, esc_html($description));
 
         /**
          * Filters the html for the site description.
@@ -110,9 +115,9 @@ if ( ! function_exists( 'elementify_site_description' ) ) {
          * @param string $description  Site description via `bloginfo()`.
          * @param string $wrapper      The format used in case you want to reuse it in a `sprintf()`.
          */
-        $html = apply_filters( 'elementify_site_description', $html, $description, $wrapper );
+        $html = apply_filters('elementify_site_description', $html, $description, $wrapper);
 
-        if ( ! $echo ) {
+        if (! $echo) {
             return $html;
         }
 
@@ -123,7 +128,7 @@ if ( ! function_exists( 'elementify_site_description' ) ) {
 /*--------------------------------------------------------------
 # Site Logo
 --------------------------------------------------------------*/
-if ( ! function_exists( 'elementify_site_logo' ) ) {
+if (! function_exists('elementify_site_logo')) {
     /**
      * Displays the site logo.
      *
@@ -131,15 +136,16 @@ if ( ! function_exists( 'elementify_site_logo' ) ) {
      * @return  void $html The HTML to display.
      * @since   1.0.0
      */
-    function elementify_site_logo( $echo = true ) {
+    function elementify_site_logo($echo = true)
+    {
 
-        if ( ! has_custom_logo() ) {
+        if (! has_custom_logo()) {
             return;
         }
-        $logo               = wp_kses_post( get_custom_logo() );
+        $logo               = wp_kses_post(get_custom_logo());
         $logo_class         = 'ele-site-logo';
         $wrapper            = '<div class="%1$s">%2$s</div>';
-        $html               = sprintf( $wrapper, $logo_class, $logo );
+        $html               = sprintf($wrapper, $logo_class, $logo);
 
         /**
          * Filters the html for the site description.
@@ -148,9 +154,9 @@ if ( ! function_exists( 'elementify_site_logo' ) ) {
          * @param string $description  Site description via `bloginfo()`.
          * @param string $wrapper      The format used in case you want to reuse it in a `sprintf()`.
          */
-        $html = apply_filters( 'elementify_site_logo', $html, $logo, $wrapper );
+        $html = apply_filters('elementify_site_logo', $html, $logo, $wrapper);
 
-        if ( ! $echo ) {
+        if (! $echo) {
             return $html;
         }
 
@@ -161,36 +167,38 @@ if ( ! function_exists( 'elementify_site_logo' ) ) {
 /*--------------------------------------------------------------
 # Site Identity
 --------------------------------------------------------------*/
-if ( ! function_exists( 'elementify_site_identify' ) ) {
+if (! function_exists('elementify_site_identify')) {
     /**
      * Displays the site  title and description.
      *
      * @return  void HTML display
      * @since   1.0.0
      */
-    function elementify_site_identify() {
-        ?>
-<div class="ele-site-identity">
-    <?php
+    function elementify_site_identify()
+    {
+?>
+        <div class="ele-site-identity">
+            <?php
             elementify_site_title(); // Site title.
             elementify_site_description(); // Site description.
             ?>
-</div>
-<?php
+        </div>
+    <?php
     }
 }
 
 /*--------------------------------------------------------------
 # Primary Navigation
 --------------------------------------------------------------*/
-if ( ! function_exists( 'elementify_primary_navigation' ) ) {
+if (! function_exists('elementify_primary_navigation')) {
     /**
      * Display Primary Navigation
      *
      * @return  string HTML display
      * @since   1.0.0
      */
-    function elementify_primary_navigation() {
+    function elementify_primary_navigation()
+    {
 
         // $default_values     = get_elementify_theme_mods();
         //$menu_caret         = elementify_get_theme_mod_new('elementify_header_menu_caret', $default_values['customizer']['toggle']['on'] );
@@ -198,7 +206,7 @@ if ( ! function_exists( 'elementify_primary_navigation' ) ) {
         $menu_class         = ['ele-main-menu ele-list-style-none ele-p-0 ele-m-0 ele-d-flex ele-flex-column ele-flex-lg-row'];
 
         // if ( $menu_caret['lg'] == 'on' ) {
-            $menu_class[]   = 'have-caret';
+        $menu_class[]   = 'have-caret';
         // }
 
         $main_navigation[] = 'main-navigation-sm ele-position-sm-relative ele-top-sm-auto ele-left-sm-auto ele-h-sm-auto';
@@ -213,28 +221,28 @@ if ( ! function_exists( 'elementify_primary_navigation' ) ) {
         // if ( isset( $settings['header_transition'] ) ) {
         //     $main_navigation[] = $settings['header_transition'];
         // }
-        ?>
+    ?>
 
-<nav id="site-navigation" class="<?php echo esc_attr( implode( ' ', $main_navigation ) ); ?>"
-    aria-label="<?php esc_attr_e( 'Horizontal', 'elementify' ); ?>" role="navigation">
+        <nav id="site-navigation" class="<?php echo esc_attr(implode(' ', $main_navigation)); ?>"
+            aria-label="<?php esc_attr_e('Horizontal', 'elementify'); ?>" role="navigation">
 
-    <?php
+            <?php
             wp_nav_menu(
                 array(
-					'theme_location'	=> 'menu-1',
-					'menu_id'        	=> 'primary-menu',
-                    'menu_class'      	=> esc_attr( implode( ' ', $menu_class ) ),
-                    'container_class' 	=> 'primary-menu-container',
-                    'items_wrap'      	=> '<ul id="primary-menu-list" class="%2$s">%3$s</ul>',
-                    'fallback_cb'     	=> 'elementify_menu_fallback',
+                    'theme_location'    => 'menu-1',
+                    'menu_id'            => 'primary-menu',
+                    'menu_class'          => esc_attr(implode(' ', $menu_class)),
+                    'container_class'     => 'primary-menu-container',
+                    'items_wrap'          => '<ul id="primary-menu-list" class="%2$s">%3$s</ul>',
+                    'fallback_cb'         => 'elementify_menu_fallback',
                 )
             );
             ?>
-</nav>
+        </nav>
 
-<div class="ele-trigger-menu ele-d-block ele-z-30 ele-d-sm-none">
-    <div class="ele-hamburger-menu"><span></span><span></span><span></span><span></span></div>
-</div>
+        <div class="ele-trigger-menu ele-d-block ele-z-30 ele-d-sm-none">
+            <div class="ele-hamburger-menu"><span></span><span></span><span></span><span></span></div>
+        </div>
 
 <?php
     }
@@ -243,7 +251,7 @@ if ( ! function_exists( 'elementify_primary_navigation' ) ) {
 /*--------------------------------------------------------------
 # Primary menu fallback
 --------------------------------------------------------------*/
-if ( ! function_exists( 'elementify_menu_fallback' ) ) {
+if (! function_exists('elementify_menu_fallback')) {
     /**
      * Menu fallback for primary menu.
      *
@@ -251,7 +259,8 @@ if ( ! function_exists( 'elementify_menu_fallback' ) ) {
      * @return  void
      * @since   1.0.0
      */
-    function elementify_menu_fallback() {
+    function elementify_menu_fallback()
+    {
         $output  = '';
         $output .= '<div class="primary-menu-container">';
         $output .= '<ul id="primary-menu-list" class="ele-main-menu ele-d-flex ele-flex-wrap ele-list-style-none">';
@@ -275,7 +284,7 @@ if ( ! function_exists( 'elementify_menu_fallback' ) ) {
 /*--------------------------------------------------------------
 # Collapsable menu fallback
 --------------------------------------------------------------*/
-if ( ! function_exists( 'elementify_collapsible_menu_fallback' ) ) {
+if (! function_exists('elementify_collapsible_menu_fallback')) {
     /**
      * Menu fallback for primary menu.
      *
@@ -283,7 +292,8 @@ if ( ! function_exists( 'elementify_collapsible_menu_fallback' ) ) {
      * @return  void
      * @since   1.0.0
      */
-    function elementify_collapsible_menu_fallback() {
+    function elementify_collapsible_menu_fallback()
+    {
         $output  = '';
         $output .= '<div class="ele-collapsible-menu-container">';
         $output .= '<ul id="ele-collapsible-menu-list" class="ele-ele-collapsible-menu">';
@@ -310,42 +320,45 @@ if ( ! function_exists( 'elementify_collapsible_menu_fallback' ) ) {
 /**
  * Gets the SVG code for a given icon.
  */
-function elementify_get_the_svg( $group, $icon, $size ) {
-	return Svg_Icons::get_svg( $group, $icon, $size );
+function elementify_get_the_svg($group, $icon, $size)
+{
+    return Svg_Icons::get_svg($group, $icon, $size);
 }
-function elementify_the_svg( $group, $icon, $size ) {
-	echo Svg_Icons::get_svg( $group, $icon, $size ); //phpcs:ignore WordPress.Security.EscapeOutput
+function elementify_the_svg($group, $icon, $size)
+{
+    echo Svg_Icons::get_svg($group, $icon, $size); //phpcs:ignore WordPress.Security.EscapeOutput
 }
 
 /*--------------------------------------------------------------
 # Pagination
 --------------------------------------------------------------*/
-if ( ! function_exists( 'elemetify_pagination' ) ) {
+if (! function_exists('elemetify_pagination')) {
 
-	/**
-	 * Elemetify Pagination.
-	 *
-	 * @return void
-	 */
-	function elemetify_pagination() {
+    /**
+     * Elemetify Pagination.
+     *
+     * @return void
+     */
+    function elemetify_pagination()
+    {
 
-		$allowed_tags = [
-			'span' => [
-				'class' => []
-			],
-			'a' => [
-				'class' => [],
-				'href' => [],
-			]
-		];
+        $allowed_tags = [
+            'span' => [
+                'class' => []
+            ],
+            'a' => [
+                'class' => [],
+                'href' => [],
+            ]
+        ];
 
-		$args = [
-			'before_page_number' => '<span class="ele-btn">',
-			'after_page_number' => '</span>',
-		];
+        $args = [
+            'before_page_number' => '<span class="ele-btn">',
+            'after_page_number' => '</span>',
+        ];
 
-		printf( '<div class="ele-pagination-wrap ele-d-flex ele-flex-wrap ele-align-items-center ele-w-100 ele-pagination-numeric numeric ele-justify-content-center"><nav class="navigation pagination" aria-label="Posts"><h2 class="screen-reader-text">%1$s</h2><div class="nav-links">%2$s</div></nav></div>', esc_html__('Posts navigation','elemetify'), wp_kses( paginate_links( $args ), $allowed_tags ) );
-	}
+        printf('<div class="ele-pagination-wrap ele-d-flex ele-flex-wrap ele-align-items-center ele-w-100 ele-pagination-numeric numeric ele-justify-content-center"><nav class="navigation pagination" aria-label="Posts"><h2 class="screen-reader-text">%1$s</h2><div class="nav-links">%2$s</div></nav></div>', esc_html__('Posts navigation', 'elemetify'), wp_kses(paginate_links($args), $allowed_tags));
+    }
 }
 
 /*
@@ -353,24 +366,25 @@ if ( ! function_exists( 'elemetify_pagination' ) ) {
 | Trail Breadcrumb
 |--------------------------------------------------------------------------
 */
-if ( ! function_exists( 'elementify_breadcrumb' ) ) {
+if (! function_exists('elementify_breadcrumb')) {
     /**
      * Display trail breadcrumb
      *
      * @return void
      */
-    function elementify_breadcrumb() {
+    function elementify_breadcrumb()
+    {
         $defaults = array(
             'show_browse'   => false,
             'echo'          => true
         );
-        $args = apply_filters( 'breadcrumb_trail_args', $defaults );
+        $args = apply_filters('breadcrumb_trail_args', $defaults);
 
-        $breadcrumb = apply_filters( 'breadcrumb_trail_object', null, $args );
+        $breadcrumb = apply_filters('breadcrumb_trail_object', null, $args);
 
-        if ( ! is_object( $breadcrumb ) )
+        if (! is_object($breadcrumb))
 
-            $breadcrumb = new Elementify\Inc\Breadcrumb_Trail( $args );
+            $breadcrumb = new Elementify\Inc\Breadcrumb_Trail($args);
 
         return $breadcrumb->trail();
     }
@@ -379,33 +393,34 @@ if ( ! function_exists( 'elementify_breadcrumb' ) ) {
 /*--------------------------------------------------------------
 # Google Fonts URL
 --------------------------------------------------------------*/
-if ( ! function_exists( 'elementify_get_fonts_url' ) ) {
+if (! function_exists('elementify_get_fonts_url')) {
 
-	/**
-	 * Get font url
-	 *
-	 * @return string
-	 */
-	function elementify_get_fonts_url() {
+    /**
+     * Get font url
+     *
+     * @return string
+     */
+    function elementify_get_fonts_url()
+    {
 
-		$font_families = array(
+        $font_families = array(
             'Josefin+Sans:wght@100;200;300;400;500;600;700',
             'Nanum+Myeongjo:wght@400;700;800'
         );
 
-        $fonts_url = add_query_arg( array(
-            'family' => implode( '&family=', $font_families ),
+        $fonts_url = add_query_arg(array(
+            'family' => implode('&family=', $font_families),
             'display' => 'swap',
-        ), 'https://fonts.googleapis.com/css2' );
+        ), 'https://fonts.googleapis.com/css2');
 
         return esc_url_raw($fonts_url);
-	}
+    }
 }
 
 /*--------------------------------------------------------------
 # Add svg icon for the menu item if they have submenu items.
 --------------------------------------------------------------*/
-if ( ! function_exists( 'elementify_submenu_icon' ) ) {
+if (! function_exists('elementify_submenu_icon')) {
     /**
      * Filters a menu item's starting output.
      * 
@@ -415,12 +430,13 @@ if ( ! function_exists( 'elementify_submenu_icon' ) ) {
      * @param WP_Post  $item        Menu item data object.
      * @return string
      */
-    function elementify_submenu_icon( $item_output, $item, $depth, $args ) {
-        $has_children = in_array( 'menu-item-has-children', $item->classes );
-        if ( $has_children ) {
+    function elementify_submenu_icon($item_output, $item, $depth, $args)
+    {
+        $has_children = in_array('menu-item-has-children', $item->classes);
+        if ($has_children) {
             $item_output = str_replace(
                 '</a>',
-                '<span class="ele-submenu-icon">' . elementify_get_the_svg( 'ui', 'angle-down', 15 ) . '</span></a>',
+                '<span class="ele-submenu-icon">' . elementify_get_the_svg('ui', 'angle-down', 15) . '</span></a>',
                 $item_output
             );
         }
@@ -432,7 +448,7 @@ if ( ! function_exists( 'elementify_submenu_icon' ) ) {
 /*--------------------------------------------------------------
 # Add classes in Sub Menu
 --------------------------------------------------------------*/
-if ( ! function_exists( 'elementify_submenu_classes' ) ) {
+if (! function_exists('elementify_submenu_classes')) {
     /**
      * Filters a menu item's starting output.
      * 
@@ -440,10 +456,11 @@ if ( ! function_exists( 'elementify_submenu_classes' ) ) {
      * 
      * @return string
      */
-    function elementify_submenu_classes( $classes, $args, $depth ) {
-        foreach ( $classes as $key => $class ) {
-            if ( $class == 'sub-menu' ) {
-                $classes[ $key ] = 'sub-menu ele-transition-normal';
+    function elementify_submenu_classes($classes, $args, $depth)
+    {
+        foreach ($classes as $key => $class) {
+            if ($class == 'sub-menu') {
+                $classes[$key] = 'sub-menu ele-transition-normal';
             }
         }
         return $classes;
@@ -460,8 +477,9 @@ if ( ! function_exists( 'elementify_submenu_classes' ) ) {
  * @param int    $size The icon size in pixels.
  * @return string
  */
-function twenty_twenty_one_get_social_link_svg( $uri, $size = 24 ) {
-	return Elementify\Inc\SVG_Icons::get_social_link_svg( $uri, $size );
+function twenty_twenty_one_get_social_link_svg($uri, $size = 24)
+{
+    return Elementify\Inc\Svg_Icons::get_social_link_svg($uri, $size);
 }
 
 /**
@@ -475,56 +493,58 @@ function twenty_twenty_one_get_social_link_svg( $uri, $size = 24 ) {
  * @param stdClass $args        An object of wp_nav_menu() arguments.
  * @return string The menu item output with social icon.
  */
-function twenty_twenty_one_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
-	// Change SVG icon inside social links menu if there is supported URL.
-	if ( 'footer' === $args->theme_location ) {
-		$svg = twenty_twenty_one_get_social_link_svg( $item->url, 24 );
-		if ( ! empty( $svg ) ) {
-			$item_output = str_replace( $args->link_before, $svg, $item_output );
-		}
-	}
+function twenty_twenty_one_nav_menu_social_icons($item_output, $item, $depth, $args)
+{
+    // Change SVG icon inside social links menu if there is supported URL.
+    if ('footer' === $args->theme_location) {
+        $svg = twenty_twenty_one_get_social_link_svg($item->url, 24);
+        if (! empty($svg)) {
+            $item_output = str_replace($args->link_before, $svg, $item_output);
+        }
+    }
 
-	return $item_output;
+    return $item_output;
 }
 
-add_filter( 'walker_nav_menu_start_el', 'twenty_twenty_one_nav_menu_social_icons', 10, 4 );
+add_filter('walker_nav_menu_start_el', 'twenty_twenty_one_nav_menu_social_icons', 10, 4);
 
 add_filter(
-	'nav_menu_link_attributes',
-	function ($attr, $item, $args, $depth) {
+    'nav_menu_link_attributes',
+    function ($attr, $item, $args, $depth) {
 
-		$class = 'ele-menu-link';
+        $class = 'ele-menu-link';
 
-		if (! isset($attr['class'])) {
-			$attr['class'] = '';
-		}
+        if (! isset($attr['class'])) {
+            $attr['class'] = '';
+        }
 
-		$attr['class'] .= ' ' . $class;
+        $attr['class'] .= ' ' . $class;
 
-		$attr['class'] = trim($attr['class']);
+        $attr['class'] = trim($attr['class']);
 
-		$attr['role'] = 'menuitem';
+        $attr['role'] = 'menuitem';
 
-		if (isset($args->skip_ghost)) {
-			$item_classes = '';
+        if (isset($args->skip_ghost)) {
+            $item_classes = '';
 
-			if ($item && isset($item->classes) && is_array($item->classes)) {
-				$item_classes = implode(' ', $item->classes);
-			}
+            if ($item && isset($item->classes) && is_array($item->classes)) {
+                $item_classes = implode(' ', $item->classes);
+            }
 
-			if (
-				strpos($item_classes, 'has-children') !== false
-				||
-				strpos($item_classes, 'has_children') !== false
-			) {
-				$attr['aria-haspopup'] = 'true';
-				$attr['aria-expanded'] = 'false';
-			}
-		}
+            if (
+                strpos($item_classes, 'has-children') !== false
+                ||
+                strpos($item_classes, 'has_children') !== false
+            ) {
+                $attr['aria-haspopup'] = 'true';
+                $attr['aria-expanded'] = 'false';
+            }
+        }
 
-		return $attr;
-	},
-	5, 4
+        return $attr;
+    },
+    5,
+    4
 );
 
 // /**
@@ -536,7 +556,7 @@ add_filter(
 // add_filter( 'nav_menu_submenu_css_class', function( $classes ) {
 //     return [ 'wp-block-navigation__container' ];
 // } );
- 
+
 // /**
 //  * Filters the CSS classes applied to a menu item's list item element.
 //  * 
@@ -553,7 +573,7 @@ add_filter(
 //     }
 //     return $item_classes;
 // } );
- 
+
 // /**
 //  * Filters the HTML attributes applied to a menu item's anchor element.
 //  * 
@@ -564,7 +584,7 @@ add_filter(
 //     $atts['class'] = 'wp-block-navigation-link__content';
 //     return $atts;
 // } );
- 
+
 // /**
 //  * Filters a menu item's title.
 //  * 
@@ -574,7 +594,7 @@ add_filter(
 // add_filter( 'nav_menu_item_title', function( $title ) {
 //     return '<span class="wp-block-navigation-link__label">' . $title . '</span>';
 // } );
- 
+
 /**
  * Filters a menu item's starting output.
  * 
@@ -597,38 +617,40 @@ add_filter(
 // }, 10, 2 );
 
 
-if ( ! function_exists( 'elementify_blog_id' ) ) {
-	/**
-	 * Get blog id, support multisite
-	 *
-	 *
-	 * @param null $slug
-	 *
-	 * @return string
-	 */
-	function elementify_blog_id( $slug = null ) {
-		global $blog_id;
+if (! function_exists('elementify_blog_id')) {
+    /**
+     * Get blog id, support multisite
+     *
+     *
+     * @param null $slug
+     *
+     * @return string
+     */
+    function elementify_blog_id($slug = null)
+    {
+        global $blog_id;
 
-		$prefix = ( is_multisite() && $blog_id > 1 ) ? 'ele-blog-' . $blog_id : 'ele-blog';
+        $prefix = (is_multisite() && $blog_id > 1) ? 'ele-blog-' . $blog_id : 'ele-blog';
 
-		return $slug === null ? $prefix : $prefix . '-' . $slug;
-	}
+        return $slug === null ? $prefix : $prefix . '-' . $slug;
+    }
 }
 
-if ( ! function_exists( 'elementify_html_attributes' ) ) {
-	/**
-	 * Output html attributes
-	 */
-	function elementify_html_attributes() {
+if (! function_exists('elementify_html_attributes')) {
+    /**
+     * Output html attributes
+     */
+    function elementify_html_attributes()
+    {
 
         $attrs = [
             'data-save-color-scheme' => 'no',
             'data-blog-id'  => elementify_blog_id(),
-            'data-theme'    => isset( $_COOKIE['darkMode'] ) ? 'dark' : 'light'
+            'data-theme'    => isset($_COOKIE['darkMode']) ? 'dark' : 'light'
         ];
 
-		Utils::print_attribute_string( apply_filters( 'elementify_html_attributes', $attrs ) );
-	}
+        Utils::print_attribute_string(apply_filters('elementify_html_attributes', $attrs));
+    }
 }
 
 /**
@@ -639,53 +661,79 @@ if ( ! function_exists( 'elementify_html_attributes' ) ) {
  *
  * @return bool
  */
-if ( ! function_exists( 'elementify_footer_widgets_show' ) ) {
+if (! function_exists('elementify_footer_widgets_show')) {
 
-    function elementify_footer_widgets_show( $active, $section ) {
-        if ( strpos( $section->id, 'widgets-footer-' ) ) {
+    function elementify_footer_widgets_show($active, $section)
+    {
+        if (strpos($section->id, 'widgets-footer-')) {
             $active = true;
         }
-    
+
         return $active;
     }
 }
-add_filter( 'customize_section_active', 'elementify_footer_widgets_show', 15, 2 );
+add_filter('customize_section_active', 'elementify_footer_widgets_show', 15, 2);
 
 
-if ( ! function_exists( 'elementify_get_post_id' ) ) {
-	/**
-	 * Store the post ids.
-	 *
-	 * Since blog page takes the first post as its id,
-	 * here we are storing the id of the post and for the blog page,
-	 * storing its value via getting the specific page id through:
-	 * `get_option( 'page_for_posts' )`
-	 *
-	 * @return false|int|mixed|string|void
-	 */
-	function elementify_get_post_id() {
+/**
+ * Helper function to get the current post ID.
+ *
+ * @package Elementify_Framework
+ */
 
-		$post_id        = '';
-		$page_for_posts = get_option( 'page_for_posts' );
+if (!function_exists('elementify_get_post_id')) {
+    /**
+     * Retrieves the current post ID based on context.
+     *
+     * @param mixed $post_id_override Optional. Override post ID. Default empty string.
+     * @return int The post ID. Returns 0 if not found.
+     */
+    function elementify_get_post_id($post_id_override = '')
+    {
+        // Check for legacy function and use it if available
+        if (function_exists('elementify_framework_get_post_id')) {
+            return (int) elementify_framework_get_post_id($post_id_override);
+        }
 
-		// For single post and pages.
-		if ( is_singular() ) {
-			$post_id = get_the_ID();
-		} elseif ( ! is_front_page() && is_home() && $page_for_posts ) { // For the static blog page.
+        // Handle override early
+        if (!empty($post_id_override) && is_numeric($post_id_override)) {
+            return (int) apply_filters('elementify_get_post_id', (int) $post_id_override, $post_id_override);
+        }
 
-			$post_id = $page_for_posts;
-		}
+        // Use WordPress core function for singular posts
+        if (is_singular() && ($current_id = get_the_ID()) !== false) {
+            return (int) apply_filters('elementify_get_post_id', $current_id, $post_id_override);
+        }
 
-		// Return the post ID.
-		return $post_id;
-	}
+        // Handle specific page types
+        $post_id = 0; // Default value
+
+        if (is_home()) {
+            $post_id = (int) get_option('page_for_posts', 0);
+        } elseif (function_exists('is_shop') && is_shop() && function_exists('wc_get_page_id')) {
+            $post_id = (int) wc_get_page_id('shop');
+        } elseif (is_archive() || is_tax() || is_category() || is_tag() || is_author()) {
+            $queried_object = get_queried_object();
+            $post_id = $queried_object instanceof WP_Post ? (int) $queried_object->ID : 0;
+        }
+
+        /**
+         * Filter the post ID before returning.
+         *
+         * @param int   $post_id          The post ID.
+         * @param mixed $post_id_override The override post ID.
+         */
+        return (int) apply_filters('elementify_get_post_id', $post_id, $post_id_override);
+    }
 }
 
 
 
-class Elementify_Walker_Page_Menu extends Walker_Page {
+class Elementify_Walker_Page_Menu extends Walker_Page
+{
     // Modify the start of each element (each link) to add the custom class
-    function start_el(&$output, $page, $depth = 0, $args = array(), $current_page = 0) {
+    function start_el(&$output, $page, $depth = 0, $args = array(), $current_page = 0)
+    {
         $indent = ($depth) ? str_repeat("\t", $depth) : '';
 
         $css_class = array('page_item', 'page-item-' . $page->ID);
