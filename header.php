@@ -101,12 +101,21 @@ do_action('elementify/before_html');
         //use Elementify_Framework\Inc\Generated_Styles;
         // $google_font_subsets = Fonts::add_google_fonts();
         // echo $google_font_subset = Fonts::get_google_font_url();
-        //$enable = get_theme_mod( 'elementify_framework_buttons_padding');
+        //$enable = get_theme_mod('elementify_framework_fonts_base_typo');
         $enable = elementify_framework_get_options();
         //echo elementify_get_post_id();
         // echo '<pre>';
         // print_r($enable);
         // echo '</pre>';
+        // foreach ($enable as $key => $value) {
+        //     if (is_array($value)) {
+        //         foreach ($value as $sub_key => $sub_value) {
+        //             if ($sub_value) {
+        //                 echo 'options/' . $key . '/class-' . str_replace("_", "-", $sub_key) . '-option.php<br/>';
+        //             }
+        //         }
+        //     }
+        // }
         // echo Generated_Styles::dimensions(
         // 		[':root'],
         // 		'elementify_framework_buttons_padding',
