@@ -73,6 +73,27 @@ do_action('elementify/before_html');
         ?>>
 
     <?php
+    $advance_customize = elementify_framework_get_options('footer');
+    // echo '<pre>';
+    // print_r($advance_customize);
+    // echo '</pre>';
+
+
+    // echo '<pre>';
+    // print_r($options);
+    // echo '</pre>';
+
+    // foreach ($options as $option) {
+    //     echo $file = ELEMENTIFY_FRAMEWORK_ABSPATH . "inc/customizer/builder/header/options/class-{$option}-option.php";
+    //     // if (file_exists($file)) {
+    //     //     echo $file;
+    //     // }
+    // }
+
+    // //echo elementify_get_post_id();
+    // echo '<pre>';
+    // print_r($options);
+    // echo '</pre>';
     /**
      * Functions hooked into elementify/body_top action
      *
@@ -102,8 +123,8 @@ do_action('elementify/before_html');
         // $google_font_subsets = Fonts::add_google_fonts();
         // echo $google_font_subset = Fonts::get_google_font_url();
         //$enable = get_theme_mod('elementify_framework_fonts_base_typo');
-        $enable = elementify_framework_get_options();
-        //echo elementify_get_post_id();
+        // $enable = elementify_framework_get_options();
+        // //echo elementify_get_post_id();
         // echo '<pre>';
         // print_r($enable);
         // echo '</pre>';

@@ -2604,7 +2604,7 @@ object {
 .site {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - var(--wp-admin-bar-height, 0px));
+  /* height: calc(100vh - var(--wp-admin-bar-height, 0px)); */
 }
 
 .site::after {

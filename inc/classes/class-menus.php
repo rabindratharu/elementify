@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Register Menus
  *
@@ -12,14 +13,16 @@ use Elementify\Inc\Traits\Singleton;
 /**
  * Class Menus.
  */
-class Menus {
+class Menus
+{
 
 	use Singleton;
 
 	/**
 	 * Constructor.
 	 */
-	public function __construct() {
+	public function __construct()
+	{
 
 		// load class.
 		$this->setup_hooks();
@@ -28,20 +31,22 @@ class Menus {
 	/**
 	 * Initialize hooks.
 	 */
-	private function setup_hooks() {
+	private function setup_hooks()
+	{
 
 		/**
 		 * Actions.
 		 */
-		add_action( 'init', [ $this, 'register_menus' ] );
+		add_action('init', [$this, 'register_menus']);
 	}
 
-	public function register_menus() {
+	public function register_menus()
+	{
 		register_nav_menus([
-			'menu-1' 	=> esc_html__( 'Menu #1', 'elementify' ),
-			'menu-2' 	=> esc_html__( 'Menu #2', 'elementify' ),
-			'menu-3' 	=> esc_html__( 'Collapsable Menu', 'elementify' ),
-			'menu-4' 	=> esc_html__( 'Footer Menu', 'elementify' ),
+			'menu-1' 	=> esc_html__('Primary Menu', 'elementify'),
+			'menu-2' 	=> esc_html__('Secondary Menu', 'elementify'),
+			'menu-3' 	=> esc_html__('Sidebar Menu', 'elementify'),
+			'menu-4' 	=> esc_html__('Footer Menu', 'elementify'),
 		]);
 	}
 
@@ -52,7 +57,8 @@ class Menus {
 	 *
 	 * @return integer
 	 */
-	public function get_menu_id( $location ) {
+	public function get_menu_id($location)
+	{
 
 		// Get all locations
 		$locations = get_nav_menu_locations();
@@ -60,8 +66,7 @@ class Menus {
 		// Get object id by location.
 		$menu_id = ! empty($locations[$location]) ? $locations[$location] : '';
 
-		return ! empty( $menu_id ) ? $menu_id : '';
-
+		return ! empty($menu_id) ? $menu_id : '';
 	}
 
 	/**
@@ -72,20 +77,20 @@ class Menus {
 	 *
 	 * @return array Child menu array.
 	 */
-	public function get_child_menu_items( $menu_array, $parent_id ) {
+	public function get_child_menu_items($menu_array, $parent_id)
+	{
 
 		$child_menus = [];
 
-		if ( ! empty( $menu_array ) && is_array( $menu_array ) ) {
+		if (! empty($menu_array) && is_array($menu_array)) {
 
-			foreach ( $menu_array as $menu ) {
-				if ( intval( $menu->menu_item_parent ) === $parent_id ) {
-					array_push( $child_menus, $menu );
+			foreach ($menu_array as $menu) {
+				if (intval($menu->menu_item_parent) === $parent_id) {
+					array_push($child_menus, $menu);
 				}
 			}
 		}
 
 		return $child_menus;
 	}
-
 }
