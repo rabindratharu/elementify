@@ -165,73 +165,73 @@ if (! function_exists('elementify_the_excerpt')) {
 		$post_content = apply_filters('the_content', $post_content);
 		$post_content = preg_replace('@\[caption[^\]]*?\].*?\[\/caption]@si', '', $post_content);
 		$post_content = preg_replace('@<script[^>]*?>.*?</script>@si', '', $post_content);
-$post_content = preg_replace('@<style[^>]*?>.*?</style>@si', '', $post_content);
-    $post_content = preg_replace(' (\[.*?\])', '', $post_content);
-    $post_content = strip_shortcodes($post_content);
-    $post_content = strip_tags($post_content);
+		$post_content = preg_replace('@<style[^>]*?>.*?</style>@si', '', $post_content);
+		$post_content = preg_replace(' (\[.*?\])', '', $post_content);
+		$post_content = strip_shortcodes($post_content);
+		$post_content = strip_tags($post_content);
 
-    $post_content = substr($post_content, 0, $trim_character_count);
-    $post_content = substr($post_content, 0, strrpos($post_content, ' '));
-    $post_content = trim(preg_replace('/\s+/', ' ', $post_content));
-    $post_content = $post_content . $tail;
+		$post_content = substr($post_content, 0, $trim_character_count);
+		$post_content = substr($post_content, 0, strrpos($post_content, ' '));
+		$post_content = trim(preg_replace('/\s+/', ' ', $post_content));
+		$post_content = $post_content . $tail;
 
-    echo wpautop($post_content); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-    }
-    }
+		echo wpautop($post_content); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	}
+}
 
-    if (! function_exists('elementify_excerpt_more')) {
+if (! function_exists('elementify_excerpt_more')) {
 
-    /**
-    * Filter the "read more" excerpt string link to the post.
-    *
-    * @param string $more "Read more" excerpt string.
-    *
-    * @return string (Maybe) modified "read more" excerpt string.
-    */
-    function elementify_excerpt_more($more = '')
-    {
-    $more = sprintf(
-    '<div class="ele-read-more-wrap"><a class="ele-read-more" href="%1$s">%2$s</a></div><!-- .ele-read-more-wrap -->',
-    get_permalink(get_the_ID()),
-    __('Read more', 'elementify')
-    );
+	/**
+	 * Filter the "read more" excerpt string link to the post.
+	 *
+	 * @param string $more "Read more" excerpt string.
+	 *
+	 * @return string (Maybe) modified "read more" excerpt string.
+	 */
+	function elementify_excerpt_more($more = '')
+	{
+		$more = sprintf(
+			'<div class="ele-read-more-wrap"><a class="ele-read-more" href="%1$s">%2$s</a></div><!-- .ele-read-more-wrap -->',
+			get_permalink(get_the_ID()),
+			__('Read more', 'elementify')
+		);
 
-    return apply_filters('elementify/excerpt_more', $more);
-    }
-    }
+		return apply_filters('elementify/excerpt_more', $more);
+	}
+}
 
-    if (! function_exists('elementify_the_post_pagination')) {
+if (! function_exists('elementify_the_post_pagination')) {
 
-    /**
-    * Display Post pagination with prev next, first last, to, from
-    *
-    * @param int $current_page_no Current page number.
-    * @param int $posts_per_page Posts per page.
-    * @param WP_Query $article_query The query object.
-    * @param string $first_page_url First page URL.
-    * @param string $last_page_url Last page URL.
-    * @param bool $is_query_param_structure Whether to use query parameter structure.
-    */
-    function elementify_the_post_pagination(
-    $current_page_no,
-    $posts_per_page,
-    $article_query,
-    $first_page_url,
-    $last_page_url,
-    bool $is_query_param_structure = true
-    ) {
-    $prev_posts = ($current_page_no - 1) * $posts_per_page;
-    $from = 1 + $prev_posts;
-    $to = count($article_query->posts) + $prev_posts;
-    $of = $article_query->found_posts;
-    $total_pages = $article_query->max_num_pages;
+	/**
+	 * Display Post pagination with prev next, first last, to, from
+	 *
+	 * @param int $current_page_no Current page number.
+	 * @param int $posts_per_page Posts per page.
+	 * @param WP_Query $article_query The query object.
+	 * @param string $first_page_url First page URL.
+	 * @param string $last_page_url Last page URL.
+	 * @param bool $is_query_param_structure Whether to use query parameter structure.
+	 */
+	function elementify_the_post_pagination(
+		$current_page_no,
+		$posts_per_page,
+		$article_query,
+		$first_page_url,
+		$last_page_url,
+		bool $is_query_param_structure = true
+	) {
+		$prev_posts = ($current_page_no - 1) * $posts_per_page;
+		$from = 1 + $prev_posts;
+		$to = count($article_query->posts) + $prev_posts;
+		$of = $article_query->found_posts;
+		$total_pages = $article_query->max_num_pages;
 
-    $base = ! empty($is_query_param_structure) ? add_query_arg('page', '%#%') : get_pagenum_link(1) . '%_%';
-    $format = ! empty($is_query_param_structure) ? '?page=%#%' : 'page/%#%';
+		$base = ! empty($is_query_param_structure) ? add_query_arg('page', '%#%') : get_pagenum_link(1) . '%_%';
+		$format = ! empty($is_query_param_structure) ? '?page=%#%' : 'page/%#%';
 
-    ?>
-    <div class="mt-0 md:mt-10 mb-10 lg:my-5 flex items-center justify-end posts-navigation">
-        <?php
+?>
+		<div class="mt-0 md:mt-10 mb-10 lg:my-5 flex items-center justify-end posts-navigation">
+			<?php
 			if (1 < $total_pages && !empty($first_page_url)) {
 				printf(
 					'<span class="mr-2">Showing %1$s - %2$s Of %3$s</span>',
@@ -260,8 +260,8 @@ $post_content = preg_replace('@<style[^>]*?>.*?</style>@si', '', $post_content);
 				printf('<a class="last-pagination-link btn border border-secondary ml-2" href="%1$s" title="last-pagination-link">%2$s</a>', esc_url($last_page_url), __('Last', 'elementify'));
 			}
 			?>
-    </div>
-    <?php
+		</div>
+		<?php
 	}
 }
 
@@ -385,14 +385,14 @@ if (! function_exists('elementify_post_thumbnail')) :
 		if (is_singular()) :
 		?>
 
-    <div class="post-thumbnail">
-        <?php the_post_thumbnail(); ?>
-    </div><!-- .post-thumbnail -->
+			<div class="post-thumbnail">
+				<?php the_post_thumbnail(); ?>
+			</div><!-- .post-thumbnail -->
 
-    <?php else : ?>
+		<?php else : ?>
 
-    <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-        <?php
+			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+				<?php
 				the_post_thumbnail(
 					'post-thumbnail',
 					array(
@@ -404,9 +404,9 @@ if (! function_exists('elementify_post_thumbnail')) :
 					)
 				);
 				?>
-    </a>
+			</a>
 
-    <?php
+<?php
 		endif; // End is_singular().
 	}
 endif;
