@@ -678,7 +678,7 @@ add_filter('customize_section_active', 'elementify_footer_widgets_show', 15, 2);
 /**
  * Helper function to get the current post ID.
  *
- * @package Elementify_Framework
+ * @package Elementify
  */
 
 if (!function_exists('elementify_get_post_id')) {

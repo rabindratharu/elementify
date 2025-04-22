@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all single posts
  *
@@ -9,9 +10,9 @@
 
 namespace Elementify;
 
-use Elementify_Framework\Inc\Utils;
+use Elementify\Inc\Utils;
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
 	exit;
 }
 
@@ -25,19 +26,19 @@ get_header();
  * Functions hooked into elementify/before_content action
  *
  */
-do_action( 'elementify/before_content' );
+do_action('elementify/before_content');
 ?>
 
 <main id="main" class="site-main ele-d-flex ele-flex-col ele-flex-column">
 
-    <?php
+	<?php
 	/**
 	 * Functions hooked into elementify/post/content/before_loop action
 	 *
 	 */
 	do_action('elementify/post/content/before_loop');
 
-	while ( have_posts() ) : the_post();
+	while (have_posts()) : the_post();
 
 		/**
 		 * Functions hooked into elementify_post_content action
@@ -45,7 +46,7 @@ do_action( 'elementify/before_content' );
 		 */
 		do_action('elementify/post/before_content');
 
-		get_template_part( 'template-parts/content', 'single' );
+		get_template_part('template-parts/content', 'single');
 
 		/**
 		 * Functions hooked into elementify_post_content action
@@ -72,7 +73,7 @@ do_action( 'elementify/before_content' );
  *
  * @hooked elementify_sidebar    - 10
  */
-do_action( 'elementify/after_content' );
+do_action('elementify/after_content');
 ?>
 
 <?php get_footer(); ?>

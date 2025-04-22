@@ -13,7 +13,7 @@
 namespace Elementify;
 
 //use Elementify\Inc\Utils;
-use Elementify_Framework\Inc\Utils;
+use Elementify\Inc\Utils;
 
 if (! defined('ABSPATH')) {
     exit;
@@ -73,7 +73,9 @@ do_action('elementify/before_html');
         ?>>
 
     <?php
-    $advance_customize = elementify_framework_get_options('footer');
+    // $advance_customize = elementify_framework_get_options();
+    // // Remove sticky and transparent
+    // unset($advance_customize['header'], $advance_customize['footer']);
     // echo '<pre>';
     // print_r($advance_customize);
     // echo '</pre>';
@@ -119,7 +121,7 @@ do_action('elementify/before_html');
          * @hooked elementify_header - 10
          */
         do_action('elementify/header');
-        //use Elementify_Framework\Inc\Generated_Styles;
+        //use Elementify\Inc\Generated_Styles;
         // $google_font_subsets = Fonts::add_google_fonts();
         // echo $google_font_subset = Fonts::get_google_font_url();
         //$enable = get_theme_mod('elementify_framework_fonts_base_typo');
