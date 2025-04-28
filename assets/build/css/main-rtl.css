@@ -1398,7 +1398,7 @@ a:active {
   display: none;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -1406,8 +1406,7 @@ h5,
 h6 {
   margin-top: 3rem;
   margin-bottom: 1.5rem;
-}
-
+} */
 .entry-content p {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
