@@ -1407,7 +1407,7 @@ h6 {
   margin-top: 3rem;
   margin-bottom: 1.5rem;
 } */
-.entry-content p {
+.entry-content p:not(.elementor-widget p) {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
 }
